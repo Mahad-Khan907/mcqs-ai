@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCAO-F & Anthropic CCAO-F Certification Exam Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070a12;
+      --card-bg: rgba(18, 26, 44, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(30, 42, 70, 0.9);
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --primary-glow: rgba(99, 102, 241, 0.35);
+      --cyan: #38bdf8;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font: 'Outfit', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 90% 90%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.06) 0%, transparent 60%);
+      background-attachment: fixed;
+      color: var(--text);
+      min-height: 100vh;
+      padding: 40px 24px;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .badge-hub {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      color: #a5b4fc;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+
+    /* Stats Row */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 22px;
+      backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--cyan);
+      font-family: var(--mono);
+      margin-bottom: 4px;
+    }
+
+    .stat-lbl {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Chapters Grid */
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .chapter-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 26px;
+      backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chapter-card.ready:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6), 0 0 20px var(--primary-glow);
+    }
+
+    .chapter-card.active {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .card-top {
+      margin-bottom: 18px;
+    }
+
+    .chapter-number {
+      font-size: 0.75rem;
+      font-family: var(--mono);
+      font-weight: 700;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .chapter-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .chapter-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .tag-green {
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .tag-blue {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .tag-yellow {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      font-family: var(--font);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-disabled {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-dim);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      cursor: not-allowed;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="hero">
+      <div class="badge-hub">Official Certification Suite</div>
+      <h1>Panaversity PCAO-F &amp; Anthropic CCAO-F</h1>
+      <p class="subtitle">Complete 10-Chapter Scenario-Based Practice Examination Hub &bull; 720 / 1,000 (72%) Cut Score Standard</p>
+
+      <div class="stats-bar">
+        <div class="stat-card">
+          <div class="stat-val">10</div>
+          <div class="stat-lbl">Core Chapters</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">40+</div>
+          <div class="stat-lbl">MCQs Per Chapter</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">720 / 1000</div>
+          <div class="stat-lbl">Associate Cut Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">100%</div>
+          <div class="stat-lbl">Chapter Grounded</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="section-title">Certification Curriculum &amp; Examination Modules</div>
+
+    <div class="chapters-grid">
+      
+      <!-- CHAPTER 1: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 01 &bull; Active Module</div>
+          <div class="chapter-title">Just Delegate It</div>
+          <p class="chapter-desc">The 6-step Delegation Loop, 10-80-10 governance rule, 6-line Delegation Brief, Plan-First pattern, and non-transferable accountability.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (23 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_01_Just_Delegate_It/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_01_Just_Delegate_It/PCAO-F_Just_Delegate_It_Exam_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 2: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 02 &bull; Active Module</div>
+          <div class="chapter-title">What AI Actually Is</div>
+          <p class="chapter-desc">The internal machine: tokens, frozen weights, pretraining vs. inference, hallucination mechanics, the context desk, sycophancy, the jagged frontier, tools, and reasoning models.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (23 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_02_What_AI_Actually_Is/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_02_What_AI_Actually_Is/PCAO-F_What_AI_Actually_Is_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 3: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 03 &bull; Active Module</div>
+          <div class="chapter-title">AI Fluency: The 4Ds</div>
+          <p class="chapter-desc">The 4Ds framework (Delegation, Description, Discernment, Diligence), 3 modalities (Automation, Augmentation, Agency), Context Engineering, Automation Bias, and Digital FTE scaling.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (27 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_03_AI_Fluency/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_03_AI_Fluency/PCAO-F_AI_Fluency_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 4: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 04 &bull; Active Module</div>
+          <div class="chapter-title">AI Prompting in 2026</div>
+          <p class="chapter-desc">The 13 concepts: Briefing mindset, 6-layer context stack, Projects vs Notebooks, Extended Thinking, neutralizing sycophancy with rubrics, Brainstorm-Iterate loop, Artifacts, and cross-model grading.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (26 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_04_AI_Prompting_in_2026/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_04_AI_Prompting_in_2026/PCAO-F_AI_Prompting_in_2026_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 5: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 05 &bull; Active Module</div>
+          <div class="chapter-title">Code You Never Write</div>
+          <p class="chapter-desc">Getting AI to compute on real data: VPRF signals, 5-section briefs, 5-step Verification Ladder (known-answer tests), error dialogue, and blast radius safety rules.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (27 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_05_Code_You_Never_Write/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_05_Code_You_Never_Write/PCAO-F_Code_You_Never_Write_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 6: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 06 &bull; Active Module</div>
+          <div class="chapter-title">Skills &amp; Connectors</div>
+          <p class="chapter-desc">The 4-way architecture (Skills vs. Connectors vs. Projects vs. Custom Instructions), progressive disclosure in SKILL.md, Model Context Protocol (MCP), and multi-surface portability.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (25 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_06_Skills_and_Connectors/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_06_Skills_and_Connectors/PCAO-F_Skills_and_Connectors_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 7: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 07 &bull; Active Module</div>
+          <div class="chapter-title">Workflow Design &amp; Diagnosis</div>
+          <p class="chapter-desc">The step-based delegation map (reversibility, stakes, accountability), the 5-rung diagnostic sequence, halo delegation traps, unstaffed gates, and first-hour incident protocol.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (25 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_07_Workflow_Design_and_Diagnosis/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_07_Workflow_Design_and_Diagnosis/PCAO-F_Workflow_Design_and_Diagnosis_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 8: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 08 &bull; Active Module</div>
+          <div class="chapter-title">Governance, Risk &amp; Responsible Use</div>
+          <p class="chapter-desc">The Four Questions (Case, Data, Capability, People), data classification tiers, the five extension checks, defined gates, prompt injection across tools, and first-hour incident protocol.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (25 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_08_Governance_Risk_and_Responsible_Use/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_08_Governance_Risk_and_Responsible_Use/PCAO-F_Governance_Risk_and_Responsible_Use_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 9: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 09 &bull; Active Module</div>
+          <div class="chapter-title">General Agents on the Web</div>
+          <p class="chapter-desc">Chat vs. agent surfaces, the two-axis runtime model, the six-part harness, persistent context stack, three file tiers, reach ladder, Cowork approval modes, unwatched delegation, and cloud scheduling.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (25 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_09_General_Agents_on_the_Web/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_09_General_Agents_on_the_Web/PCAO-F_General_Agents_on_the_Web_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+      <!-- CHAPTER 10: Ready -->
+      <div class="chapter-card ready">
+        <div class="card-top">
+          <div class="chapter-number">Chapter 10 &bull; Active Module</div>
+          <div class="chapter-title">ChatGPT &amp; Claude Quick Reference</div>
+          <p class="chapter-desc">Two cockpits, one discipline: 3-tier model pattern, context attachments, the Persistence Triad, Claude Artifacts vs. 2026 ChatGPT writing blocks, Agent Skills open standard, MCP governance, and the 5-step proving loop.</p>
+          <div class="card-meta">
+            <span class="tag tag-green">&#10003; 40 MCQs Ready</span>
+            <span class="tag">Interactive Web App</span>
+            <span class="tag">Print PDF (25 Pages)</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="Chapter_10_ChatGPT_and_Claude_Quick_Reference/quiz.html" class="btn btn-primary">&#9658; Launch Exam Simulator</a>
+          <a href="Chapter_10_ChatGPT_and_Claude_Quick_Reference/PCAO-F_ChatGPT_and_Claude_Quick_Reference_40_MCQs_Guide.pdf" class="btn btn-secondary" target="_blank">&#128196; Download Study Guide PDF</a>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      Panaversity Certified Associate: Foundations (PCAO-F) &bull; Anthropic Claude Certified Associate &ndash; Foundations (CCAO-F) Exam Hub
+    </footer>
+  </div>
+
+</body>
+</html>
