@@ -1,0 +1,861 @@
+"""
+Generator script for Chapter 07: Workflow Design & Diagnosis
+PCAO-F & Anthropic CCAO-F Certification Exam Guide
+"""
+
+import json
+import os
+import sys
+
+QUESTIONS = [
+  {
+    "id": 1,
+    "subtopic": "Translating Unstructured Needs into 5-Part Task Definitions",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 2: Extract the requirements, then attack them (Lines 330-344)",
+    "scenario": "A regional hospital operations director receives a vague verbal instruction from the board: 'We need better departmental staffing reporting.' A junior analyst proposes pasting this exact sentence into Claude to generate an automated report. What structured conversion must occur before this request can be delegated to an automated assistant?",
+    "options": {
+      "A": "Translate it into five settled answers: what is produced, for whom, how often, from what data, and in what format.",
+      "B": "Request that the board chairman write a formal seventy-page procedural manual before attempting prompt design.",
+      "C": "Upgrade the department's subscription to an enterprise tier so the model can infer missing governance details.",
+      "D": "Execute an automated web search query to benchmark hospital staffing ratios against international standards."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 2. The text states: '\"We need better reporting\" is not a requirement. Nobody can build it, and nobody can say afterwards whether it was met. A task definition is a business need turned into five settled answers: what is produced, for whom, how often, from what data, and in what format. Each answer is something you can check. Each one still missing is a clarifying question you owe somebody, not a blank for the model to fill.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because translating needs into clear requirements does not require a 70-page manual; it requires defining five concrete operational answers.",
+      "distractor_C": "Option C is incorrect because model tiers cannot guess unstated organizational context, governance rules, or internal reporting formats.",
+      "distractor_D": "Option D is incorrect because public web benchmarks do not resolve internal operational ambiguity regarding internal data sources, frequencies, or recipients."
+    }
+  },
+  {
+    "id": 2,
+    "subtopic": "Requirements Extraction and Ambiguity Attack",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 2: Extract the requirements, then attack them (Lines 345-361)",
+    "scenario": "A commercial bid manager at an aerospace parts fabricator uses Claude to parse a 100-page municipal RFP. After extracting a structured table of explicit vendor deliverables, the manager immediately begins drafting proposal sections. What critical quality verification step outlined in Section 2 was skipped?",
+    "options": {
+      "A": "Re-running the extraction prompt ten consecutive times across different web browsers to test model latency.",
+      "B": "Converting all extracted text rows into binary C++ machine code modules to verify computational accuracy.",
+      "C": "Running an 'attack' pass to identify ambiguous clauses, conflicting team readings, and unstated indirect rules.",
+      "D": "Submitting the RFP to public open-source developer chat forums to gather crowd-sourced scoring opinions."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 2. The chapter mandates: 'Then attack it. The requirements that cost teams the bid are rarely stated plainly. They sit in a small clause, behind a scoring rule, or in a sentence two people would read differently. Extraction finds what was written. It does not find what was meant... An unclear requirement caught here costs one clarifying question. Caught after the work is built, it costs the work.'",
+      "distractor_A": "Option A is incorrect because browser latency testing does nothing to evaluate semantic ambiguity or unstated RFP scoring traps.",
+      "distractor_B": "Option B is incorrect because RFP requirements analysis is semantic and legal extraction, not low-level binary C++ compilation.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because posting confidential commercial bidding documents to public forums creates severe data confidentiality breaches."
+    }
+  },
+  {
+    "id": 3,
+    "subtopic": "The Window Test: Synthesis vs. Judgment",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 4: Where AI insight actually changes a plan (Lines 401-417)",
+    "scenario": "A supply chain fleet director tasks an AI assistant with generating a quarterly vehicle acquisition plan. The model produces a highly structured recommendation to purchase fifteen heavy diesel trucks. However, the plan is completely unviable because the executive board approved a strict carbon-neutral fleet cap in an unminuted meeting. How does Section 4 categorize this planning failure?",
+    "options": {
+      "A": "A severe hardware crash caused by GPU thread saturation during the generation of the truck fleet schedule.",
+      "B": "A failure of the Window Test, where the step required judgment inputs that were impossible to put in context.",
+      "C": "A prompt injection vulnerability where hidden tokens manipulated the model's vehicle selection parameters.",
+      "D": "A catastrophic neural network collapse resulting from processing mixed-fleet diesel and electric datasets."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 4. The text explains: 'A judgment step is one that runs on information you cannot supply, or would not. Risk appetite. A hiring freeze. Whether this client will accept one more delay... The useful question is the window test: Could I put everything this step needs into the window? If not, the step is mine.' When a decision depends on unminuted board decisions or private risk appetite, it cannot be delegated.",
+      "distractor_A": "Option A is incorrect because the issue is missing real-world contextual inputs, not hardware or thread saturation.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because prompt injection involves adversarial malicious instructions, which are absent in this scenario.",
+      "distractor_D": "Option D is incorrect because the model did not suffer neural collapse; it generated a plausible plan from the incomplete data it was provided."
+    }
+  },
+  {
+    "id": 4,
+    "subtopic": "Judgment Steps vs. Missing Inputs",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 4: Where AI insight actually changes a plan (Lines 401-417)",
+    "scenario": "A senior wealth manager is designing an AI-assisted estate distribution workflow. When assessing whether AI should draft condolence letters to grieving families and decide discretionary hardship trust distributions, the manager considers delegating these steps. Why must these sensitive discretionary steps remain strictly human-retained?",
+    "options": {
+      "A": "Large language models lack the mathematical compute capacity required to calculate trust tax exemptions.",
+      "B": "Estate distribution workflows are technically prohibited from generating text formatted with headings.",
+      "C": "Conversational models automatically hallucinate negative financial account balances on grieving clients.",
+      "D": "They rely on unstated empathy and human context that cannot be fully supplied inside the context window."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 4. The chapter notes: 'The test also catches the work people call \"needing a human touch.\" A condolence note to a long-standing client. A hard conversation with somebody's manager. What they need cannot be put in the window either.' Steps that depend on unstated emotional context, relationship history, and moral judgment fail the Window Test.",
+      "distractor_A": "Option A is incorrect because discretionary estate distributions involve fiduciary and emotional judgment rather than pure arithmetic compute limits.",
+      "distractor_B": "Option B is incorrect because language models have no structural formatting prohibitions against legal headings.",
+      "distractor_C": "Option C is incorrect because models do not deterministically fabricate negative balances based on emotional topics.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 5,
+    "subtopic": "Research Splitting: Stable Concepts vs. Live Sources",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 4: Where AI insight actually changes a plan (Lines 418-447)",
+    "scenario": "A financial research analyst asks Claude: 'What is the current spot price of lithium carbonate per tonne, and what were the historical pricing dynamics in 2021?' How should this dual-horizon query be architecturally governed across information sources?",
+    "options": {
+      "A": "Generate both the current spot price and the historical analysis strictly from the model's frozen weights.",
+      "B": "Rely on model knowledge for historical 2021 dynamics, but mandate live search with openable links for current prices.",
+      "C": "Prohibit the query entirely because language models cannot legally summarize historical commodity markets.",
+      "D": "Route the entire request through offline code execution using synthetic random number generation modules."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 4. The research table dictates: Stable concepts and historical methods can come from the model's own knowledge, but 'Anything current, priced, or dated' must come from an external source you can open: 'The answer and the link, so you can check it... For anything current, ask for a source you can open. Never a confident answer.'",
+      "distractor_A": "Option A is incorrect because generating current commodity spot prices from frozen weights produces confident hallucinations.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because LLMs are well-suited to analyzing historical market dynamics that occurred within their training cutoff.",
+      "distractor_D": "Option D is incorrect because synthetic random number generation would fabricate commodity market prices rather than retrieving real market data."
+    }
+  },
+  {
+    "id": 6,
+    "subtopic": "The Three Ownership Criteria: Reversibility, Stakes, Accountability",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 5: Three criteria decide every step (Lines 502-527)",
+    "scenario": "A commercial property accounting firm is mapping an automated accounts payable workflow. A consultant argues that step ownership should be decided by benchmarking how accurately Claude performed on each step during a two-week pilot. According to Section 5, why is the consultant's approach incorrect?",
+    "options": {
+      "A": "Ownership is governed strictly by reversibility, stakes, and accountability, not pilot test performance.",
+      "B": "Pilot performance is legally invalid unless verified by an independent third-party accounting auditor.",
+      "C": "Step ownership must be decided exclusively by the department manager's personal aesthetic preferences.",
+      "D": "Automated accounting workflows must assign every single operational step to human staff members."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 5. The text explicitly states: 'Ownership is decided by three criteria, and only these three: reversibility, stakes, accountability. Each one is a question about the step, not about the model... How well AI performed on this step in your test run is not a criterion.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because the issue is architectural design methodology, not legal audit mandates.",
+      "distractor_C": "Option C is incorrect because workflow delegation is an objective risk management discipline, not subjective personal preference.",
+      "distractor_D": "Option D is incorrect because mechanical, reversible steps with low stakes can be safely delegated to AI."
+    }
+  },
+  {
+    "id": 7,
+    "subtopic": "Disagreement Rule Among Ownership Criteria",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 5: Three criteria decide every step (Lines 518-525)",
+    "scenario": "A municipal procurement officer reviews a step titled 'Issue final vendor disqualification notice.' An analyst notes that generating the notice draft can be undone in seconds (high reversibility) and printing costs are negligible (low stakes). However, issuing the notice represents a legally binding decision that the city answers for. Who must own this step?",
+    "options": {
+      "A": "An unmonitored script, because municipal administrative workflows do not require human sign-off.",
+      "B": "An automated AI agent, because high reversibility and low financial costs override legal accountability.",
+      "C": "A third-party external LLM vendor, because cloud providers absorb liability for municipal legal notices.",
+      "D": "A human official, because when the three criteria disagree, the strictest criterion (accountability) wins."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 5. The rule is explicit: 'Where the three disagree, the strictest one wins. A step that can be undone and costs little, but is still the decision somebody answers for, stays human.' Because accountability cannot move onto a machine, final legal disqualification remains human.",
+      "distractor_A": "Option A is incorrect because government administrative actions carry strict legal accountability that cannot be outsourced to unattended scripts.",
+      "distractor_B": "Option B is incorrect because reversibility cannot excuse automating a decision for which an official is personally answerable.",
+      "distractor_C": "Option C is incorrect because cloud vendors explicitly disclaim legal liability for user decisions and outputs in their terms of service.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 8,
+    "subtopic": "Step Classifications: AI-Appropriate vs. Human vs. Collaborative",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 5 & Concept 6 (Lines 504-506, 560-565)",
+    "scenario": "In a corporate contract review pipeline, a corporate legal team analyzes the step 'Draft the redline markup and explanatory rationale.' Because the edits carry significant legal consequences, a human attorney reviews and verifies every single drafted clause. How is this step formally classified in an operational delegation map?",
+    "options": {
+      "A": "Human-retained, because the legal lead maintains an attorney license to practice corporate law.",
+      "B": "AI-appropriate, because the underlying text generation is executed by a commercial foundation model.",
+      "C": "Collaborative, because AI produces the initial draft and a named human reviewer evaluates the output.",
+      "D": "Autonomous, because the contract playbook provides explicit rules that eliminate legal ambiguity."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 5 and Section 6. The text defines collaborative steps: 'collaborative, which means AI produces and a named person judges.' In contract redlining, AI drafts the proposed edits, but because the stakes are high, an attorney judges each edit at a formal gate.",
+      "distractor_A": "Option A is incorrect because human-retained steps are performed entirely by a human without AI drafting the content.",
+      "distractor_B": "Option B is incorrect because AI-appropriate steps are owned by AI without requiring individual line-by-line human approval.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because legal redlines involve complex contractual liabilities that cannot be treated as unattended autonomous actions."
+    }
+  },
+  {
+    "id": 9,
+    "subtopic": "Contract Review Worked Map: Penalty Exposure vs. Sign and Send",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 6: Two workflows, same criteria, different answers (Lines 542-598)",
+    "scenario": "A legal ops team maps two distinct steps: (Step 4) 'Compute financial exposure of a contract penalty clause', and (Step 6) 'Sign and send finalized agreement to counterparty.' Why is Step 4 assigned to automated execution while Step 6 is strictly human-retained?",
+    "options": {
+      "A": "Step 4 carries criminal liability, while Step 6 represents an informal non-binding commercial communication.",
+      "B": "Step 4 requires natural language prose, while Step 6 requires advanced multi-variable differential calculus.",
+      "C": "Step 4 is reversible and judged at the next approval gate, while Step 6 is irreversible and externally binding.",
+      "D": "Step 4 must be executed on a smartphone, while Step 6 can only be executed within an enterprise mainframe."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 6. The contract review table and analysis state: Computing financial exposure is AI-appropriate because it is reversible and lands directly in front of a human reviewer at the very next approval gate. Conversely, 'Sign and send' is human-retained because it is 'Irreversible and externally binding' and cannot be undone.",
+      "distractor_A": "Option A is incorrect because penalty calculations do not carry criminal penalties, whereas signing agreements creates real binding corporate liability.",
+      "distractor_B": "Option B is incorrect because Step 4 is arithmetic computation (not prose), and Step 6 is legal signing (not calculus).",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because device form factors do not determine governance boundaries or step reversibility."
+    }
+  },
+  {
+    "id": 10,
+    "subtopic": "Onboarding Documents Worked Map: Personalization vs. Compensation",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 6: Two workflows, same criteria, different answers (Lines 602-655)",
+    "scenario": "An HR director at a software enterprise designs an automated new-hire onboarding workflow. She evaluates two steps: (Step A) 'Personalize the executive welcome note', and (Step B) 'Confirm compensation matches approved requisition.' How should these steps be allocated according to the criteria in Section 6?",
+    "options": {
+      "A": "Step A is collaborative because the manager's voice cannot be supplied; Step B is human because it is the check.",
+      "B": "Step A is human-retained because HR letters are patented; Step B is AI-appropriate because salaries are public.",
+      "C": "Both Step A and Step B should be fully automated because HR onboarding workflows carry zero legal exposure.",
+      "D": "Step A is AI-appropriate because voice is mechanical; Step B is collaborative because machines set salaries."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 6. In the onboarding map: Personalizing the welcome note is Collaborative because 'The manager's voice cannot be supplied' (failing the pure window test). Confirming compensation is Human-retained because 'This step is the check, nothing follows it'—it is the terminal decision before an offer becomes legally binding.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because welcome letters are not patented, and employee compensation is confidential proprietary data.",
+      "distractor_C": "Option C is incorrect because sending an offer letter with an erroneous compensation figure creates binding contractual obligations.",
+      "distractor_D": "Option D is incorrect because manager voice requires human touch, and compensation approval requires human accountability."
+    }
+  },
+  {
+    "id": 11,
+    "subtopic": "The Halo Delegation Cognitive Trap",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 7: Three ways a map goes wrong (Lines 657-667, 718-721)",
+    "scenario": "A customer support director at a telecom firm observes that an AI assistant has summarized customer complaint tickets with 98% accuracy for three months. Based on this excellent performance, the director decides to let the AI autonomously assign ticket severity levels (Low, Medium, High). What cognitive failure has occurred?",
+    "options": {
+      "A": "Under-specification, where the support director omitted essential customer ticket context parameters.",
+      "B": "Context overload, where the accumulation of ticket tokens degrades the model's active working memory.",
+      "C": "Stale configuration, where the firm's customer service policy document expired without notification.",
+      "D": "Halo delegation, which assumes that drafting competence directly implies decision-making competence."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 7. The text defines halo delegation: 'Halo delegation means handing a step to AI because the previous step went well. The competence was real. It just belonged to a different step... Drafting quality is evidence about the draft. It is not evidence about the decision.' Summarizing a ticket is mechanical synthesis; classifying severity decides whether a customer is escalated or ignored.",
+      "distractor_A": "Option A is incorrect because the root cause is misattributing decision competence based on drafting accuracy, not a brief omission.",
+      "distractor_B": "Option B is incorrect because context overload relates to long conversation sessions, not a flawed managerial delegation decision.",
+      "distractor_C": "Option C is incorrect because stale configuration refers to outdated saved files or instructions, not cognitive bias in workflow mapping.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 12,
+    "subtopic": "Over-Delegation and Self-Authorizing Gates",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 7: Three ways a map goes wrong (Lines 657-664, 722-723)",
+    "scenario": "In a redesigned warranty claims workflow, Claude classifies claim validity and then autonomously issues refund payments for all claims it tagged as 'Low Risk.' The engineering lead argues that this is safe because the model only sends refunds for low-risk items. Why does Section 7 reject this justification as over-delegation?",
+    "options": {
+      "A": "Warranty claims must always be processed using mechanical analog calculators rather than cloud software.",
+      "B": "A step cannot give itself permission to bypass a gate, and sending financial payments cannot be undone.",
+      "C": "Low-risk claims are legally prohibited from receiving automated bank transfers under enterprise banking laws.",
+      "D": "The model's neural network will refuse to execute refund calculations if the customer name contains vowels."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 7. In diagnosing Row 5 of the complaint workflow, the text warns: '\"Low severity only\" sounds like a control, but severity was set in row 3 by the same system that is now sending without review. A step cannot give itself permission to skip the gate. Sending also cannot be undone.' This represents classic over-delegation.",
+      "distractor_A": "Option A is incorrect because modern warranty workflows use digital computing systems rather than mechanical calculators.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because commercial banking supports automated ACH/wire APIs; the failure is governance self-authorization.",
+      "distractor_D": "Option D is incorrect because language models process natural language tokens regardless of vowel structures."
+    }
+  },
+  {
+    "id": 13,
+    "subtopic": "The Unstaffed Gate Phenomenon",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 7 & Concept 8 (Lines 668-670, 742-755, 780-787)",
+    "scenario": "A medical insurance pre-authorization team designed a collaborative review gate where a senior nurse must approve AI-drafted approval letters. Over six months, claim volume surges from 20 to 180 cases daily. To keep pace, the nurse begins glancing at letters for two seconds and clicking 'Approve.' What operational failure has developed?",
+    "options": {
+      "A": "A prompt injection attack, where adversarial claim text bypassed the model's safety alignment filters.",
+      "B": "An unstaffed gate, where a designed human review silently degrades into an unmonitored rubber-stamp click.",
+      "C": "Expectation mismatch, where the healthcare pre-authorization task exceeds the fundamental scope of AI.",
+      "D": "Hardware bit-rot, where server storage arrays experience physical corruption across client medical records."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 7 and Section 8. The text defines an unstaffed gate: 'An unstaffed gate is a collaborative step whose review is no longer really done. When the reviewer is busy, or the queue is long, or the drafts have been good for two months, the review becomes a glance and then a click. Nothing was decided and nobody changed the map, but the step is now automated.'",
+      "distractor_A": "Option A is incorrect because the issue is human reviewer fatigue and volume saturation, not adversarial input injection.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because drafting approval letters from policy rules is a standard LLM capability.",
+      "distractor_D": "Option D is incorrect because storage hardware is intact; the failure resides in the human supervisory layer."
+    }
+  },
+  {
+    "id": 14,
+    "subtopic": "Mapping the Tool Instead of the Work",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 7: Three ways a map goes wrong (Lines 670-671, 724-725)",
+    "scenario": "A marketing agency introduces a new step into its client proposal process: 'Convert client brief into an interactive HTML dashboard artifact.' The agency lead admits this step was added primarily because Claude's web artifact feature creates visually impressive widgets, not because clients requested dashboards. What mapping error does this represent?",
+    "options": {
+      "A": "Stale configuration, where the agency's proposal template expired due to quarterly calendar drift.",
+      "B": "Halo delegation, where high drafting competence is mistakenly confused with executive decision-making.",
+      "C": "Context overload, where the inclusion of HTML CSS code exhausts the model's active working memory window.",
+      "D": "Mapping the tool instead of the work, where the workflow is distorted around favourite technology features."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 7. The chapter defines this trap: 'Mapping the tool instead of the work. A team maps around the features they like. They built a good Skill [or artifact], so the workflow gains a step shaped like that Skill. It is the hardest of the three to see from inside, because the workflow really does use the tool well. It just is not the work.'",
+      "distractor_A": "Option A is incorrect because the workflow addition was driven by enthusiasm for a tool feature, not out-of-date templates.",
+      "distractor_B": "Option B is incorrect because halo delegation involves carrying trust across different steps, not inserting gratuitous feature steps.",
+      "distractor_C": "Option C is incorrect because generating an artifact does not inherently exhaust the context window.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 15,
+    "subtopic": "Collaborative Step Specification Standards",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 4 & Concept 8 (Lines 488-501, 1284-1285)",
+    "scenario": "A compliance auditor inspects a hospital's AI delegation map and encounters a collaborative step documented simply as: 'Step 4: AI draft is reviewed by human.' Why is this documentation insufficient for operational governance?",
+    "options": {
+      "A": "A valid gate requires three explicit elements: a named person, a named moment, and the specific thing checked.",
+      "B": "Human review gates are legally prohibited from being documented in text tables or spreadsheet matrices.",
+      "C": "All medical review gates must be executed by a committee of five licensed physicians simultaneously.",
+      "D": "Documentation must specify the serial numbers of the physical computer monitors used by hospital staff."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 4 and Section 8. The text emphasizes: 'A step you keep with a person is not finished when you write \"human\" next to it. It needs a named person, a named moment, and a named thing they are checking. \"A human looks at it\" is how the gate in Concept 7 goes unstaffed.' Without naming who, when, and what, the gate cannot be held accountable.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because text tables and matrices are the standard recommended medium for delegation maps.",
+      "distractor_C": "Option C is incorrect because individual designated reviewers frequently operate valid operational review gates.",
+      "distractor_D": "Option D is incorrect because hardware serial numbers are completely irrelevant to workflow governance."
+    }
+  },
+  {
+    "id": 16,
+    "subtopic": "Code Execution Requirement: Computed vs. Generated",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 3: A plan is only as good as the numbers under it (Lines 370-390, 809-816)",
+    "scenario": "A corporate treasury analyst asks Claude: 'Calculate our total foreign exchange currency exposure across these 400 invoice rows and summarize the top three risk factors.' Why does Section 3 mandate that the financial totals be produced via code execution rather than written directly into the response prose?",
+    "options": {
+      "A": "Text models are mathematically incapable of outputting numbers larger than three digits in chat messages.",
+      "B": "Code execution automatically guarantees that the model will pick the correct spreadsheet columns without review.",
+      "C": "If a number matters, it must be computed by code, because generated prose numbers look identical to real math.",
+      "D": "Foreign exchange regulations require that all currency arithmetic be executed exclusively in Python 2.7."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 3. The core rule states: 'If a result matters, compute it. Never write it. Have the numbers produced by code execution rather than written into a sentence... The problem is that you cannot tell from the page whether they did. A written figure and a calculated one look the same.' A written number looks just as confident as a true computed sum.",
+      "distractor_A": "Option A is incorrect because LLMs can output arbitrary numbers in text, though they are probabilistic rather than mechanically computed.",
+      "distractor_B": "Option B is incorrect because code execution runs exact arithmetic, but the model can still pick the wrong column, so human verification is still required.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because Python 2.7 is long deprecated and regulatory compliance does not mandate specific runtime versions."
+    }
+  },
+  {
+    "id": 17,
+    "subtopic": "Decoupling Implementation from Step Ownership",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 4 & Concept 6 (Lines 456-497, 590-593)",
+    "scenario": "A risk analyst is building a delegation map for evaluating loan default probabilities. The computational math is complex, so the analyst notes under Criterion: 'Carried by code execution, therefore AI-appropriate.' What fundamental structural mistake has the analyst committed?",
+    "options": {
+      "A": "Confusing implementation with ownership; computational exactness does not make a step safe.",
+      "B": "Selecting Python code execution instead of manual pencil-and-paper arithmetic verification.",
+      "C": "Failing to convert the loan portfolio into an unencrypted public CSV file hosted on GitHub.",
+      "D": "Omitting the loan applicant's biometric fingerprint records from the context prompt window."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 4 and Section 6. The chapter warns: 'Keep the third decision out of the second. \"This has to be computed\" is true and it belongs in the implementation column. It is not a reason to hand the step to AI, and using it as one is how a high-stakes calculation ends up unreviewed... \"Must be computed\" belongs under Carried by. It never belongs under Criterion.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because Python code execution is the recommended tool for arithmetic, but it does not determine step ownership.",
+      "distractor_C": "Option C is incorrect because financial loan data must remain confidential and should never be posted to public repositories.",
+      "distractor_D": "Option D is incorrect because biometric fingerprints are irrelevant to debt default modeling."
+    }
+  },
+  {
+    "id": 18,
+    "subtopic": "The Three Configuration Homes: Rule, Reference, Procedure",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 14: Rule, reference, or procedure (Lines 1064-1085)",
+    "scenario": "A marketing communications lead identifies three improvements needed across her team's workspace: (1) A mandatory requirement that all press releases open with a dateline, (2) The firm's 40-page corporate brand stylebook, and (3) A fixed 7-step sequence for drafting executive media briefs. Where do these three fixes belong?",
+    "options": {
+      "A": "(1) Project knowledge base, (2) Skill, (3) Standing instruction.",
+      "B": "(1) Standing instruction, (2) Project knowledge base, (3) Skill.",
+      "C": "(1) Skill, (2) Standing instruction, (3) Project knowledge base.",
+      "D": "(1) Standing instruction, (2) Skill, (3) Project knowledge base."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 14. The framework is unambiguous: 'Rules go to standing instructions. They change behavior inside a Project (\"Always state the target segment in the first line\"). References go to the knowledge base. They change what is known (The brand voice guide). Procedures go to Skills. They change how the work is done (\"Generate the weekly report in this exact format, in this order\").'",
+      "distractor_A": "Option A is incorrect because it misassigns rules to knowledge bases and reference documents to Skills.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because a single constraint rule is not a multi-step Skill, and a 40-page guide is not a standing instruction.",
+      "distractor_D": "Option D is incorrect because it misplaces the 40-page brand guide into a Skill and the 7-step procedure into a knowledge base."
+    }
+  },
+  {
+    "id": 19,
+    "subtopic": "Promotion of Corrections into Permanent Configuration",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 14: Rule, reference, or procedure (Lines 1066-1073, 1086-1092)",
+    "scenario": "A revenue operations analyst discovers that monthly revenue summaries erroneously include canceled subscription orders. For six months, he manually types 'Exclude canceled orders' into his chat before running the report. When he goes on vacation, his replacement runs the report, and incorrect figures reach the CFO. What failure occurred?",
+    "options": {
+      "A": "Expectation mismatch, because language models cannot mathematically filter database rows out.",
+      "B": "A hardware server failure in the cloud provider's regional data center during report creation.",
+      "C": "Under-specification, because the replacement analyst failed to clear browser cookie caches.",
+      "D": "Failure of promotion: keeping a recurring rule in chat rather than promoting to configuration."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 14. The text uses this exact scenario: 'Promotion means moving a fix out of a chat and into configuration, so it lasts... An analyst on the revenue report works out in his first month that the figures have to exclude canceled orders, and types that reminder into the chat every month... Then he takes two weeks off, a colleague runs the report, and the numbers go out with canceled orders in them. The fix existed the whole time. The failure was leaving it somewhere only one person could find.'",
+      "distractor_A": "Option A is incorrect because filtering canceled orders is a routine, well-supported capability when codified properly.",
+      "distractor_B": "Option B is incorrect because cloud servers functioned normally; the human process failed to persist operational rules.",
+      "distractor_C": "Option C is incorrect because browser cookies have no effect on workspace standing instructions.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 20,
+    "subtopic": "Assistant Memory Limitations vs. Shared Configuration",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 14: Rule, reference, or procedure (Lines 1092-1101)",
+    "scenario": "A software team lead asks whether the team can rely on Claude's native conversational 'Memory' feature to standardize coding conventions across twelve junior developers instead of configuring a shared Project. According to Section 14, why is native memory an inadequate substitute?",
+    "options": {
+      "A": "Conversational memory is strictly restricted to processing non-technical poetic literature and prose.",
+      "B": "Memory features automatically delete all stored information whenever a developer reboots their computer.",
+      "C": "Native memory is per-user and best-effort; colleagues cannot read, audit, or share another user's memory.",
+      "D": "Activating memory requires installing third-party cryptographic hardware keys on developer laptops."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 14. The chapter clarifies why memory is not configuration: 'It is per-user. Whatever it learned about your preferences is yours, and the colleague covering for you starts from nothing. It is best-effort. It may pick a pattern up. It may not. You cannot point at it, read it, or hand it to somebody. Configuration is the shared home you can open and read.'",
+      "distractor_A": "Option A is incorrect because memory handles arbitrary conversational domains, not just poetry.",
+      "distractor_B": "Option B is incorrect because server-side memory persists across reboots; its failure is lack of team visibility and deterministic control.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because native memory requires no external hardware encryption modules."
+    }
+  },
+  {
+    "id": 21,
+    "subtopic": "The 4-Phase Build Loop: Ideate, Prototype, Feedback, Refine",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 9: The loop: ideate, prototype, feedback, refine (Lines 791-796)",
+    "scenario": "A commercial operations team attempts to build an automated supply chain monitoring tool. Rather than creating a structured Project workspace, individual analysts ask one-off questions in scattered separate chat sessions, resulting in disconnected drafts. What discipline from Section 9 restores operational control?",
+    "options": {
+      "A": "Mandating that analysts execute all prototyping queries from mobile smartphones on cellular data.",
+      "B": "Commissioning an external software consultancy to write 10,000 lines of proprietary Java code.",
+      "C": "Restricting prompt input lengths to a maximum of twelve words to force model concise behavior.",
+      "D": "Running the 4-phase build loop (ideate, prototype, feedback, refine) inside a unified Project workspace."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 9. The text explains: 'You will not get a solution by asking for one. You get one by running a loop with four steps: ideate, prototype, feedback, refine... Run the loop inside a Project so the background, the limits, and earlier decisions stay stable. Across scattered chats each round restarts from a slightly different understanding, which is how you end up with a pile of drafts rather than a solution.'",
+      "distractor_A": "Option A is incorrect because mobile networks have no bearing on systematic workflow design methodologies.",
+      "distractor_B": "Option B is incorrect because rapid prototyping in Claude enables internal teams to build working tools without expensive external custom code builds.",
+      "distractor_C": "Option C is incorrect because arbitrary 12-word constraints starve the model of essential context.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 22,
+    "subtopic": "Web Artifacts as Prototyping Vehicles",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 9: The loop: ideate, prototype, feedback, refine (Lines 797-806)",
+    "scenario": "A clinic administrator wants a lightweight visual interface to track weekly patient wait times. Instead of waiting six months for the hospital's central IT department to build a custom application, she asks Claude to create an 'artifact.' What is an artifact in this operational context?",
+    "options": {
+      "A": "A physical encrypted USB hardware drive delivered by postal mail from the cloud vendor.",
+      "B": "A raw hexadecimal core memory dump generated during catastrophic model inference errors.",
+      "C": "A small, self-contained working web page application rendered and running directly inside the chat.",
+      "D": "A legal patent registration document filed with the government trade licensing bureau."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 9. The glossary and text define an artifact: 'An artifact is a small working web page the assistant builds inside the chat.' It allows non-technical business teams to prototype interactive widgets, dashboards, and calculators in seconds without dedicated software developers.",
+      "distractor_A": "Option A is incorrect because artifacts are software rendering assets within the browser, not physical postal USB drives.",
+      "distractor_B": "Option B is incorrect because artifacts are functional web interfaces (HTML/CSS/JS), not low-level binary crash dumps.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because artifacts have no connection to patent office intellectual property filings."
+    }
+  },
+  {
+    "id": 23,
+    "subtopic": "The Middle Failing Cycle in Build Loops",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 9: The loop: ideate, prototype, feedback, refine (Lines 807-830)",
+    "scenario": "During Cycle 2 of an internal dashboard build, an analytics team requests a date-range filter and a totals row. The artifact updates cleanly with polished formatting, but an analyst notices the totals row figures do not add up. Why is this silent calculation discrepancy considered particularly dangerous in automated deliverables?",
+    "options": {
+      "A": "It produces no error message; because the text looks confident and formatted, it easily bypasses review.",
+      "B": "It immediately deletes all underlying historical database records stored across the local network.",
+      "C": "It permanently locks the user's browser session, requiring an operating system reinstallation.",
+      "D": "It alerts external regulatory authorities of financial non-compliance through automated alerts."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 9. The text highlights why Cycle 2 is the most realistic hazard: 'Cycle 2 fails with no noise, which is the point. A loud failure teaches you nothing, because an error message tells you where to look. The realistic failure in a build loop is the one that passes review, because the output was smooth, formatted, and confident. It reaches real use because there was nothing to catch it.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because conversational artifacts operate in isolated browser environments and cannot wipe network databases.",
+      "distractor_C": "Option C is incorrect because client browser sessions do not lock or require OS reinstalls.",
+      "distractor_D": "Option D is incorrect because conversational artifacts do not broadcast automated non-compliance alerts to regulators."
+    }
+  },
+  {
+    "id": 24,
+    "subtopic": "The Escalation Signal: When a Tool Outgrows Prompting",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 10: When it has outgrown prompt-and-iterate (Lines 831-840)",
+    "scenario": "A financial planning analyst creates an ingenious spreadsheet auditing prompt in Claude. Six months later, four departments rely on this prompt every Monday morning, and the CFO includes its outputs in quarterly board packs. How should the enterprise evaluate this operational milestone?",
+    "options": {
+      "A": "It represents an unauthorized security breach that requires immediate disciplinary termination of the analyst.",
+      "B": "It has hit the escalation signal; external dependency means it has become infrastructure needing engineering.",
+      "C": "The prompt should be immediately deleted because business teams are prohibited from using AI for board reports.",
+      "D": "The analyst should simply paste more exclamation marks into the prompt to guarantee 100% system uptime."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 10. The text explains: 'Dependency is the escalation signal, which means the point where a tool has outgrown prompt-and-iterate. Once other people rely on something as infrastructure, it has requirements it never had before. Uptime, access control, somebody to call when it breaks, and a guarantee that it still does today what it did in March. That work belongs with developer or architect expertise.'",
+      "distractor_A": "Option A is incorrect because widespread adoption is a sign of immense value, not an infraction requiring termination.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because AI outputs are widely used for executive reporting provided they are engineered and governed properly.",
+      "distractor_D": "Option D is incorrect because infrastructure stability requires software engineering, not prompt punctuation tweaks."
+    }
+  },
+  {
+    "id": 25,
+    "subtopic": "Disentangling Dependency vs. Repetition Signals",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 10: When it has outgrown prompt-and-iterate (Lines 841-864)",
+    "scenario": "A senior AI systems designer distinguishes between two operational milestones: (Signal A) 'Other departments now depend on this tool for weekly operations', and (Signal B) 'I have solved this identical data reformatting task the same way three times.' What architectural destinations correspond to each signal?",
+    "options": {
+      "A": "Signal A requires deleting the workflow; Signal B requires purchasing enterprise mainframes.",
+      "B": "Signal A requires clearing browser cookies; Signal B requires downgrading model account tiers.",
+      "C": "Signal A requires developer engineering (infrastructure); Signal B requires a codified worker.",
+      "D": "Signal A requires manual pencil recalculation; Signal B requires deploying autonomous robots."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 10. The summary table clearly separates the two signals: 'Other people now depend on this $\\rightarrow$ It is infrastructure and needs engineering $\\rightarrow$ Developer or architect expertise.' In contrast: 'I have solved this the same way three times $\\rightarrow$ The shape is stable and can be manufactured $\\rightarrow$ From One-Off to Worker.'",
+      "distractor_A": "Option A is incorrect because successful tools should be engineered rather than deleted, and mainframes are unnecessary.",
+      "distractor_B": "Option B is incorrect because browser cookies and model downgrades do not address organizational scaling or process codification.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because neither signal relates to manual recalculation or physical robotics."
+    }
+  },
+  {
+    "id": 26,
+    "subtopic": "The Diagnostic Sequence: Cheapest First",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Concept 12: The sequence runs cheapest first (Lines 939-963)",
+    "scenario": "A marketing specialist generates a product announcement draft with Claude, but the output sounds bland and generic. His immediate reaction is to switch from a standard model to the most expensive model tier available. Why does Section 12 condemn this instinct?",
+    "options": {
+      "A": "Generic outputs are caused exclusively by hardware power surges occurring at server facilities.",
+      "B": "The most capable model tiers are strictly prohibited from generating commercial marketing copy.",
+      "C": "Switching model tiers corrupts the underlying company brand voice documents in the knowledge base.",
+      "D": "It runs the sequence backwards, jumping to expensive rungs before checking under-specification."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 12. The text instructs: 'Picture the five steps as a ladder, with the cheapest check at the top. Most people run it backwards. The instinct on a disappointing output is to switch to the most capable model, or to declare the task impossible. Both are moves from the bottom of the ladder, made before anything at the top was checked.' Checking the prompt for under-specification takes seconds and costs nothing.",
+      "distractor_A": "Option A is incorrect because bland text is a symptom of vague prompts, not data center electrical surges.",
+      "distractor_B": "Option B is incorrect because capable model tiers excel at marketing copy once properly specified.",
+      "distractor_C": "Option C is incorrect because selecting a different model version has zero impact on stored knowledge base files.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 27,
+    "subtopic": "Timing Taxonomy: Under-Specification",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Concept 11: Four causes, told apart by when the symptom appeared (Lines 878-902)",
+    "scenario": "A logistics dispatcher inputs a freight pickup request into a fresh chat. The very first response completely omits mandatory reefer temperature limits and delivery time windows. According to the timing taxonomy in Section 11, what is the primary diagnosis and immediate cheap confirmation?",
+    "options": {
+      "A": "Context overload; confirm by continuing the conversation for twenty additional turns to test it.",
+      "B": "Under-specification; confirm by re-reading the prompt to verify whether constraints were stated.",
+      "C": "Wrong model tier; confirm by immediately upgrading to an expensive scientific reasoning version.",
+      "D": "Stale configuration; confirm by requesting that the corporate IT department re-install server OS."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 11. Under the timing taxonomy: 'Wrong from the first answer $\\rightarrow$ First hypothesis: Under-specification $\\rightarrow$ Cheap confirmation: Re-read the prompt. Is the missing thing actually in it? $\\rightarrow$ Fix: Add what it left out.' If a critical constraint is missing on turn 1, it was almost certainly omitted from the user's prompt.",
+      "distractor_A": "Option A is incorrect because context overload occurs in long sessions, not on turn 1 of a brand-new chat.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because upgrading model tiers cannot supply constraints that were never written in the prompt.",
+      "distractor_D": "Option D is incorrect because OS reinstalls have no connection to prompt drafting errors."
+    }
+  },
+  {
+    "id": 28,
+    "subtopic": "Timing Taxonomy: Context Overload",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Concept 11: Four causes, told apart by when the symptom appeared (Lines 881-882, 903-910)",
+    "scenario": "A clinical research associate conducts a multi-hour session analyzing forty medical trials. For the first fifteen trials, the assistant followed the required 6-column reporting format perfectly. By trial thirty, the model begins omitting columns and drifting into unstructured prose. How should this be diagnosed and resolved?",
+    "options": {
+      "A": "Context overload; restart the session in a fresh chat using a concise summary of the established format.",
+      "B": "Under-specification; rewrite the original prompt using aggressive capitalization and threatening language.",
+      "C": "Hardware disk fragmentation; instruct the cloud provider to run defragmentation on client storage nodes.",
+      "D": "Expectation mismatch; permanently declare medical trial analysis an impossible task for generative AI."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 11. Timing diagnostic: 'Started fine, then degraded $\\rightarrow$ First hypothesis: Context overload $\\rightarrow$ Cheap confirmation: Restate the instruction in a fresh session. Does it hold? $\\rightarrow$ Fix: Restart or summarise.' As conversation history approaches the context window limit, earlier instructions lose attention weight.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because the prompt was already proven effective in the first 15 trials; aggressive language does not fix token limits.",
+      "distractor_C": "Option C is incorrect because conversational degradation is a token window phenomenon, not cloud disk fragmentation.",
+      "distractor_D": "Option D is incorrect because the task succeeded for 15 trials, proving it is entirely feasible within manageable context sizes."
+    }
+  },
+  {
+    "id": 29,
+    "subtopic": "Timing Taxonomy: Wrong Feature or Model",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Concept 11: Four causes, told apart by when the symptom appeared (Lines 883-884, 911-918)",
+    "scenario": "An inventory auditor asks Claude to reconcile quarterly store stock numbers. On every single run across multiple fresh chats, the totals in the final summary table are off by small amounts ($12 here, $45 there). What diagnosis fits this specific repeatable error pattern?",
+    "options": {
+      "A": "Under-specification; the auditor failed to provide his personal corporate job title in the prompt.",
+      "B": "Wrong feature; calculation was requested in prose text instead of routing to code execution.",
+      "C": "Context overload; the model's neural network suffered memory loss from processing numbers.",
+      "D": "Sycophantic drift; the model intentionally flattens numbers to please the inventory auditor."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 11. Timing taxonomy: 'One repeatable error type $\\rightarrow$ First hypothesis: Wrong feature or model $\\rightarrow$ Cheap confirmation: Run the step once with the right feature or a stronger tier $\\rightarrow$ Fix: Change the feature or the tier.' The chapter notes: 'Numbers slightly off means a calculation was asked for in prose.' Routing the calculation to code execution resolves it.",
+      "distractor_A": "Option A is incorrect because adding the auditor's job title does not turn probabilistic language generation into deterministic arithmetic.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because fresh chats eliminate context overload.",
+      "distractor_D": "Option D is incorrect because arithmetic variance is a natural property of language models generating math tokens, not intentional flattery."
+    }
+  },
+  {
+    "id": 30,
+    "subtopic": "Timing Taxonomy: Stale Configuration",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Concept 11: Four causes, told apart by when the symptom appeared (Lines 885-886, 919-938)",
+    "scenario": "A regional procurement office uses a dedicated Project workspace to draft purchase agreements. Throughout 2025, every contract generated was 100% compliant. In March 2026, contracts begin failing legal review because they reference obsolete statutory threshold limits. Nobody modified the prompt. What failure occurred?",
+    "options": {
+      "A": "Stale configuration; files in the Project knowledge base expired when statutory limits changed externally.",
+      "B": "Under-specification; the procurement officer forgot to include the word 'urgent' in the prompt header.",
+      "C": "Context overload; the procurement workspace accumulated too many saved chat sessions over the year.",
+      "D": "Model quantization; the cloud vendor permanently downgraded the floating-point precision of all servers."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 11. Timing diagnostic: 'Used to work, now does not $\\rightarrow$ First hypothesis: Stale configuration $\\rightarrow$ Cheap confirmation: Open the instruction or knowledge source and check its date $\\rightarrow$ Fix: Maintenance on the configuration.' Stale configuration fails silently because the model quotes outdated files perfectly without knowing the law changed.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because adding emotional urgency tags does not update statutory threshold numbers.",
+      "distractor_C": "Option C is incorrect because the number of past chat sessions does not alter the content of the active knowledge base files.",
+      "distractor_D": "Option D is incorrect because the error stems from factual changes in the law, not hardware quantization changes."
+    }
+  },
+  {
+    "id": 31,
+    "subtopic": "The Three Signals of Workflow Friction",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Concept 15: Find the friction before you optimize (Lines 1102-1136)",
+    "scenario": "An IT operations consultant audits an enterprise customer support team to identify workflow friction. Which three observable signals does Section 15 instruct the consultant to look for?",
+    "options": {
+      "A": "Sub-sampling (dropping data rows), Quantization (low memory precision), and Overfitting (memorizing training data).",
+      "B": "Latency (slow browser rendering), Ingestion (large file uploads), and Serialization (JSON format errors).",
+      "C": "Repetition (pasting the same text), Correction (fixing the same flaw), and Variance (differing results across staff).",
+      "D": "Encryption (managing SSL certs), Authentication (MFA logins), and Deprecation (obsolete programming languages)."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 15. The text explicitly defines the three signals of friction: 'Repetition: You paste or type the same thing every run $\\rightarrow$ Fix: Saved context or standing instruction. Correction: You fix the same flaw in every output $\\rightarrow$ Fix: Configuration change. Variance: Different people running the same task get different results $\\rightarrow$ Fix: Shared Skill or knowledge base.'",
+      "distractor_A": "Option A is incorrect because sub-sampling, quantization, and overfitting are machine learning model training terms.",
+      "distractor_B": "Option B is incorrect because latency, ingestion, and serialization are software technical metrics, not operational workflow friction signals.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because encryption, authentication, and deprecation relate to general IT security infrastructure."
+    }
+  },
+  {
+    "id": 32,
+    "subtopic": "Variance: The Friction Between People",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 15: Find the friction before you optimize (Lines 1126-1136)",
+    "scenario": "Four credit risk analysts prepare weekly loan portfolio memos using Claude. Each analyst's individual output is internally consistent, yet the risk committee chair spends three hours every Monday reconciling different formatting layouts, metrics, and section orders. Why did the analysts fail to notice this friction?",
+    "options": {
+      "A": "Individual user accounts operate on different physical GPU microchips that alter formatting rules.",
+      "B": "Credit analysts are mathematically prohibited from inspecting spreadsheets prepared by colleagues.",
+      "C": "The language model intentionally alters formatting between users to prevent corporate plagiarism.",
+      "D": "Variance exists only between people, so the cost is invisible to individuals and lands on reviewers."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 15. The chapter explains: 'Variance is the one teams miss, because no individual feels it. The inconsistency exists only between people, so it shows up at the reviewer.' Each analyst produced a great report that suited them; only the final reviewer suffered the friction of reconciling four disparate formats.",
+      "distractor_A": "Option A is incorrect because GPU hardware architecture does not dictate document layout formatting.",
+      "distractor_B": "Option B is incorrect because organizational analysts regularly collaborate and share financial spreadsheets.",
+      "distractor_C": "Option C is incorrect because models do not vary formatting to thwart plagiarism; variance occurs because prompts lack shared configuration.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 33,
+    "subtopic": "Friction Removal Sequencing: Consolidate Before Promote",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 15: Find the friction before you optimize (Lines 1138-1145)",
+    "scenario": "A business process engineer plans to optimize a multi-step customer complaint triage flow. Currently, agents submit three separate conversational prompts to extract facts, categorize complaints, and check account statuses. What engineering sequence does Section 15 mandate?",
+    "options": {
+      "A": "Consolidate the three prompts into a single step first, then promote the remaining pattern to setup.",
+      "B": "Promote all three separate prompts into individual Skills first, then attempt to merge them later on.",
+      "C": "Deploy five parallel autonomous agent instances before evaluating whether steps can be consolidated.",
+      "D": "Replace all conversational interactions with hardcoded deterministic SQL database trigger routines."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 15. The text establishes the sequencing rule: 'Consolidation reduces the number of steps. Promotion reduces the cost of the steps that remain. Do them in that order, because promoting a step you were about to merge away is work you did not need to do.' Three prompts sharing the same background should become one prompt before codifying into configuration.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because building three separate Skills for steps that should be consolidated wastes configuration effort.",
+      "distractor_C": "Option C is incorrect because deploying multi-agent swarms over unconsolidated workflows compounds complexity and cost.",
+      "distractor_D": "Option D is incorrect because semantic triage tasks benefit from LLM reasoning rather than rigid SQL triggers."
+    }
+  },
+  {
+    "id": 34,
+    "subtopic": "The Pre-Implementation Baseline Requirement",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 16: Measure the thing you actually care about (Lines 1152-1160)",
+    "scenario": "A legal ops manager redesigns the contract intake workflow with AI. After rollout, executive leadership asks for proof that the redesign delivered meaningful efficiency gains. The manager realizes she never measured the old workflow before launching the tool. Why is estimating the old way retrospectively unacceptable?",
+    "options": {
+      "A": "Without a recorded baseline, the cloud software platform automatically locks the organization's account.",
+      "B": "Federal corporate auditing laws impose severe criminal penalties on unmeasured legal department workflows.",
+      "C": "Language models automatically wipe all historical company operational data when a redesign is implemented.",
+      "D": "Retrospective estimates inevitably flatter the redesign; an objective baseline requires timing the old way beforehand."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 16. The text instructs: 'Measure the before... A baseline is that measurement. Without one you have an improvement you believe in and cannot state, which is the same as no improvement the first time a manager asks. It costs one cycle. Run the workflow once, unchanged, and record three numbers: how long it took, how many revision rounds it needed, and how many manual steps you performed. You cannot rebuild a baseline afterwards, because your estimate of the old way will flatter you.'",
+      "distractor_A": "Option A is incorrect because cloud vendors do not audit or lock accounts based on internal team KPI baselines.",
+      "distractor_B": "Option B is incorrect because workflow efficiency baselines are operational governance tools, not federal criminal statutes.",
+      "distractor_C": "Option C is incorrect because deploying new AI prompts does not delete historical corporate databases.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 35,
+    "subtopic": "Matching Metrics to Purpose & Parallel Runs",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 16: Measure the thing you actually care about (Lines 1161-1200)",
+    "scenario": "A clinical laboratory redesigns its statutory compliance reporting pipeline with AI. A junior consultant recommends optimizing strictly for 'time saved per report.' Why does Section 16 reject 'time saved' as the primary metric for compliance and finance workflows?",
+    "options": {
+      "A": "Time measurements are technically impossible to calculate within browser-based web applications.",
+      "B": "For compliance and finance, accuracy is paramount; one wrong figure costs far more than an hour saved.",
+      "C": "Compliance regulators legally require that all statutory medical reports take at least six hours to write.",
+      "D": "Optimizing for time automatically converts all tabular statistical charts into non-printable text logs."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 16. The metric table specifies: 'A compliance or finance output $\\rightarrow$ Optimize for: Accuracy $\\rightarrow$ Because: One wrong figure costs more than an hour saved.' In high-stakes regulatory environments, speed is secondary to flawless factual and mathematical correctness.",
+      "distractor_A": "Option A is incorrect because elapsed time is easily tracked using basic timers or timesheet entries.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because regulators mandate accuracy and substantive compliance, not artificial delay durations.",
+      "distractor_D": "Option D is incorrect because optimizing prompt workflows for speed does not alter document chart rendering capabilities."
+    }
+  },
+  {
+    "id": 36,
+    "subtopic": "First-Hour Incident Protocol: Stop, Scope, Tell, Map",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 17: When a bad output gets out (Lines 1206-1225)",
+    "scenario": "A commercial property management AI workflow erroneously sends 45 inaccurate tenant rental escalation letters before anyone catches the mistake. What four structured actions must the workflow designer have established in advance to manage the first hour of this incident?",
+    "options": {
+      "A": "Reinstalling the workstation operating system, resetting network routers, and changing Wi-Fi passwords.",
+      "B": "Deleting all employee email accounts, shredding physical lease files, and denying the incident publicly.",
+      "C": "How the workflow gets halted, scoping affected outputs, who must be notified, and updating the map.",
+      "D": "Issuing formal public press releases to national news agencies before checking the underlying data files."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 17. The first-hour incident procedure mandates four advance decisions: '1. How it gets stopped (fastest way to halt, who can act without permission); 2. What is already out (scope check: how many outputs affected and where they went); 3. Who is told, and by when (internal owner, customer, risk/compliance); 4. What changes in the map (record the fix with a date so it outlasts the week).' Decisions 1 and 4 are made at design time or not at all.",
+      "distractor_A": "Option A is incorrect because local Wi-Fi passwords and OS reinstalls do not address enterprise output tracking or tenant notifications.",
+      "distractor_B": "Option B is incorrect because deleting records and issuing public denials represents criminal obstruction and catastrophic governance failure.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because premature public press broadcasts before scoping the issue cause unwarranted reputational panic."
+    }
+  },
+  {
+    "id": 37,
+    "subtopic": "The Delegation Map Owner and Scheduled Read",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 8: Who owns the map, and when it is read again (Lines 736-777)",
+    "scenario": "An enterprise risk director reviews twenty department delegation maps. She notices that while review gates and standing instructions were configured meticulously on day one, sixteen maps now fail because review gates decayed into rubber stamps and instructions went stale. What structural absence caused this failure?",
+    "options": {
+      "A": "The cloud provider's terms of service automatically expire all configured workflow maps after thirty days.",
+      "B": "The departments failed to execute daily 500-question automated regression test suites on the models.",
+      "C": "The maps lacked a single named map owner and a scheduled read date to audit operational reality.",
+      "D": "The organization neglected to install physical hardware surveillance cameras in employee offices."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 8. The text explains: 'Three controls in this course decay the same way: A review gate, a standing instruction, and the map itself... The one answer to a failure with no signal is a scheduled read, which means a review of the map on a fixed date... The map needs two things most maps do not have: An owner (one named person answerable for whether the map still describes reality) and a review date (quarterly default).' Without an owner and a calendar date, maps decay silently.",
+      "distractor_A": "Option A is incorrect because cloud vendors do not expire internal markdown or document maps.",
+      "distractor_B": "Option B is incorrect because massive daily regression test suites do not check whether human review gates are being rubber-stamped.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because video surveillance does not assess workflow delegation validity or template currency."
+    }
+  },
+  {
+    "id": 38,
+    "subtopic": "The 4-Question Map Review Protocol",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 8: Who owns the map, and when it is read again (Lines 778-787)",
+    "scenario": "During a scheduled quarterly delegation map review, a map owner evaluates an ongoing insurance claim workflow. Which specific question from Section 8 is engineered to uncover unstaffed gates that look compliant on paper?",
+    "options": {
+      "A": "'What is the exact floating-point mathematical calculation speed of the cloud server cluster?'",
+      "B": "'For every collaborative step: who reviewed it last week, and how long did they spend?'",
+      "C": "'How many total prompt tokens were ingested across all department employee accounts this year?'",
+      "D": "'Which employee submitted the highest number of vacation day requests during the previous quarter?'"
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 8. Question 2 of the 4-question review protocol asks: 'For every collaborative step: who reviewed it last week, and how long did they spend? If nobody can answer, the step is automated and the map is wrong. Question 2 finds the real problems. It asks about last week rather than about policy, because policy is what the map already says and last week is what happened.'",
+      "distractor_A": "Option A is incorrect because cloud cluster FLOPS do not indicate whether human reviewers are inspecting drafts.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because total ingested token counts do not evaluate human gate integrity.",
+      "distractor_D": "Option D is incorrect because HR vacation tracking does not assess collaborative workflow gate compliance."
+    }
+  },
+  {
+    "id": 39,
+    "subtopic": "Communicating AI Workflows: Avoiding Dangerous Phrases",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 18: Say what it does, then name the gate (Lines 1226-1240)",
+    "scenario": "A hospital IT administrator presents a newly deployed AI clinical discharge workflow to the medical board. In his opening slide, he announces: 'This system is fully automated, AI handles patient discharge summaries, and it is basically as good as a physician.' Why does Section 18 condemn this framing?",
+    "options": {
+      "A": "Describing AI to medical boards requires using raw Latin clinical nomenclature in every slide bullet.",
+      "B": "Medical boards are legally required to reject any presentation containing fewer than one hundred slides.",
+      "C": "The term 'automated' automatically invalidates all professional medical malpractice insurance coverage.",
+      "D": "These three phrases overstate capabilities, hide human review gates, and destroy trust on the first visible miss."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 18. The text warns against three specific phrases: '\"Fully automated\" (almost never true, and the first visible error exposes it in public); \"AI handles X\" (drops the human gate out of the sentence; whoever hears it believes there is no gate); \"It's basically as good as a person at Y\" (sets a standard the tool will eventually miss). The repair is the same every time: State what the tool does, then name the human checkpoint.'",
+      "distractor_A": "Option A is incorrect because clear, precise English is standard for hospital administrative governance.",
+      "distractor_B": "Option B is incorrect because presentation length is not a legal compliance mandate.",
+      "distractor_C": "Option C is incorrect because professional insurance policies depend on actual medical supervision, though overstating automation creates severe regulatory liability.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 40,
+    "subtopic": "The Refusal Boundary: Proving Designed Controls",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 18: Say what it does, then name the gate (Lines 1241-1265)",
+    "scenario": "A corporate legal tech director presents an AI-assisted contract review pipeline to an external enterprise client's risk committee. To win their confidence, what third element does Section 18 mandate she include alongside stating what the tool does and naming the human gate?",
+    "options": {
+      "A": "Say what the workflow refuses: explicit edge cases, unclear clauses, or requests it is built to decline.",
+      "B": "Guarantee that the AI model will achieve zero false positives and zero false negatives in perpetuity.",
+      "C": "Provide the personal home phone numbers and residential addresses of the software developers.",
+      "D": "Offer an unconditional contractual commitment that no human attorney will ever inspect contract terms."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 18. The text mandates: 'Add a third clause when the audience is deciding whether to trust the workflow at all. Say what it refuses. Every well-designed workflow has cases it is built to decline and hand to a person. The unclear clause, the unusual contract, the request outside the playbook. Naming that list proves the boundary was designed in advance rather than found by an incident... Stakeholders trust an AI workflow more, not less, when the human checkpoints are explicit.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because promising zero errors is impossible with probabilistic LLMs and destroys credibility.",
+      "distractor_C": "Option C is incorrect because developer personal addresses violate privacy and have no bearing on workflow controls.",
+      "distractor_D": "Option D is incorrect because eliminating attorney review increases legal risk rather than mitigating it."
+    }
+  }
+]
+
+def main():
+    out_dir = os.path.dirname(os.path.abspath(__file__))
+    json_path = os.path.join(out_dir, "questions.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(QUESTIONS, f, indent=2, ensure_ascii=False)
+    print(f"[+] Successfully wrote {len(QUESTIONS)} questions to {json_path}")
+
+if __name__ == "__main__":
+    main()

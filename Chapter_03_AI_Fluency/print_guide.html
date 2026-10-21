@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Panaversity PCAO-F & Anthropic CCAO-F Study Guide: AI_Fluency</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+    @bottom-right {
+      content: counter(page);
+      font-size: 9pt;
+      font-family: Arial, sans-serif;
+      color: #64748b;
+    }
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    font-size: 10pt;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-cover {
+    text-align: center;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e0e7ff;
+    color: #3730a3;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: 20pt;
+    margin: 8px 0;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 10pt;
+    color: #64748b;
+  }
+
+  .section-divider {
+    page-break-before: always;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .q-item {
+    page-break-inside: avoid;
+    margin-bottom: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 14px;
+    background: #f8fafc;
+  }
+
+  .q-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #475569;
+    font-weight: bold;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+
+  .q-num {
+    color: #4338ca;
+  }
+
+  .q-scenario {
+    font-size: 9.8pt;
+    line-height: 1.5;
+    color: #0f172a;
+    margin-bottom: 10px;
+  }
+
+  .options-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .opt-row {
+    font-size: 9.2pt;
+    line-height: 1.4;
+    padding: 3px 0;
+    vertical-align: top;
+  }
+
+  .opt-letter {
+    font-weight: bold;
+    width: 25px;
+    color: #334155;
+  }
+
+  .exp-item {
+    page-break-inside: avoid;
+    margin-bottom: 22px;
+    border-left: 3.5px solid #4338ca;
+    padding-left: 12px;
+  }
+
+  .exp-head {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+
+  .exp-correct {
+    color: #047857;
+    font-weight: bold;
+  }
+
+  .exp-grounding {
+    font-size: 8.5pt;
+    color: #64748b;
+    margin-bottom: 6px;
+  }
+
+  .exp-body {
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1e293b;
+    margin-bottom: 6px;
+  }
+
+  .flaw-list {
+    font-size: 8.5pt;
+    line-height: 1.4;
+    color: #475569;
+    padding-left: 16px;
+    margin-top: 4px;
+  }
+
+  .flaw-list li {
+    margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header-cover">
+    <div class="badge">Official Exam Blueprint Preparation Guide</div>
+    <h1>Panaversity PCAO-F & Anthropic CCAO-F</h1>
+    <div style="font-size: 13pt; font-weight: 600; color: #4338ca; margin-bottom: 6px;">
+      Chapter: AI_Fluency
+    </div>
+    <div class="meta">
+      40 High-Yield Scenario-Based Examination Items &bull; Cut Score: 720 / 1,000 (72%) &bull; Psychometric Standard
+    </div>
+  </div>
+
+  <div style="margin-bottom: 24px; padding: 10px 14px; background: #eef2ff; border-radius: 6px; font-size: 9pt; border-left: 3px solid #6366f1;">
+    <strong>Examination Instructions:</strong> Part 1 contains 40 numbered scenario-based items with zero answers or spoilers. Complete Part 1 under simulated exam conditions (target time: 60 minutes). Then consult Part 2 for the official answer keys, direct source citations, and comprehensive distractor dissections.
+  </div>
+
+  <div class="section-title">PART 1: QUESTIONS ONLY (SPOILER-FREE SIMULATION)</div>
+  <div style="margin-bottom: 16px;"></div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 1</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Core AI Fluency: Effective, Efficient, Ethical, Safe</span>
+    </div>
+    <div class="q-scenario">Two financial analysts at a commercial bank subscribe to the identical advanced generative model. Analyst A generates a client risk assessment in ten minutes that is immediately approved by compliance. Analyst B spends four hours generating dozens of verbose revisions, ultimately discarding the output due to unverified regulatory claims. What core principle distinguishes their outcomes?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Analyst A utilized proprietary prompt tokens that bypassed the foundation model's public safety guardrails.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Commercial reasoning engines dynamically allocate higher compute bandwidth to accounts with lower error logs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Working with AI reflects human decision quality across efficiency, safety, and goal attainment rather than system access.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Enterprise model tiers automatically calibrate statistical confidence to match the user's institutional rank.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 2</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Stateless Nature & Working Memory vs Human Learning</span>
+    </div>
+    <div class="q-scenario">A clinical research administrator instructs an assistant on Monday regarding institutional formatting rules for pediatric oncology trial reports. When opening a fresh chat on Thursday to draft a new protocol, the assistant reverts to generic adult oncology formatting. What architectural attribute explains this behavioral reset?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The model is stateless across independent chats, requiring contextual constraints to be re-supplied each time.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant detected conflicting medical formatting standards across published clinical research guidelines.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The enterprise platform cleared user working memory caches following an automated server security overhaul.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The model token consumption optimizer automatically purged low-frequency pediatric terminology branches.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 3</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Economic Efficiency & Token Conservation</span>
+    </div>
+    <div class="q-scenario">A legal consultancy audits an enterprise lease summarization workflow. Staff members routinely paste entire 300-page lease agreements into a general chat window with generic prompts like 'summarize key risks', forcing the model to repeatedly re-read full texts across dozens of iterative questions. Why is this workflow flagged as inefficient?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It violates statutory commercial standards requiring all contracts to be summarized exclusively by human lawyers.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It permanently degrades foundation model weights by filling shared global context buffers with private data.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It triggers automatic model hallucination subroutines whenever ingested token volume exceeds ten thousand tokens.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It consumes excessive tokens and compute budget without structured target scoping or information boundaries.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 4</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Three Modalities: Automation (Script Writer)</span>
+    </div>
+    <div class="q-scenario">A municipal logistics coordinator writes a prompt instructing an assistant: 'Extract the delivery date, container serial number, and customs duty amount from this manifest PDF, then format the output into a 3-column CSV table.' What operational work modality and human role does this task illustrate?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Agency, where the model operates autonomously on behalf of third-party clients across future workflows.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Augmentation, where the human and model engage in collaborative exploratory thinking to reach decisions.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Automation, where the user functions as a script writer defining a rigid, repeatable task for the model.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Context engineering, where the platform autonomously synthesizes domain knowledge from external sources.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 5</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Three Modalities: Augmentation (Thinking Partner)</span>
+    </div>
+    <div class="q-scenario">A university department head works with an AI model for two hours to restructure an undergraduate degree program. The department head proposes course sequences, the AI identifies prerequisite bottlenecks, the head challenges its assumptions regarding laboratory hours, and the AI refines its proposal. What operational modality is occurring?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Automation, where the user executes fixed multi-step procedural scripts to extract structured academic data.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Augmentation, where the human and artificial intelligence interact iteratively as co-creative thinking partners.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Delegation, where all course design decisions are fully offloaded to an external artificial intelligence.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Agency, where the system executes autonomous administrative enrollments without direct human supervision.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 6</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Three Modalities: Agency (Director, Future & For Others)</span>
+    </div>
+    <div class="q-scenario">A customer success director configures an assistant: 'Monitor the incoming client support queue overnight. Resolve tier-1 billing inquiries within policy boundaries, flag cancellation threats for morning review, and request my approval before issuing refunds over $100.' What key characteristics define this operational mode?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The system replaces human organizational accountability by assuming legal liability for refund checks.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The model executes continuous real-time model retraining based on sentiment analysis of inbound tickets.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The assistant operates independently in the future and for others within established goal boundaries.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The user maintains synchronous, turn-by-turn verification over every operational decision in the queue.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 7</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Modality Failure Modes: Script Writer vs Director</span>
+    </div>
+    <div class="q-scenario">An e-commerce operations manager transitions a product catalog enrichment task from an automated script (which formatted raw supplier specs) to an autonomous agent (empowered to re-categorize merchandise). The new deployment experiences widespread failures. What is the most likely root cause of this operational breakdown?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The model underlying neural network experienced catastrophic forgetting of previously acquired vocabulary rules.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The system misunderstood broad organizational goals and boundaries rather than making a single tactical error.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The manager failed to provide low-level procedural pseudo-code for every individual catalog categorization event.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The platform context window overflowed due to processing complex structured JSON product schemas simultaneously.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 8</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Delegation: Problem Awareness & Business Questions</span>
+    </div>
+    <div class="q-scenario">A medical clinic administrator wants to deploy an AI agent to handle patient appointment cancellations and rescheduling via text messages. Before drafting any system prompt or selecting software, what primary action must the administrator execute?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Benchmarking inference token latency across competing proprietary and open-source foundation model providers.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Drafting advanced few-shot prompting templates containing simulated patient dialogue examples and medical jargon.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Establishing clinical escalation rules, late cancellation fees, emergency handling protocols, and approval limits.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Configuring vector database indexing pipelines to ingest all past historical clinic patient consultation records.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 9</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Delegation: Boundaries of Authority (Read vs Send)</span>
+    </div>
+    <div class="q-scenario">An accounts receivable team designs an AI agent to follow up on overdue client invoices. During planning, the finance director insists that the agent be permitted to read billing ledgers and draft reminder emails, but strictly prohibited from sending emails or modifying account balances without human sign-off. Why is this distinction critical?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It establishes precise operational boundaries between autonomous computation and mandatory human-in-the-loop approval.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It prevents the foundation model from exceeding its internal token bandwidth quota during external email transmission.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It eliminates the need to provide the agent with accounting terminology definitions or invoice overdue thresholds.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It bypasses corporate compliance auditing requirements by classifying the automated agent as a passive data cache.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 10</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Delegation as Workflow Design vs Offloading</span>
+    </div>
+    <div class="q-scenario">A software engineering director reviews a proposal to 'delegate all pull request code reviews to an autonomous AI bot.' The director rejects the proposal, noting that delegation requires workflow design rather than task offloading. What did the proposal fail to structure?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Structuring which review aspects require human architectural judgment versus automated mechanical syntax checks.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Configuring the bot to automatically approve and merge all pull requests authored by senior development personnel.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Selecting a cloud model provider with sufficient server cluster capacity to compile and execute binary software builds.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Embedding comprehensive dictionary definitions of all programming language keywords directly inside the prompt context.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 11</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Delegation: Non-Promptable Business Decisions</span>
+    </div>
+    <div class="q-scenario">A retail bank develops a loan screening assistant. The project team attempts to prompt the AI to 'independently decide what debt-to-income threshold constitutes an acceptable default risk for small business applicants.' Why is this an operational failure of delegation?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Neural networks cannot perform arithmetic comparisons between applicant debt figures and monthly revenue numbers.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Foundation models automatically default to predatory lending practices when calculating small enterprise interest rates.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Inference APIs prohibit commercial financial institutions from querying models about debt or credit balance data.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Risk tolerance and credit lending thresholds are strategic business policies that humans must explicitly govern.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 12</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Platform Awareness: Matching AI Architecture to Task</span>
+    </div>
+    <div class="q-scenario">A forensic accountant needs to verify whether a multinational conglomerate's regulatory filings in 2026 comply with a newly enacted European trade statute that took effect three weeks ago. Which AI platform capability is essential to delegate this task effectively?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>A frozen base foundation model possessing massive parameter scale but strict historical training data cutoffs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>An autonomous coding agent specialized exclusively in refactoring legacy relational database stored procedures.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>A lightweight embedded model optimized for low-latency offline mobile speech-to-text audio transcriptions.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>A search-enabled assistant capable of retrieving and grounding analysis in current external web publications.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 13</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Platform Awareness: Multi-Step Reasoning Models</span>
+    </div>
+    <div class="q-scenario">A civil engineering consultancy needs to evaluate the structural load distribution of a suspension bridge under complex variable wind shear and thermal expansion scenarios involving hundreds of interdependent equations. What system architecture does platform awareness dictate?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>An unguided autonomous web-scraping agent programmed to aggregate unverified public civil engineering forums.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>A consumer text auto-complete extension integrated directly into a standard desktop word processing software.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>A high-speed conversational chat assistant optimized for rapid creative brainstorming and informal dialogue.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>A dedicated reasoning model that executes extended multi-step internal verification chains before outputting results.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 14</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Task Delegation Matrix: Human vs AI Ownership</span>
+    </div>
+    <div class="q-scenario">A medical publishing house outlines the workflow for developing a new clinical immunology training program. Which distribution of responsibilities correctly aligns human authority with AI capabilities?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Humans delegate full publication copyright and final sign-off authority to an autonomous educational agent architecture.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Humans determine learning goals and clinical accuracy; AI assists in proposing structures and drafting review sections.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>AI establishes core pedagogical goals and ethical boundaries; humans handle mechanical spelling and grammar cleanup.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>AI independently verifies medical trial factual veracity; humans generate initial rapid drafts without clinical review.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 15</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; Task Delegation: Lived Experience & Local Nuance</span>
+    </div>
+    <div class="q-scenario">A public health agency creates a community health brochure regarding seasonal waterborne illnesses for rural clinics. The communications team uses an advanced model to draft the informational medical copy. When localizing the brochure, why must human staff retain ownership over the contextual case examples?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Foundation models are strictly prohibited by international treaty from referencing regional geographical locations.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The foundation model lacks lived human experience, local cultural context, and regional community trust dynamics.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Commercial language models automatically encrypt output text when regional dialects are detected in system prompts.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Inference token algorithms experience computational arithmetic errors when translating medical concepts into Urdu.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 16</span>
+      <span>Domain 2: Prompt Engineering & In-Context Learning &bull; Product Description: Completeness Over Cleverness</span>
+    </div>
+    <div class="q-scenario">A venture capital associate needs an executive briefing on a 150-page renewable energy startup filing. Instead of typing 'Summarize this report like an expert,' she specifies: 'Summarize for our investment committee in 3 bulleted pages; cover capital expenditure, patented tech, and regulatory risks; exclude generic marketing jargon.' What prompt design principle is demonstrated?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Product completeness regarding format, audience, and boundaries matters far more than clever prompt phrasing.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Negative constraints such as excluding marketing copy guarantee that the foundation model will never hallucinate.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Specifying executive committee personas automatically forces the model to verify startup balance sheet figures.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Embedding explicit word count ceilings triggers internal chain-of-thought mathematical reasoning subroutines.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 17</span>
+      <span>Domain 2: Prompt Engineering & In-Context Learning &bull; Product Description: Audience and Length Constraints</span>
+    </div>
+    <div class="q-scenario">A hospital safety officer prompts an assistant to summarize a 40-page hazardous chemical spill protocol. The prompt omits the target audience, reading time constraint, and operational use-case. The assistant returns a 15-page academic essay detailing chemical molecular bonds. Why did the model produce this suboptimal output?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The safety officer failed to use specialized system engineering markup tags required for medical prompting.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The model underlying neural weights prioritize organic chemistry theory over practical clinical procedures.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Because AI works only from available context, leaving unstated parameters forces the model to guess intent.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The hospital network firewall automatically stripped operational directive headers from the prompt payload.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 18</span>
+      <span>Domain 2: Prompt Engineering & In-Context Learning &bull; Product Description: Context & Empathy Factors</span>
+    </div>
+    <div class="q-scenario">A community sports coordinator drafts two separate prompts requesting a welcome email for new participants. Prompt 1 asks for a general welcome message. Prompt 2 specifies nervous beginners riding in heavy morning traffic, a warm reassuring tone, zero exclamation marks, under 150 words, and a note about the weekend assembly point. Why does Prompt 2 produce significantly superior copy?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Prompt 2 utilized emotional sentiment tokens that bypass the model standard conversational token limits.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Prompt 2 accessed an authenticated proprietary database of athletic club communication templates.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Prompt 2 provided detailed situational context, audience empathy factors, and explicit negative constraints.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The model applied advanced reinforcement learning updates during inference to personalize its core weights.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 19</span>
+      <span>Domain 2: Prompt Engineering & In-Context Learning &bull; Product Description: Explicit Exclusions & Negative Constraints</span>
+    </div>
+    <div class="q-scenario">A corporate communications director instructs an assistant to draft a press release regarding an internal restructuring. The prompt explicitly includes: 'Do not use corporate buzzwords such as synergy, right-sizing, or paradigm shift; do not mention unannounced product roadmaps.' Why are explicit exclusions a key component of product description?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>They establish definitive negative boundaries that prevent the model from drifting into clichéd content.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>They eliminate the requirement for human legal review by guaranteeing compliance with international press codes.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>They purge the foundation model pre-trained vocabulary vectors of corporate jargon across the entire session.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>They force the inference engine to utilize lower-temperature sampling algorithms for the remainder of the query.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 20</span>
+      <span>Domain 2: Prompt Engineering & In-Context Learning &bull; Process Description: Staged Multi-Step Order of Operations</span>
+    </div>
+    <div class="q-scenario">A procurement manager must evaluate three competing IT vendor proposals across cost, SLA guarantees, and data sovereignty. Instead of submitting all three proposals and requesting an immediate recommendation, the manager instructs the assistant to extract facts into a structured table, verify the cells, and stop before scoring. Why is this staged process critical?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Splitting the task bypasses commercial cloud inference rate limits applied to multi-document comparisons.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Staged processing eliminates the operational requirement for human verification of vendor price quotes.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Separating extraction from evaluation prevents the model from generating premature recommendations.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Extracting facts into a table forces the model to store vendor bids in persistent browser memory buffers.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 21</span>
+      <span>Domain 2: Prompt Engineering & In-Context Learning &bull; Process Description: Intermediate Verification Checkpoints</span>
+    </div>
+    <div class="q-scenario">A financial auditor uses an assistant to analyze a 200-page corporate financial statement. The auditor structures the prompt: 'First, extract all related-party transactions into a table. Stop and wait for my confirmation before calculating net exposure or drafting findings.' What operational risk is mitigated by this stopping point?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Model parameter corruption, where unverified financial figures alter the underlying weights during inference.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Token rate limit throttling, where continuous generation triggers automated cloud server cooling periods.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Browser session crashes, where simultaneous extraction and calculation exceed workstation physical RAM.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Compounding errors, where unverified extraction mistakes distort all downstream calculations and summaries.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 22</span>
+      <span>Domain 2: Prompt Engineering & In-Context Learning &bull; Performance Description: Few-Shot Examples vs Abstract Adjectives</span>
+    </div>
+    <div class="q-scenario">A marketing lead wants an assistant to draft product release notes in the company's precise brand voice. The lead considers writing: 'Write in a witty, punchy, professional, and sophisticated tone.' How should the lead improve this performance description?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Upgrade the user account to a dedicated enterprise tier that natively enforces corporate brand identity.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Command the assistant to run an automated web search across social media to evaluate current slang trends.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Append ten additional synonyms for witty and sophisticated to ensure the semantic embedding vector is dense.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Provide two concrete examples of approved release notes alongside two examples of rejected release notes.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 23</span>
+      <span>Domain 2: Prompt Engineering & In-Context Learning &bull; Performance Description: Measurable Quality Rubrics</span>
+    </div>
+    <div class="q-scenario">An insurance claims supervisor instructs an assistant to summarize customer incident reports. Which instruction represents an objective, measurable performance criterion rather than a vague qualitative request?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Include date of loss, policy number, estimated damage amount, and police report ID in bullet points.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Ensure the incident summary is completely comprehensive, exceptionally thorough, and deeply insightful.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Produce a high-quality summary that meets the highest professional standards of modern insurance practice.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Write the summary using a dynamic and engaging narrative voice that captures the customer's true emotion.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 24</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Output Discernment: Surface Fluency vs Truth</span>
+    </div>
+    <div class="q-scenario">A junior financial analyst receives an AI-generated equity research memo. The text is beautifully structured, features immaculate grammar, and uses sophisticated investment terminology, but contains an invented EBITDA margin figure. Why did the analyst initially accept the report as accurate?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The junior analyst verified the EBITDA margin against primary audited filings before submission.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The foundation model was operating with a temperature parameter of zero, guaranteeing factual precision.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The analyst fell into the fluency trap, mistaking grammatical elegance and confidence for factual truth.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The analyst used a consumer browser account rather than an authenticated enterprise API connector.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 25</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Output Discernment: The Fact-Checking Sequence</span>
+    </div>
+    <div class="q-scenario">An investigative journalist reviews an AI-generated briefing on municipal real estate zoning decisions. What sequence of actions represents rigorous output discernment?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Submit the briefing to a second AI assistant and accept the text if the second model praises the draft.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Identify factual claims, trace them to primary municipal records, challenge anomalies, and decide.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Skim the text for grammatical errors, check sentence length, format fonts, and immediately publish.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Paste the briefing into an automated grammar checker and approve all sections scoring above ninety.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 26</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Process Discernment: Detecting Model Drift & Context Rot</span>
+    </div>
+    <div class="q-scenario">A software engineer engages in a 40-turn chat to debug a complex distributed database issue. By turn 35, the assistant begins suggesting database configurations that directly contradict architectural constraints established in turn 2. What operational issue has occurred?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The assistant was fine-tuned in real time on conflicting database management documentation online.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The conversation outgrew the context window, causing early constraints to be pushed out or diluted.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The server hardware hosting the foundation model experienced permanent memory register degradation.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The engineer utilized deprecated programming keywords that corrupted the active token dictionary.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 27</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Process Discernment: Knowing When to Reset vs Steer</span>
+    </div>
+    <div class="q-scenario">A data analyst notices an assistant repeating a circular calculation error across four consecutive prompts, despite three detailed corrective explanations. According to process discernment, what is the most effective operational move?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Continue the chat and submit identical prompts repeatedly until stochastic sampling breaks the loop.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Add an angry emotional warning in all capital letters threatening to report the model to administrators.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Stop the conversation, open a fresh chat, and re-frame the brief with the calculation formula included.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Switch to an offline image generation model to illustrate the calculation formula graphically.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 28</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Ethical Discernment: Bias, Fairness & Representation</span>
+    </div>
+    <div class="q-scenario">A human resources manager uses an assistant to screen job applicants for leadership positions. The manager notices that the model's summaries consistently highlight assertiveness in male candidates while labeling identical phrasing in female candidates as abrasive. What operational action is required?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Delegate all leadership screening to an external image recognition model to evaluate candidate photos.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Intervene immediately by establishing objective scoring rubrics and removing gender markers from text.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Accept the summaries because generative models reflect purely objective statistical linguistic data.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Instruct the assistant to upgrade its internal token temperature setting to maximize scoring randomness.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 29</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Automation Bias: Complacency & Uncritical Acceptance</span>
+    </div>
+    <div class="q-scenario">A radiologist uses an AI diagnostic assistant that has accurately flagged 99 consecutive normal chest X-rays. On the 100th scan, the assistant flags the image as normal, missing a subtle pulmonary nodule that the radiologist would have caught during manual inspection. What cognitive failure occurred?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Algorithmic cynicism, where the clinician assumed the system was incompetent and rejected its findings.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Context dilution, where historical X-ray images crowded out the patient's active radiological pixels.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Quantization drift, where hospital server graphics processing units lost numerical floating-point precision.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Automation bias, where prolonged exposure to correct AI outputs eroded the human vigilance threshold.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 30</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Algorithmic Cynicism: Rejection of Real Utility</span>
+    </div>
+    <div class="q-scenario">A senior paralegal tries an AI assistant once to draft a contract summary. The draft misses one boilerplate clause. The paralegal declares that 'AI is completely useless for legal work', bans staff from using it, and spends 60 hours manually drafting summaries. What cognitive trap does this reaction illustrate?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Algorithmic cynicism, rejecting an effective tool entirely due to an early, easily correctable flaw.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Automation bias, accepting the first generated response without verifying underlying court records.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Process discernment, accurately concluding that AI is economically unviable for legal practices.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Platform awareness, selecting an unspecialized search model for proprietary contract extraction.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 31</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Process Discernment: Knowing When Doing It Yourself Is Faster</span>
+    </div>
+    <div class="q-scenario">A technical writer spends 45 minutes prompting and re-prompting an assistant to reformat a 2-page equipment maintenance guide. The writer corrects the same table formatting error four times, watches the model drift back, and ultimately rewrites the entire text by hand. What operational failure occurred?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Creation diligence, failing to obtain commercial software licensing agreements before formatting text.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Process discernment, failing to recognize when steering AI is consuming more effort than manual execution.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Transparency diligence, omitting public citations acknowledging that the model assisted in drafting text.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Platform awareness, selecting an advanced cloud reasoning engine instead of an unspecialized search tool.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 32</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Creation Diligence: Building Reliable Systems</span>
+    </div>
+    <div class="q-scenario">A logistics director designs an automated AI agent to route customer delivery trucks. Which preparatory action demonstrates creation diligence before launching the agent into production?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Deploying the agent directly to customer fleets on day one to gather real-world error data rapidly.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Setting the assistant sampling temperature to maximum to ensure routing proposals are creative and diverse.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Testing edge cases, configuring geographic boundaries, and verifying fallback escalation procedures.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Disabling all operational human confirmation checkpoints to maximize automated dispatch velocity.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 33</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Operation Diligence: Human Oversight in Flight</span>
+    </div>
+    <div class="q-scenario">A fintech firm runs an autonomous transaction monitoring agent that flags suspicious wire transfers. The compliance officer reviews weekly error logs, spot-checks five percent of cleared transactions, and updates threshold rules monthly. What operational competency is this officer exercising?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Operation diligence, maintaining disciplined human oversight and monitoring while the system runs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Algorithmic cynicism, rejecting automated transaction scores due to distrust of machine learning.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Context engineering, compressing structured banking ledgers into serialized prompt token streams.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Platform awareness, migrating legacy SQL stored procedures into cloud-hosted vector embeddings.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 34</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Transparency Diligence: Honest Disclosure</span>
+    </div>
+    <div class="q-scenario">A policy analyst drafts a government white paper using an AI assistant to summarize 50 public stakeholder submissions. In the methodology notes, the analyst writes: 'Public submissions were synthesized using Claude 3.5 Sonnet to extract key themes, with all extracted points audited against original submissions by research staff.' Why is this disclosure commendable?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It guarantees that the white paper will receive automatic fast-track legislative approval.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It eliminates the operational requirement for peer review by academic advisory committees.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It practices transparency diligence by honestly describing the tool used, the task, and human review.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It transfers all legal liability for policy recommendations to the software model provider.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 35</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Transparency Diligence: Misleading AI Claims</span>
+    </div>
+    <div class="q-scenario">A boutique market research agency uses an assistant to clean up grammar and generate charts from human-conducted customer focus groups. In their marketing brochure, the agency writes: 'Our proprietary autonomous neural intelligence conducts end-to-end consumer sentiment analysis.' What operational failure does this represent?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Failing transparency diligence by overclaiming automation to appear more technologically sophisticated.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Context rot, allowing marketing copy to dilute empirical research findings in client presentation slides.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Automation bias, placing uncritical reliance on grammar correction tools to validate qualitative charts.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Algorithmic cynicism, understating the genuine computational capabilities of artificial intelligence.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 36</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Non-Transferable Accountability</span>
+    </div>
+    <div class="q-scenario">A cloud security engineer accepts an AI coding assistant's suggestion to bypass TLS certificate validation in a microservice to resolve a connection timeout. When a data breach occurs through this vulnerability, the engineer claims: 'The AI assistant generated the code, so the software vendor is at fault.' Why is this defense invalid?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>AI can automate operational tasks, but human professionals and their organizations retain complete accountability.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The engineer should have prompted the AI assistant to assume legal liability before accepting the code suggestion.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Bypassing TLS validation is automatically classified as a harmless development convenience under cloud standards.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Commercial coding assistant software licenses explicitly transfer all corporate cybersecurity liability to the vendor.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 37</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Responsible AI: Environmental & Social Costs</span>
+    </div>
+    <div class="q-scenario">An enterprise sustainability officer reviews corporate IT resource consumption. The officer discovers that employees routinely run heavy reasoning models with maximum thinking tokens for simple grammar checks and spellchecking. Why does this practice violate operational diligence?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It causes commercial cloud data centers to automatically vent hazardous cooling chemicals into urban areas.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It degrades global foundation model neural weights by exhausting international internet bandwidth quotas.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It expends massive energy and compute resources on simple tasks where lightweight models suffice.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It permanently locks employee workstations out of enterprise word processing licenses due to token overuse.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 38</span>
+      <span>Domain 3: AI Augmentation, Task Delegation & Agentic Workflows &bull; The 10-80-10 Rule: Allocation of Human Effort</span>
+    </div>
+    <div class="q-scenario">A product management team adopts the 10-80-10 operational model to guide their AI development lifecycle. How are human effort and oversight allocated across the workflow?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>10% selecting cloud hosting vendors, 80% automated code deployment, and 10% managing external legal litigation.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>10% setting direction, 80% orchestrating the AI, and 10% judging the result, with diligence throughout.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>10% drafting prompts, 80% verifying arithmetic spreadsheets manually, and 10% encrypting production databases.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>10% manual data entry, 80% training foundation neural network weights, and 10% marketing final software.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 39</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Beginner Mistake 1: Prompting Before Defining the Problem</span>
+    </div>
+    <div class="q-scenario">An operations associate sits down at a computer, immediately opens an AI chat tab, and begins typing fragmented prompts without reviewing the project brief, client objectives, or compliance constraints. Which common operational mistake is the associate committing?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Automation bias, placing uncritical reliance on statistical models to verify regulatory compliance rules.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Context rot, allowing long conversation transcripts to dilute early project instructions and parameters.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Prompting before defining the problem, jumping directly into text generation without establishing goals.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Algorithmic cynicism, rejecting an effective computational tool due to minor initial formatting defects.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 40</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Beginner Mistake 2: Treating First Answer as Final</span>
+    </div>
+    <div class="q-scenario">A marketing copywriter types a hasty one-line prompt: 'Write an article about electric vehicles.' The assistant returns a bland, general overview. Frustrated, the copywriter concludes that 'AI is completely useless for serious content creation' and immediately closes the browser. Which beginner mistake does this embody?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Falling prey to automation bias, missing the mathematical skill required to compute token loss distributions.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Prompting before defining the problem, missing the technical ability to train custom transformer tokenizers.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Ignoring data privacy standards, missing the cryptographic skills required to redact proprietary vehicle specs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Treating the first output as final, missing the iterative description and discernment feedback steering loop.</td></tr>
+    </table>
+  </div>
+
+  <div class="section-divider"></div>
+  <div class="section-title">PART 2: ANSWER KEY & COMPREHENSIVE RATIONALES</div>
+  <div style="margin-bottom: 16px; font-size: 9pt; color: #64748b;">
+    Exhaustive psychometric explanations detailing why the correct option is uniquely accurate per the chapter source text, and why each alternate distractor is operationally flawed.
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 1: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Part 1, Section 1: AI access is not AI fluency
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> AI access is not AI fluency. Two individuals using the exact same model achieve vastly different results because fluency is defined by human competency: working effectively (achieving the goal), efficiently (conserving time and tokens), ethically (transparent and fair), and safely (protecting privacy and institutional data).
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Fluency depends on clear problem definition and verification, not secret tokens or bypassing safety guardrails.</li>
+      <li><strong>Option B Flaw:</strong> Compute allocation is uniform across subscription tiers and does not adjust based on user error logs.</li>
+      <li><strong>Option D Flaw:</strong> Models do not adjust statistical accuracy or confidence based on user organizational status.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 2: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Opening: Imagine a talented new colleague joins your team
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Unlike human colleagues who retain memory across weeks, foundation models carry nothing from one chat session into the next. Each new conversation starts completely stateless with read-only frozen weights, requiring instructions and formatting rules to be re-supplied or stored in persistent Project knowledge.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> The reversion is caused by lack of conversational continuity, not conflict resolution among clinical guidelines.</li>
+      <li><strong>Option C Flaw:</strong> Session resets are an inherent architectural property of stateless models, not an administrative server purge.</li>
+      <li><strong>Option D Flaw:</strong> Tokenizers are static lookup tables and do not selectively purge specialized vocabulary branches.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 3: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Part 1, Section 1: Effective, Efficient, Ethical, Safe
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Efficiency requires minimizing wasted time, human effort, and tokens. Ingesting 300-page raw agreements repeatedly for unfocused queries consumes millions of unnecessary input tokens, inflates enterprise billing, and degrades output precision through context overcrowding.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The operational failure flagged is technical inefficiency and resource waste, not statutory legal prohibition.</li>
+      <li><strong>Option B Flaw:</strong> Inference prompts do not modify or degrade frozen foundation model weights.</li>
+      <li><strong>Option C Flaw:</strong> Context windows do not possess automatic hallucination subroutines triggered by token volume.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 4: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 1, Section 2: Automation: 'Do this task'
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Automation fits clear, repeatable tasks where the model executes a predefined procedure with zero autonomous decision-making. The human acts like a script writer dictating inputs, extractions, and output formats.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Agency involves setting broad goals for autonomous execution while the user is absent.</li>
+      <li><strong>Option B Flaw:</strong> Augmentation involves two-way exploratory ideation and discussion, not deterministic data extraction.</li>
+      <li><strong>Option D Flaw:</strong> Context engineering relates to system knowledge infrastructure, not user execution modalities.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 5: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 1, Section 2: Augmentation: 'Help me think'
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Augmentation is a multi-turn, collaborative thinking partnership. The model is not merely executing fixed instructions; it acts as a sounding board, challenging assumptions and co-creating solutions while the human remains firmly in control of decisions.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The process is dynamic and exploratory, not a fixed extraction script.</li>
+      <li><strong>Option C Flaw:</strong> Curriculum strategy requires institutional judgment and cannot be completely offloaded.</li>
+      <li><strong>Option D Flaw:</strong> The model is not acting autonomously in the future for others; the human is present throughout.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 6: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 1, Section 2: Agency: 'Pursue this goal for me'
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Agency is defined by two operational realities: 'Future' (the system acts when the operator is not in the room) and 'For others' (the system interacts directly with third parties). The human steps back from turn-by-turn execution and acts as a director establishing boundaries and approval triggers.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Software systems cannot assume legal liability; human operators and firms retain accountability.</li>
+      <li><strong>Option B Flaw:</strong> Agents run via runtime tools and prompts, not continuous base model retraining.</li>
+      <li><strong>Option D Flaw:</strong> Agency specifically eliminates synchronous turn-by-turn human supervision for routine actions.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 7: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 1, Section 2: Automation and agency comparison table
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> In automation, failures typically occur because 'a procedural step was executed badly.' In agency, because the human specifies objectives and constraints rather than micro-steps, the dominant failure mode is that 'the goal or boundary was misunderstood or ambiguous.'
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Frozen models do not experience catastrophic forgetting during standard inference execution.</li>
+      <li><strong>Option C Flaw:</strong> Supplying pseudo-code for every categorization step reverts the system back to rigid automation.</li>
+      <li><strong>Option D Flaw:</strong> Context windows easily handle JSON product records; the issue is semantic boundary ambiguity.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 8: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 2, Section 3.1: Problem awareness: know what you are trying to accomplish
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Problem awareness requires clarifying fundamental business, operational, and ethical rules before touching the AI. In clinic scheduling, questions regarding emergency triage, fee thresholds, and escalation pathways are human policy decisions, not prompt engineering choices.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Benchmarking model latency addresses infrastructure selection, not operational problem definition.</li>
+      <li><strong>Option B Flaw:</strong> Prompt templates belong to Description; writing them before establishing policy is a critical beginner error.</li>
+      <li><strong>Option D Flaw:</strong> Ingesting confidential clinical consultation transcripts violates patient privacy regulations.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 9: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 2, Section 3.1: Hard business questions
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Delegation requires defining the exact boundary between automated analysis and human execution. Permitting an assistant to read records and draft correspondence while withholding transmission and balance modification powers ensures high-risk financial actions require human approval.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Network email dispatch does not consume model context window tokens.</li>
+      <li><strong>Option C Flaw:</strong> Drafting accurate reminders still requires clear definitions of billing rules and overdue timelines.</li>
+      <li><strong>Option D Flaw:</strong> Restricting execution authority is an active risk control, not an audit evasion tactic.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 10: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 2, Section 3: Delegation: decide who should do what
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Delegation is not dumping work onto a machine. It is the intentional division of labor: identifying which sub-tasks are routine and verifiable (e.g., syntax linting, style formatting) versus which require strategic human judgment (e.g., architectural coherence, security threat modeling).
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Bypassing review for senior staff creates catastrophic vulnerabilities and violates governance.</li>
+      <li><strong>Option C Flaw:</strong> Server capacity is a hosting concern that does not address workflow allocation.</li>
+      <li><strong>Option D Flaw:</strong> Models natively parse programming keywords; embedding dictionaries is redundant.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 11: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 2, Section 3.1: These are business questions, not prompting questions
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Credit risk tolerance is a foundational business and fiduciary policy. Asking an AI to invent its own credit threshold abdicates human responsibility. The human institution must determine the threshold; the AI merely applies it to applicant data.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Language models can easily compare numerical ratios against defined thresholds.</li>
+      <li><strong>Option B Flaw:</strong> Models do not have predatory biases, but ungrounded prompts produce erratic risk decisions.</li>
+      <li><strong>Option C Flaw:</strong> Commercial APIs fully support financial risk workflows under appropriate enterprise agreements.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 12: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 2, Section 3.2: Platform awareness: choose the right kind of AI
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Because the statute took effect three weeks ago, static models with historical knowledge cutoffs will hallucinate or fail. Platform awareness dictates choosing an assistant with live web search capabilities to ground analysis in current statutory publications.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Static frozen models lack knowledge of recent events and will fail this audit.</li>
+      <li><strong>Option B Flaw:</strong> Database refactoring agents cannot analyze external trade statutes.</li>
+      <li><strong>Option C Flaw:</strong> Offline speech transcription models lack web search and legal analysis capabilities.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 13: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 2, Section 3.2: Choosing models and tools
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Complex multi-step physics derivations with interdependent constraints require extended test-time compute. A reasoning model uses internal scratchpads to work through mathematical steps systematically, reducing calculation errors compared to fast conversational models.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Scraping unverified public forums does not solve deterministic structural load equations.</li>
+      <li><strong>Option B Flaw:</strong> Word processor auto-complete tools lack the architectural compute for structural simulation.</li>
+      <li><strong>Option C Flaw:</strong> Fast conversational models prioritize speed over rigorous multi-step deduction.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 14: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 2, Section 3.3: Task delegation: divide the work deliberately
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> High-fluency delegation assigns intent, pedagogical scope, and clinical verification to human experts, while leveraging AI for structural ideation and rapid initial drafting from approved source materials.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Copyright ownership and professional accountability cannot be transferred to software agents.</li>
+      <li><strong>Option C Flaw:</strong> Relegating humans to copyeditors while letting AI set ethical and clinical goals inverts responsible delegation.</li>
+      <li><strong>Option D Flaw:</strong> AI cannot verify factual truth independently; humans must verify clinical claims.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 15: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 2, Section 3.3: Task delegation table: lived experience
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> AI possesses extensive general data but zero lived human experience. Cultural nuances, community relationships, and local health practices require human insight to ensure health messaging is trusted and understood.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> No international treaties restrict geographic references in language models.</li>
+      <li><strong>Option C Flaw:</strong> Models do not encrypt text when regional dialects are used.</li>
+      <li><strong>Option D Flaw:</strong> Translation into regional languages uses standard token mapping without arithmetic errors.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 16: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Prompt Engineering & In-Context Learning | <strong>Grounding:</strong> Part 2, Section 4.1: Product description: define the result
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> High-quality prompting does not rely on clever phrasing or flattering personas. It depends on completeness: clearly defining target audience, output structure, mandatory focus areas, and explicit exclusions.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Negative constraints remove clichés, but cannot guarantee zero factual hallucination.</li>
+      <li><strong>Option C Flaw:</strong> Persona prompts do not independently audit external financial balance sheets.</li>
+      <li><strong>Option D Flaw:</strong> Length limits constrain token generation; they do not trigger mathematical reasoning engines.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 17: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Prompt Engineering & In-Context Learning | <strong>Grounding:</strong> Part 2, Section 4.1: What do I want back?
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> An assistant can only predict completions based on provided context. When key parameters—such as audience (nurses vs chemists), format (action checklist vs treatise), and length—are omitted, the model guesses statistically, often defaulting to academic prose.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Standard plain English defines parameters effectively without proprietary tags.</li>
+      <li><strong>Option B Flaw:</strong> Models do not have an inherent preference for theory over practice; the failure stems from missing prompt constraints.</li>
+      <li><strong>Option D Flaw:</strong> Network firewalls do not selectively strip semantic sentences from API payloads.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 18: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Prompt Engineering & In-Context Learning | <strong>Grounding:</strong> Part 1: See it in three minutes
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Prompt 2 succeeds because it provides the operational context that Prompt 1 omitted: who the audience is, what anxieties they have, the desired tone, strict length bounds, and concrete logistical details.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Emotional words do not alter context window token limits or model quotas.</li>
+      <li><strong>Option B Flaw:</strong> Both prompts ran on the identical public model without external proprietary databases.</li>
+      <li><strong>Option D Flaw:</strong> Model weights remain completely frozen during inference; no runtime reinforcement learning occurs.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 19: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Prompt Engineering & In-Context Learning | <strong>Grounding:</strong> Part 2, Section 4.1: Anything to leave out
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Explicit exclusions (negative constraints) eliminate common, unwanted statistical defaults. Directing an assistant what NOT to include prevents the generation of hollow corporate jargon and safeguards confidential topics.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Prompt constraints never replace mandatory human legal review before public disclosure.</li>
+      <li><strong>Option C Flaw:</strong> Negative constraints guide generation focus, but do not delete token vectors from model weights.</li>
+      <li><strong>Option D Flaw:</strong> Negative wording does not reconfigure the mathematical temperature parameter of the API.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 20: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Prompt Engineering & In-Context Learning | <strong>Grounding:</strong> Part 2, Section 4.2: Process description: define the approach
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Process description defines the approach. When complex evaluations are attempted in a single unconstrained prompt, models blend extraction with subjective judgment, often inventing facts to justify a conclusion. Staging extraction first isolates factual data for inspection before scoring.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Multi-stage prompting is designed for factual accuracy, not bypassing API rate limits.</li>
+      <li><strong>Option B Flaw:</strong> Staging makes verification easier; it never eliminates the need for human review.</li>
+      <li><strong>Option D Flaw:</strong> Extraction tables exist only in conversation context, not persistent browser memory.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 21: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Prompt Engineering & In-Context Learning | <strong>Grounding:</strong> Part 2, Section 4.2: Staged approach and stopping points
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> In multi-step analytical workflows, an uncorrected error in step 1 cascades through steps 2 and 3, multiplying inaccuracies. Establishing an explicit stopping point allows the auditor to verify the extracted transactions before allowing the model to compute totals.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Model weights are strictly read-only and cannot be corrupted by incorrect user data.</li>
+      <li><strong>Option B Flaw:</strong> Pausing does not prevent rate limits; it enforces human quality gates.</li>
+      <li><strong>Option C Flaw:</strong> Text processing in browser tabs consumes minimal local RAM.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 22: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Prompt Engineering & In-Context Learning | <strong>Grounding:</strong> Part 2, Section 4.3: Performance description: show what good looks like
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Abstract adjectives (e.g., 'punchy', 'witty', 'sophisticated') are subjective and interpreted unpredictably by language models. Showing concrete positive examples (what good looks like) and negative examples (what to avoid) provides unambiguous pattern guidance.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Enterprise tiers provide administrative security and quotas, not automatic brand style matching.</li>
+      <li><strong>Option B Flaw:</strong> Searching social media trends introduces random, unaligned slang that conflicts with company voice.</li>
+      <li><strong>Option C Flaw:</strong> Piling on subjective adjectives increases ambiguity rather than providing clear stylistic boundaries.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 23: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Prompt Engineering & In-Context Learning | <strong>Grounding:</strong> Part 2, Section 4.3: Clear criteria over vague adjectives
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Measurable performance criteria specify exact verifiable elements (date of loss, policy number, damage estimate, police ID). Vague adjectives like 'comprehensive', 'insightful', or 'high-quality' cannot be verified objectively.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Words like 'comprehensive' and 'insightful' are unverifiable qualitative filler.</li>
+      <li><strong>Option C Flaw:</strong> 'Highest professional standards' is an ungrounded slogan that gives the model no structural guidance.</li>
+      <li><strong>Option D Flaw:</strong> Emotionally engaging narratives are inappropriate for objective insurance claim summaries.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 24: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Part 2, Section 5.1: Output discernment: evaluate what the AI produced
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The fluency trap occurs when human evaluators confuse articulate, authoritative, and grammatically polished prose with factual accuracy. LLMs naturally produce fluent language, making hallucinations deceptively hard to detect without active source verification.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> If the analyst had verified against primary audited filings, the error would have been caught.</li>
+      <li><strong>Option B Flaw:</strong> Zero temperature reduces sampling randomness, but does not prevent factual hallucinations.</li>
+      <li><strong>Option D Flaw:</strong> Subscription tiers do not prevent the human psychological error of the fluency trap.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 25: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Part 2, Section 5.1: How to evaluate output
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Rigorous discernment follows a four-step sequence: Identify specific factual claims and figures, Trace them back to primary authoritative sources, Challenge edge cases and discrepancies, and Decide whether to accept, revise, or reject.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Submitting to another model invites sycophantic praise or compounding hallucinations without external verification.</li>
+      <li><strong>Option C Flaw:</strong> Proofreading formatting and grammar checks surface appearance while ignoring factual validity.</li>
+      <li><strong>Option D Flaw:</strong> Grammar scores evaluate linguistic structure, not whether municipal zoning decisions actually occurred.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 26: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Part 2, Section 5.2: Process discernment: evaluate how the work is going
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> As a conversation extends across dozens of turns, the accumulated text fills the context window. Earlier constraints are either truncated or diluted by hundreds of intervening tokens, causing the assistant to drift and contradict early instructions.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Models are not fine-tuned during inference conversations; weights remain frozen.</li>
+      <li><strong>Option C Flaw:</strong> Cloud server hardware does not suffer permanent memory degradation during conversational sessions.</li>
+      <li><strong>Option D Flaw:</strong> Programming syntax does not corrupt the model's static token dictionary.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 27: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Part 2, Section 5.2: Knowing when to steer, when to restart, and when to stop
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> When a chat enters a compounding error loop, the faulty reasoning remains in the context history, biasing future tokens. Process discernment dictates cutting losses: open a fresh chat, strip out the conversational baggage, and supply explicit constraints.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Submitting identical prompts in a contaminated context simply reinforces the error loop.</li>
+      <li><strong>Option B Flaw:</strong> Capital letters and emotional threats do not alter mathematical token prediction.</li>
+      <li><strong>Option D Flaw:</strong> Image generation models produce pictures, not audited numerical calculations.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 28: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Part 2, Section 5.3: Ethical discernment: evaluate whether the work is right
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Ethical discernment requires identifying bias and unfair representation inherited from historical training data. The HR manager must intervene by standardizing criteria, eliminating gender markers, and enforcing structured rubrics rather than accepting ungrounded qualitative labels.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Screening candidates based on facial photos is unethical and violates equal opportunity laws.</li>
+      <li><strong>Option C Flaw:</strong> Training data reflects historical human societal biases; accepting it uncritically perpetuates discrimination.</li>
+      <li><strong>Option D Flaw:</strong> Increasing temperature increases randomness and worsens arbitrary, unfair scoring variance.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 29: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Part 2, Section 5.4: Automation bias and cynicism: two cognitive traps
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Automation bias is the human tendency to become complacent when a machine performs reliably over time. The operator relaxes their critical vigilance, trusting the AI's assessment and failing to detect rare but critical errors.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Cynicism is the opposite trap—rejecting AI completely; the radiologist trusted the system too much.</li>
+      <li><strong>Option B Flaw:</strong> Inference on the 100th image ran in a fresh context, not an overcrowded context window.</li>
+      <li><strong>Option C Flaw:</strong> The failure was human clinical vigilance erosion, not a hardware GPU quantization fault.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 30: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Part 2, Section 5.4: Automation bias and cynicism: two cognitive traps
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Algorithmic cynicism is the uncritical rejection of AI technology based on an initial mistake. Because the first draft was imperfect, the paralegal dismissed the entire capability, missing opportunities to save dozens of hours through proper prompt description and human review.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> The paralegal rejected the output immediately rather than complacently accepting it.</li>
+      <li><strong>Option C Flaw:</strong> Banning tools that could safely automate routine drafting is an operational failure, not sound discernment.</li>
+      <li><strong>Option D Flaw:</strong> The cognitive trap is the all-or-nothing emotional rejection, not platform selection.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 31: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Part 2, Section 5.2: Knowing when to stop
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Process discernment includes recognizing when using AI costs more time and energy than doing the work manually. Spending 45 minutes wrestling with prompts for a 5-minute manual task is an operational failure.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Formatting technical manuals does not require specialized external licensing agreements.</li>
+      <li><strong>Option C Flaw:</strong> Transparency citations are irrelevant when the final text was manually rewritten by hand.</li>
+      <li><strong>Option D Flaw:</strong> The issue was failing to stop wrestling with formatting, not cloud model selection.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 32: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Part 2, Section 6.1: Creation diligence: doing the work properly when you set it up
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Creation diligence means doing the engineering and governance work properly upfront: testing edge cases (e.g., bridge weight limits, severe weather), setting hard operational boundaries, and ensuring human dispatchers can intervene seamlessly.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Deploying untested agents into live operations creates severe commercial and physical safety hazards.</li>
+      <li><strong>Option B Flaw:</strong> High temperature introduces unpredictable routing hallucinations.</li>
+      <li><strong>Option D Flaw:</strong> Disabling human review screens removes essential safety guardrails.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 33: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Part 2, Section 6.2: Operation diligence: doing the work properly while it runs
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Operation diligence is ongoing stewardship. Launching a system is not fire-and-forget; operators must monitor error logs, conduct random audits, and refine rules over time as real-world conditions evolve.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Spot-checking transactions is standard responsible oversight, not cynical rejection of technology.</li>
+      <li><strong>Option C Flaw:</strong> Context engineering relates to prompt construction, not ongoing operational audit.</li>
+      <li><strong>Option D Flaw:</strong> Database migration is an IT infrastructure project, not operational compliance diligence.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 34: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Part 2, Section 6.3: Transparency diligence: being open about what AI did
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Transparency diligence means being clear and honest about where and how AI was used. Stating the exact tool, the specific role it played, and the human verification step provides complete, accountable transparency.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Methodology disclosures inform readers; they do not bypass legislative debate.</li>
+      <li><strong>Option B Flaw:</strong> Transparent AI usage increases the need for rigorous peer review rather than eliminating it.</li>
+      <li><strong>Option D Flaw:</strong> Public disclosures do not transfer legal liability to commercial software vendors.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 35: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Part 2, Section 6.3: Two ways to get transparency wrong
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Transparency can be violated in two directions: concealing AI use, or falsely exaggerating it. Claiming that basic grammar editing and chart drafting represents 'proprietary autonomous neural intelligence' overclaims automation to mislead clients.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Context rot refers to token window overflow, not promotional exaggerations.</li>
+      <li><strong>Option C Flaw:</strong> The failure is misleading marketing claims, not uncritical reliance on software.</li>
+      <li><strong>Option D Flaw:</strong> The agency is exaggerating AI capabilities, not cynically dismissing them.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 36: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Part 2, Section 6: Diligence: take responsibility for the outcome
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Accountability is strictly non-transferable. Tools generate suggestions, but the human engineer who reviews, commits, and deploys the code holds 100% professional and institutional responsibility for security outcomes.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Prompts cannot force an algorithm to assume legal liability.</li>
+      <li><strong>Option C Flaw:</strong> Disabling TLS validation is an extreme security flaw, never a harmless convenience.</li>
+      <li><strong>Option D Flaw:</strong> Software licenses universally disclaim all liability for software defects or data breaches.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 37: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Part 2, Section 6.4: The wider picture: resource use and labor
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Reasoning models require significant data center electricity and water cooling per query. Running heavy reasoning compute for trivial spellchecking wastes substantial enterprise budget and environmental resources when lightweight models or local spellcheckers accomplish the task instantly.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Data centers do not vent toxic chemicals into urban areas when running reasoning queries.</li>
+      <li><strong>Option B Flaw:</strong> Internet bandwidth does not degrade neural network weights.</li>
+      <li><strong>Option D Flaw:</strong> Token consumption does not revoke desktop software licenses.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 38: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: AI Augmentation, Task Delegation & Agentic Workflows | <strong>Grounding:</strong> Part 3, Section 7: The whole picture: the 10-80-10 rule
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Under the 10-80-10 rule, humans invest the first 10% defining the problem, constraints, and approach (Delegation and Description); AI performs the middle 80% of routine heavy lifting while the human steers; and humans invest the final 10% verifying claims and deciding acceptance (Discernment). Diligence surrounds the entire 100%.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The rule describes task execution effort, not vendor procurement and litigation.</li>
+      <li><strong>Option C Flaw:</strong> The middle 80% is AI execution, not manual spreadsheet verification.</li>
+      <li><strong>Option D Flaw:</strong> Foundation models are pretrained by vendors, not trained manually by product management teams.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 39: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Part 3, Section 8: Four common beginner mistakes
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Mistake 1 is jumping straight into typing prompts before knowing what you want to achieve, who the audience is, what the boundaries are, and how the output will be checked. High fluency requires defining the problem before opening the tool.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The associate has not received any output yet to exhibit automation bias.</li>
+      <li><strong>Option B Flaw:</strong> Context rot occurs across dozens of turns in long chats, not before the first prompt is sent.</li>
+      <li><strong>Option D Flaw:</strong> The associate is eager to prompt, not cynically rejecting the tool.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 40: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Part 3, Section 8: Four common beginner mistakes
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Mistake 2 is treating the first answer as the final answer. An initial prompt often yields a generic baseline. AI fluency requires inspecting the result (Discernment), providing specific corrective guidance (Description), and steering the output iteratively toward quality.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The copywriter rejected the output rather than uncritically trusting it.</li>
+      <li><strong>Option B Flaw:</strong> Writing content does not require training custom transformer tokenizers.</li>
+      <li><strong>Option C Flaw:</strong> No proprietary or private data was leaked in this public marketing query.</li>
+    </ul>
+  </div>
+
+</body>
+</html>

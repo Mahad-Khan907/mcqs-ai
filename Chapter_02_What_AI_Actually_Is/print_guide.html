@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Panaversity PCAO-F & Anthropic CCAO-F Study Guide: What_AI_Actually_Is</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+    @bottom-right {
+      content: counter(page);
+      font-size: 9pt;
+      font-family: Arial, sans-serif;
+      color: #64748b;
+    }
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    font-size: 10pt;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-cover {
+    text-align: center;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e0e7ff;
+    color: #3730a3;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: 20pt;
+    margin: 8px 0;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 10pt;
+    color: #64748b;
+  }
+
+  .section-divider {
+    page-break-before: always;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .q-item {
+    page-break-inside: avoid;
+    margin-bottom: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 14px;
+    background: #f8fafc;
+  }
+
+  .q-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #475569;
+    font-weight: bold;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+
+  .q-num {
+    color: #4338ca;
+  }
+
+  .q-scenario {
+    font-size: 9.8pt;
+    line-height: 1.5;
+    color: #0f172a;
+    margin-bottom: 10px;
+  }
+
+  .options-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .opt-row {
+    font-size: 9.2pt;
+    line-height: 1.4;
+    padding: 3px 0;
+    vertical-align: top;
+  }
+
+  .opt-letter {
+    font-weight: bold;
+    width: 25px;
+    color: #334155;
+  }
+
+  .exp-item {
+    page-break-inside: avoid;
+    margin-bottom: 22px;
+    border-left: 3.5px solid #4338ca;
+    padding-left: 12px;
+  }
+
+  .exp-head {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+
+  .exp-correct {
+    color: #047857;
+    font-weight: bold;
+  }
+
+  .exp-grounding {
+    font-size: 8.5pt;
+    color: #64748b;
+    margin-bottom: 6px;
+  }
+
+  .exp-body {
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1e293b;
+    margin-bottom: 6px;
+  }
+
+  .flaw-list {
+    font-size: 8.5pt;
+    line-height: 1.4;
+    color: #475569;
+    padding-left: 16px;
+    margin-top: 4px;
+  }
+
+  .flaw-list li {
+    margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header-cover">
+    <div class="badge">Official Exam Blueprint Preparation Guide</div>
+    <h1>Panaversity PCAO-F & Anthropic CCAO-F</h1>
+    <div style="font-size: 13pt; font-weight: 600; color: #4338ca; margin-bottom: 6px;">
+      Chapter: What_AI_Actually_Is
+    </div>
+    <div class="meta">
+      40 High-Yield Scenario-Based Examination Items &bull; Cut Score: 720 / 1,000 (72%) &bull; Psychometric Standard
+    </div>
+  </div>
+
+  <div style="margin-bottom: 24px; padding: 10px 14px; background: #eef2ff; border-radius: 6px; font-size: 9pt; border-left: 3px solid #6366f1;">
+    <strong>Examination Instructions:</strong> Part 1 contains 40 numbered scenario-based items with zero answers or spoilers. Complete Part 1 under simulated exam conditions (target time: 60 minutes). Then consult Part 2 for the official answer keys, direct source citations, and comprehensive distractor dissections.
+  </div>
+
+  <div class="section-title">PART 1: QUESTIONS ONLY (SPOILER-FREE SIMULATION)</div>
+  <div style="margin-bottom: 16px;"></div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 1</span>
+      <span>Domain 3: Product and Model Selection &bull; Prediction Engine & Stochastic Selection</span>
+    </div>
+    <div class="q-scenario">A sports physiotherapist prompts an assistant for the clinical protocol of an obscure regional rehabilitation method practiced only in two rural clinics. The assistant immediately produces an authoritative, five-stage rehabilitation plan complete with physiological rationales. Why did the assistant generate detailed clinical guidance on such a rare technique?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It accessed real-time sports medicine registry portals through background automated web sockets.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It queried internal clinical trial database tables that were indexed during initial pretraining.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It activated emergency clinical advisory subroutines that synthesize missing documentation alone.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It predicted the most probable text continuation by blending patterns from related medical texts.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 2</span>
+      <span>Domain 3: Product and Model Selection &bull; Prediction Engine & Stochastic Selection</span>
+    </div>
+    <div class="q-scenario">An agricultural cooperative logistics scheduler enters the exact same bulk grain haulage scheduling prompt into a standard chat assistant twice in succession. The first run recommends Route A via rail freight, while the second run suggests Route B via canal barge. What architectural mechanism accounts for these divergent operational proposals?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The platform routed the two identical inquiries to distinct regional hardware compute clusters.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant detected contradictory logistical constraints embedded across the operator prompt.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The model updated its core weight parameters based on network traffic data received between runs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The engine samples stochastically from a probability distribution of candidate continuation tokens.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 3</span>
+      <span>Domain 3: Product and Model Selection &bull; Prediction Engine & Stochastic Selection</span>
+    </div>
+    <div class="q-scenario">A municipal environmental health inspector seeks to configure an AI deployment so that statutory pollution assessment summaries produce perfectly reproducible, invariant text outputs across repeat audits. What is the operational reality of attempting this in standard browser chat interfaces?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Standard chat interfaces cannot guarantee identical outputs because sampling variation is built in.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Standard chat interfaces eliminate stochastic sampling when queries cite municipal legal codes.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Standard chat interfaces guarantee invariant outputs whenever prompts exceed four hundred tokens.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Standard chat interfaces achieve deterministic reproduction only when operating in offline modes.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 4</span>
+      <span>Domain 3: Product and Model Selection &bull; Prediction Engine & Stochastic Selection</span>
+    </div>
+    <div class="q-scenario">A commercial bakery operations supervisor tasks an assistant with calculating recipe scaling for brioche dough. The supervisor assumes the assistant retrieves the ratio from an internal culinary encyclopedia before applying mathematical operations. Why is this operational mental model flawed?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It overlooks that consumer assistants require culinary domain plugins before handling baking jobs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It assumes the model calculates baker percentages using external server spreadsheet connectors.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It treats the model as an internal retrieval database rather than a statistical sequence predictor.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It misinterprets tokenization limits as strict constraints on algorithmic recipe decomposition.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 5</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; Training, Frozen Weights & Statelessness</span>
+    </div>
+    <div class="q-scenario">A payroll manager notices an assistant miscalculating overtime premiums under a regional labor pact. The manager spends forty minutes correcting the assistant in chat until it answers accurately. The next morning, the manager opens a fresh chat and asks the same question, but the error recurs. Why did the correction fail to persist?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The platform detected proprietary payroll data and deployed protective automated memory wipes.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant was downgraded automatically to a lightweight secondary tier due to inactivity.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The weights are frozen during inference, meaning corrections exist only within that transcript.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The browser cache purged the session tokens when the user closed the application window overnight.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 6</span>
+      <span>Domain 3: Product and Model Selection &bull; Training, Frozen Weights & Statelessness</span>
+    </div>
+    <div class="q-scenario">A clinical trials coordinator queries an assistant regarding pharmaceutical marketing authorizations granted in the European Union two weeks ago. The assistant responds that the drugs are currently under preliminary evaluation and lack approval. What operational constraint explains this response?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The model intentionally conceals recent regulatory findings due to pharmaceutical liability rules.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The authorizations occurred after the model knowledge cutoff date and are absent from its weights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The assistant requires multimodal reasoning capabilities to process statutory health directives.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The European medicines agency blocks foundational AI scrapers through firewall access filters.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 7</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Training, Frozen Weights & Statelessness</span>
+    </div>
+    <div class="q-scenario">An enterprise legal risk committee asks why foundation model providers deliberately freeze model parameters rather than allowing the neural network to learn continuously from employee interactions. Which deliberate operational reasons mandate this architectural freeze?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Memory hardware storage constraints, software patent restrictions, and licensing fee limitations.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Cloud database synchronization latency, regional copyright regimes, and platform server quotas.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Token context window exhaustion, user privacy regulations, and internet connection bandwidth caps.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Prohibitive training compute costs, safety envelope drift prevention, and multi-tenant consistency.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 8</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; Training, Frozen Weights & Statelessness</span>
+    </div>
+    <div class="q-scenario">A veterinary pharmaceuticals sales director observes that an assistant appears to remember the names of their regional distributor accounts across multiple separate chat sessions. How does the product architecture actually implement this cross-session continuity?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The application saves text notes about the user and inserts them into the context window of new chats.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant executes background web queries to cross-reference the user identity against records.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The platform deploys an active multi-agent supervisory cluster that monitors all user interactions.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The model modifies a small partition of its frozen weights dedicated to individual customer profiles.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 9</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Missing Truth-Checker</span>
+    </div>
+    <div class="q-scenario">A school bursar asks an assistant for the fee structure and operating hours of a newly opened community day nursery with no website or online press coverage. The assistant produces a professional, neatly formatted schedule of tuition fees and infant care timings. What does this output represent mechanically?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>A deliberate safety filter suppression event designed to protect the nursery commercial privacy.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>An automated retrieval of proprietary business filings stored in regional licensing databases.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>A temporary model calculation failure caused by exceeding the token context window threshold.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>A statistically plausible text continuation generated without an internal truth-verification check.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 10</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Missing Truth-Checker</span>
+    </div>
+    <div class="q-scenario">A marine salvage surveyor evaluates an AI report containing three maritime legal precedents. Two precedents cite authentic court rulings, while the third cites an invented tribunal case with realistic case numbers, delivered in the identical authoritative voice. Why did the assistant fail to flag the third case as uncertain?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The model lacks an internal truth-checking faculty to distinguish verified facts from guesses.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The model experienced an attention routing failure caused by ambiguous maritime terminology.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The platform applied lossy quantization to its parameter weights, corrupting legal archives.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The assistant was configured with excessive system prompt instructions that suppressed hedging.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 11</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Missing Truth-Checker</span>
+    </div>
+    <div class="q-scenario">A timber merchant asks an assistant about local building code load ratings for specialized laminated veneer lumber. The assistant invents a structural rating without declaring ignorance. Why does an LLM rarely state 'I do not know' unless explicitly instructed?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Safety alignment protocols forbid conversational models from acknowledging knowledge gaps.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Tokenization algorithms prevent models from outputting negative declarative statements.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Prediction is its native function, so it continues text rather than evaluating factual absence.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Commercial vendor service agreements mandate continuous generation across all user turns.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 12</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Missing Truth-Checker</span>
+    </div>
+    <div class="q-scenario">A quality assurance manager at an aerospace plant attempts to eliminate all hallucinations by prepending extensive prompt instructions commanding the model to 'never make mistakes and guarantee 100% truth'. Why does this prompt constraint fail to eliminate errors?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Prompt guardrails reduce error frequency, but cannot alter the underlying predictive mechanism.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Prompt guardrails trigger automated tool use that verifies every statement before generation.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Prompt guardrails eliminate hallucinations completely by forcing mathematical precision in weights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Prompt guardrails succeed only when applied to enterprise models exceeding 500 billion parameters.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 13</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Tokens as the Unit of Text</span>
+    </div>
+    <div class="q-scenario">An opticians chain manager asks an assistant to count the letter 'r' in 'strawberry'. The assistant reports there are two 'r's. However, when instructed to 'spell the word out letter by letter and count again', it correctly counts three. Why does spelling the word out resolve the counting error?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Spelling increases internal attention weights across English orthographic dictionary tables.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Spelling forces the model to tokenize letters individually rather than processing word chunks.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Spelling triggers automated code execution subroutines that parse string character arrays.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Spelling resets the temperature parameter to zero, eliminating probabilistic counting errors.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 14</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Tokens as the Unit of Text</span>
+    </div>
+    <div class="q-scenario">A facilities coordinator drafts a complex chiller maintenance prompt containing four obvious typographical errors ('maintnance', 'tempurature'). Despite the typos, the assistant produces an accurate, professional schedule. What tokenization property explains why minor typos rarely degrade performance?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Misspelled words map to token chunks close enough in embedding space to preserve semantic intent.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Typographical errors trigger automated fallback to character-by-character semantic parsing.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The platform replaces misspelled prompt tokens with dictionary definitions in the background.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The model tokenizer automatically runs an internal spellchecker before segmenting text inputs.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 15</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Tokens as the Unit of Text</span>
+    </div>
+    <div class="q-scenario">An export compliance officer processes shipping manifests written in Urdu and Arabic. The officer notices that token consumption is substantially higher per word than for English documents, and long chats exhaust context limits much faster. What explains this operational discrepancy?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Non-Latin scripts require multi-byte UTF-8 decompression that bloats server parameter memory.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Tokenizers trained on English-heavy corpora segment non-Latin scripts into more chunks per word.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Frontier models apply defensive rate limiting to non-English languages to manage server load.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Arabic and Urdu scripts trigger mandatory translation middleware that doubles token outputs.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 16</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Tokens as the Unit of Text</span>
+    </div>
+    <div class="q-scenario">A warehouse logistics auditor uploads a high-resolution photograph of a shipping pallet containing small, densely packed serial numbers. The assistant misreads several digits. Why does fine alphanumeric print inside an image present a severe challenge for multimodal models?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Image processing subroutines cannot process alphanumeric characters without external OCR tools.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Visual tokens cannot be processed concurrently with textual tokens within the context window.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Multimodal models discard image resolution above 72 DPI to comply with context window quotas.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Images are sliced into visual patches converted to tokens, making sub-patch details hard to resolve.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 17</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; The Context Window as Reading Desk</span>
+    </div>
+    <div class="q-scenario">A commercial property surveyor is surprised that an assistant recalls specific tenant lease covenants discussed ten turns earlier in the same chat. Since the underlying foundation model is completely stateless, how does this conversational memory function mechanically?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The model writes intermediate conversational facts to a local cache partition inside its weights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant uses background database connectors to index each message into long-term storage.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The platform maintains a persistent neural activation state that remains open between user turns.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The application prepends the entire conversation transcript into the context window on every turn.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 18</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; The Context Window as Reading Desk</span>
+    </div>
+    <div class="q-scenario">A hospital patient transport coordinator has been utilizing a single chat session for three weeks to manage ongoing vehicle assignments. Gradually, the assistant begins ignoring vehicle capacity limits defined at the beginning of the conversation. What operational breakdown has occurred?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The assistant accumulated conflicting token embeddings that corrupted the underlying tokenizer.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The transcript outgrew the window, causing the application to trim or summarize earlier turns.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The system prompt expired automatically after reaching its statutory fourteen-day life cycle.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The model parameter weights degraded over time due to repeated inference across hospital data.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 19</span>
+      <span>Domain 1: Prompting and Task Execution &bull; The Context Window as Reading Desk</span>
+    </div>
+    <div class="q-scenario">A financial planner assumes that a 'system prompt' represents specialized compiled machine code that hardcodes permanent behavioral logic into the assistant. How does the architecture actually implement a system prompt?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>A specialized operating system driver that controls hardware GPU allocation during generation.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Text placed at the very top of the context window before user text, read by standard prediction.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Compiled binary instructions that bypass model tokenization to enforce absolute safety rules.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>A cryptographic validation certificate that authenticates the user subscription tier to the API.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 20</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; The Context Window as Reading Desk</span>
+    </div>
+    <div class="q-scenario">A technical training director manages 40 specialized engineering standards that exceed the context window limit if loaded together. How does the 'progressive disclosure' architectural pattern in agent Skills resolve this capacity limitation?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It keeps full skill files on disk, loading only a summary into context until a matching request occurs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It compresses the text of all 40 engineering manuals into binary tokens that consume zero space.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It fine-tunes a dedicated open-source language model on the engineering standards every weekend.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It deploys cloud database workers to pre-compute answers to all possible student inquiries in advance.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 21</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Learned Confidence & Sycophancy</span>
+    </div>
+    <div class="q-scenario">An enterprise information security manager audits an AI assistant deployment to determine whether deleting a confidential customer service chat purges the data from the model. What does deleting a chat thread accomplish mechanically?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It executes a selective neural gradient reversal that wipes customer tokens from frozen weights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It signals the foundational model provider to re-train the base model without customer inputs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It marks customer records as archived while retaining active embedding pointers in the weights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It removes the stored transcript from the application database, as models hold no chat data inside.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 22</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Learned Confidence & Sycophancy</span>
+    </div>
+    <div class="q-scenario">A construction project manager prompts an assistant: 'Don't you agree that our proposed 14-day slab curing time is more than adequate for heavy industrial loads?' The assistant validates the manager's proposal enthusiastically, despite regional codes recommending 28 days. What trained behavioral bias caused this validation?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Hallucination, where the model was unable to predict text describing concrete curing times.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Sycophancy, where RLHF tuning pushes models to agree with the perspective signaled by the user.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Model degradation, where continuous usage reduces the mathematical rigor of reasoning loops.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Context rot, where technical curing parameters were pushed outside the active reading desk.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 23</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Learned Confidence & Sycophancy</span>
+    </div>
+    <div class="q-scenario">A regional veterinary director seeks an objective comparison of two controversial livestock vaccination regimens. How should the director phrase the prompt to neutralize the assistant's trained sycophantic bias?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Express strong personal preference for Regimen A and instruct the model to prove the director wrong.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Command the model to adopt an aggressive adversarial persona and insult both pharmaceutical options.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Frame the inquiry neutrally, asking the model to evaluate both regimens against explicit criteria.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Request the comparison using an informal colloquial tone to bypass conversational alignment filters.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 24</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Learned Confidence & Sycophancy</span>
+    </div>
+    <div class="q-scenario">A municipal procurement officer tasks an assistant with evaluating three software vendor bids by assigning a score from 1 to 10 for each. The assistant rates all three bids between 8.8 and 9.4 without establishing benchmark scoring metrics. How does this flattering outcome reflect sycophancy?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The model lacked sufficient mathematical precision to compute fractional differences between bids.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant was bound by commercial alignment rules that prohibit awarding scores below 8.0.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Unanchored numerical ratings exhibit sycophancy by avoiding critical or challenging evaluations.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The context window was overcrowded, forcing the scoring mechanism into a uniform average.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 25</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Jagged Frontier</span>
+    </div>
+    <div class="q-scenario">A corporate training lead notes that even when an assistant produces inaccurate statistical forecasts, it presents them with complete grammatical certainty. Why is an AI model's confident tone entirely decoupled from factual truth?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Frontend chat interfaces append confidence enhancement wrappers to all outgoing model responses.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Foundation models evaluate statistical confidence by measuring internal GPU memory voltage states.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Human evaluators in RLHF systematically rewarded confident, fluent prose over hedged answers.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The tokenizer eliminates uncertainty markers from text tokens to minimize output token length.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 26</span>
+      <span>Domain 3: Product and Model Selection &bull; The Jagged Frontier</span>
+    </div>
+    <div class="q-scenario">A structural engineering auditor observes an assistant draft a flawless mathematical derivation of cantilever deflection, yet fail a basic three-step spatial logic puzzle that an elementary student solves easily. What core characteristic of artificial intelligence does this disparity demonstrate?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Context contamination, where engineering equations crowd out elementary logic deduction rules.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Inference throttling, where complex derivation tasks exhaust downstream server attention heads.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Tokenization drift, where numerical calculations degrade following symbolic logic processing.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The jagged frontier, where AI capability does not track human intuitions of task difficulty.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 27</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Jagged Frontier</span>
+    </div>
+    <div class="q-scenario">A retail operations director is establishing quality verification protocols for AI-generated operational schedules. In light of the jagged frontier, which auditing habit must operators maintain?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Audit rigorously across capability boundaries, checking easy-looking tasks that fail unexpectedly.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Delegate audit responsibilities to a smaller model, since small models have smoother frontiers.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Assume that a flawless response on a difficult task validates all surrounding sub-tasks in that run.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Focus auditing exclusively on complex derivations, assuming simpler tasks succeed automatically.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 28</span>
+      <span>Domain 3: Product and Model Selection &bull; The Jagged Frontier</span>
+    </div>
+    <div class="q-scenario">A clinical research auditor runs a complex protocol synthesis through two different frontier models. Model 1 excels at adverse event coding but misses dosage calculation bounds, while Model 2 handles calculations perfectly but misinterprets clinical trial coding. What explains this divergence?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Model 1 was operating with uncalibrated temperature parameters that corrupted clinical dosing.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Different models have differently shaped jagged frontiers, allowing one to catch what another drops.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Model 2 was executing an unapproved fine-tuning checkpoint trained on medical dosage formulas.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Frontier models intentionally introduce diverse error profiles to comply with antitrust rules.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 29</span>
+      <span>Domain 3: Product and Model Selection &bull; Tools, MCP & The Agent Loop</span>
+    </div>
+    <div class="q-scenario">A financial risk analyst establishes a corporate policy requiring AI capability assumptions to be re-tested every few months. Why is periodic re-benchmarking necessary in production workflows?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Local browser tokenizers accumulate corrupted string mappings that require quarterly resets.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Enterprise model licenses expire on rolling 90-day cycles, degrading unverified weights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The jagged frontier moves dynamically as newer model releases alter specific task competencies.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Regulatory bodies require periodic re-certification of foundational LLM parameters by law.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 30</span>
+      <span>Domain 4: Workflow Integration and Solution Design &bull; Tools, MCP & The Agent Loop</span>
+    </div>
+    <div class="q-scenario">A supply chain director evaluates a software proposal claiming to introduce an entirely new form of synthetic cognitive intelligence called an 'AI Agent'. What is the architectural reality of an AI agent?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>An agent is a specialized machine learning model trained entirely without human language data.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>An agent is a distributed database engine that executes automated SQL transaction queries.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>An agent is a quantum neural network that has achieved autonomous general cognitive awareness.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>An agent is a next-token predictor with tools, executing an iterative predict-act-observe cycle.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 31</span>
+      <span>Domain 4: Workflow Integration and Solution Design &bull; Tools, MCP & The Agent Loop</span>
+    </div>
+    <div class="q-scenario">An enterprise IT architect connects an AI assistant to corporate Google Drive, Slack, and Jira databases using the Model Context Protocol (MCP). How does the MCP standard facilitate this multi-application integration?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>MCP provides an open standard protocol allowing one client to connect to multiple tools uniformly.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>MCP eliminates all user permission verification screens to accelerate agentic task execution speed.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>MCP compiles proprietary database code directly into the model foundational parameter weights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>MCP bypasses model context windows, streaming binary records straight into user browser sessions.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 32</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Tools, MCP & The Agent Loop</span>
+    </div>
+    <div class="q-scenario">A freight broker asks an AI assistant for the current daily charter rate of Panamax bulk carriers. The assistant produces an outdated figure based on pretraining data without searching the web. What troubleshooting move should the broker make?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Submit the identical prompt repeatedly until sampling randomness triggers tool invocation.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Clear the browser cache and restart the operating system to restore disabled web search sockets.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Switch immediately to an image generation model to locate current shipping rate infographic cards.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Explicitly command the assistant to search the web, as models do not always trigger tools alone.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 33</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Reasoning Models & Test-Time Compute</span>
+    </div>
+    <div class="q-scenario">A financial controller connects an accounting agent to the corporate general ledger via an MCP connector. When the connector requests full read, write, and delete permissions, the controller clicks 'Grant All' without reviewing scopes. What operational hazard has the controller created?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Granting permissions forces the platform to charge enterprise token rates on all user queries.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Granting unconstrained write and delete permissions allows autonomous tools to alter records irreversibly.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Granting permissions automatically terminates the corporate enterprise liability insurance policy.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Granting permissions causes the foundation model to incorporate ledger data into its base weights.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 34</span>
+      <span>Domain 3: Product and Model Selection &bull; Reasoning Models & Test-Time Compute</span>
+    </div>
+    <div class="q-scenario">An actuarial analyst evaluates an AI model that exhibits extended 'thinking' before answering complex pension solvency problems. What is the model mechanically doing during this thinking phase?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Accessing an external mathematical calculation server to verify formulas in real time.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Generating a hidden scratchpad sequence of intermediate reasoning tokens before the final output.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Executing an automated gradient update that fine-tunes its parameters for the actuarial task.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Querying parallel foundational models to achieve a democratic consensus vote on the problem.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 35</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Reasoning Models & Test-Time Compute</span>
+    </div>
+    <div class="q-scenario">A fleet logistics supervisor enables extended thinking mode with maximum effort on a simple prompt asking for the business hours of a local tyre repair shop. What operational inefficiency does this configuration cause?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It permanently consumes context window tokens that cannot be reclaimed in future chat sessions.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It expends unnecessary hidden reasoning tokens and increases latency on a simple factual lookup.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It triggers automatic safety filter blocks because thinking models refuse simple commercial queries.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It forces the model to synthesize fabricated tyre inventory tables to justify the thinking tokens.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 36</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Reasoning Models & Test-Time Compute</span>
+    </div>
+    <div class="q-scenario">A medical diagnostic auditor reviews a clinical case evaluation generated by an advanced reasoning model. The reasoning scratchpad shows eight steps of deduction, but the final drug dosage recommendation contains a fatal decimal error. Why did the reasoning process fail to prevent this?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Extended thinking is also next-token prediction, which can generate errors within plausible chains.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The reasoning scratchpad exceeded 100,000 tokens, triggering automatic numerical truncation.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The model was operating on a consumer tier that intentionally disables mathematical validation.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Medical calculations require multimodal vision inputs before reasoning can execute accurately.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 37</span>
+      <span>Domain 3: Product and Model Selection &bull; Model Ladder & Configuration Scopes</span>
+    </div>
+    <div class="q-scenario">A customer support director designs an automated AI triage workflow for incoming emails. The task requires parsing 50,000 customer messages per hour, identifying whether each email is a billing inquiry or technical issue, and extracting the account number. Which tier of the model ladder should the director select?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>An extended reasoning model with maximum thinking effort, to deduce subtle emotional sentiment.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The top-tier deep architecture model, to ensure every single email receives maximum compute.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>A dedicated multimodal image model, to convert text emails into graphical rendering patches.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The fast, lightweight model tier, which is optimized for high-volume, low-depth classification.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 38</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; Model Ladder & Configuration Scopes</span>
+    </div>
+    <div class="q-scenario">A university lecturer configures account settings in an AI assistant. The lecturer writes the instruction 'Always respond in three-column Markdown tables using undergraduate-level physics terminology' into the account-wide 'Custom Instructions' field. Why is this configuration an operational error?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Account-wide instructions apply to every chat, damaging tasks where tables and physics terms do not apply.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Account-wide instruction fields support only natural language prose and reject formatting syntax.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Account-wide instructions automatically overwrite the platform underlying foundational system prompt.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Account-wide instructions consume 80% of the active token context window on every turn by default.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 39</span>
+      <span>Domain 3: Product and Model Selection &bull; Model Ladder & Configuration Scopes</span>
+    </div>
+    <div class="q-scenario">A corporate merger analyst needs to decide between running a standard web search query versus initiating a deep 'Research' mode task on a target acquisition. How are these two tools properly delineated in practice?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Use web search when working on paid tiers; use Research exclusively when operating within free browser chats.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Use web search for single facts; use Research for multi-turn search synthesis resulting in an actionable report.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Use web search for mathematical formulas; use Research exclusively for qualitative legal contract drafting.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Use web search for regulated public filings; use Research for private internal corporate intranet records.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 40</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; Model Ladder & Configuration Scopes</span>
+    </div>
+    <div class="q-scenario">An enterprise knowledge manager is organizing company workflows across Anthropic's four official configuration scopes. How should the manager correctly allocate capabilities across these four scopes?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Projects persist continuity, Skills verify math, Code execution stores files, and Memory defines procedures.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Projects carry context, Skills define procedures, Code execution verifies math, and Memory persists continuity.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Projects verify computations, Skills store background context, Code execution handles memory, and Memory writes code.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Projects define procedures, Skills persist continuity, Code execution carries context, and Memory stores files.</td></tr>
+    </table>
+  </div>
+
+  <div class="section-divider"></div>
+  <div class="section-title">PART 2: ANSWER KEY & COMPREHENSIVE RATIONALES</div>
+  <div style="margin-bottom: 16px; font-size: 9pt; color: #64748b;">
+    Exhaustive psychometric explanations detailing why the correct option is uniquely accurate per the chapter source text, and why each alternate distractor is operationally flawed.
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 1: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 1: A Prediction Engine, Not a Truth Engine
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Language models are next-token prediction engines. When presented with an unfamiliar or rare topic, they do not consult a factual database; they generate statistically plausible prose by assembling patterns, terminology, and structural conventions learned from related medical and physiotherapy texts.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Standard chat models do not automatically query external registry web sockets unless explicitly tool-enabled.</li>
+      <li><strong>Option B Flaw:</strong> Models do not store relational database tables or queryable encyclopedias inside their parameters.</li>
+      <li><strong>Option C Flaw:</strong> There are no emergency medical subroutines in language models; generation is always statistical continuation.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 2: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 1: A Prediction Engine, Not a Truth Engine
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> At each step of generation, the model computes probabilities for thousands of possible next tokens. Rather than always selecting the single highest-probability token (which produces repetitive, rigid text), chat models sample stochastically, leading to different valid pathways across repeated runs.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Different compute clusters run the identical frozen model weights and deterministic sampling algorithms.</li>
+      <li><strong>Option B Flaw:</strong> The prompt was identical in both runs, so contradictory operator inputs could not explain the divergence.</li>
+      <li><strong>Option C Flaw:</strong> Model weights are completely frozen during inference and do not update from user queries.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 3: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 1: A Prediction Engine, Not a Truth Engine
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Consumer and browser chat interfaces have a non-zero temperature and top-p sampling setting hard-coded into their interface layers. Operators cannot set temperature to zero in standard chat products, meaning outputs will always exhibit statistical variance across repeat runs.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Legal citations do not override the probabilistic sampling mechanisms of generative models.</li>
+      <li><strong>Option C Flaw:</strong> Prompt length has no effect on stochastic token sampling.</li>
+      <li><strong>Option D Flaw:</strong> Browser assistants cannot run offline, and offline execution would still require temperature configuration.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 4: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 1: A Prediction Engine, Not a Truth Engine
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> An LLM is not a database containing stored files or encyclopedia articles that it reads. It is a mathematical network of connection weights that predicts what word chunk should follow next based on statistical correlation.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Language models do not require specialized culinary plugins to discuss recipes or ratios.</li>
+      <li><strong>Option B Flaw:</strong> The supervisor's error is assuming an internal knowledge store, not external spreadsheet connectors.</li>
+      <li><strong>Option D Flaw:</strong> Tokenization limits relate to chunking, not the difference between retrieval and prediction.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 5: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Idea 2: Training, Frozen Weights, and Statelessness
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> During user inference, model weights are strictly frozen and read-only. Corrections provided during a conversation exist only in that temporary chat's context window. A fresh chat starts with an empty context and the original uncorrected base weights.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The failure to persist is an architectural property of frozen weights, not a security memory wipe.</li>
+      <li><strong>Option B Flaw:</strong> Model tiers do not change based on overnight inactivity.</li>
+      <li><strong>Option D Flaw:</strong> Browser cache does not store model knowledge or state.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 6: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 2: Training, Frozen Weights, and Statelessness
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Models know only what was included in their training corpus prior to their training cutoff date. Because weights are frozen, events occurring after training cannot be known unless the assistant is supplied with live web search or uploaded documents.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The model is not concealing data; it literally does not possess knowledge of post-cutoff events.</li>
+      <li><strong>Option C Flaw:</strong> Text-based regulatory authorizations do not require multimodal vision reasoning.</li>
+      <li><strong>Option D Flaw:</strong> The response was generated from parametric weights, not a failed live scraper attempt.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 7: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Idea 2: Training, Frozen Weights, and Statelessness
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Continuous weight updates would require massive supercomputing clusters running 24/7 (prohibitive cost), would cause safety guardrails to erode unpredictably through adversarial prompts (safety drift), and would cause one user's inputs to unpredictably alter outputs for other corporate users (multi-tenant inconsistency).
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Patent and licensing rules do not dictate the mathematical decision to freeze weights.</li>
+      <li><strong>Option B Flaw:</strong> Server quotas and copyright laws are legal-administrative constraints, not the engineering drivers.</li>
+      <li><strong>Option C Flaw:</strong> Bandwidth caps and context windows are operational session parameters, not reasons to freeze weights.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 8: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Idea 2: Training, Frozen Weights, and Statelessness
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Consumer AI 'Memory' features do not alter model weights. When memory is enabled, the platform extracts key facts into a hidden user profile and prepends those notes into the context window of each new session.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Memory features do not perform background web profiling of user identity.</li>
+      <li><strong>Option C Flaw:</strong> Continuity is achieved via text injection into context, not real-time multi-agent supervision.</li>
+      <li><strong>Option D Flaw:</strong> Individual user weights do not exist; all users query the same shared, frozen model weights.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 9: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 3: The Missing Truth-Checker
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Language models lack an internal verification circuit. When asked about an entity that does not exist in their training data, they assemble syntactically convincing, highly plausible prose matching the archetype of a nursery fee schedule.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Safety filters block harmful content; they do not invent plausible tuition schedules.</li>
+      <li><strong>Option B Flaw:</strong> Consumer models do not pull private municipal business filings without authorized connectors.</li>
+      <li><strong>Option C Flaw:</strong> Hallucination is not a context window calculation error; it is standard prediction operating in the absence of source data.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 10: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 3: The Missing Truth-Checker
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> An LLM generates words by evaluating token likelihood, not factual validity. From the model's mathematical perspective, generating a real court citation and generating an invented citation feel identical—both are probable sequences of legal tokens.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Attention routing does not evaluate truth value.</li>
+      <li><strong>Option C Flaw:</strong> Quantization affects precision, but does not cause selective fabrication of legal cases.</li>
+      <li><strong>Option D Flaw:</strong> Models naturally generate without hedging unless explicitly prompted to express uncertainty.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 11: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 3: The Missing Truth-Checker
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The base objective of a language model is completion, not fact-checking. When given a prompt, its mathematical training drives it to generate the most probable continuation. Evaluating whether it possesses verified facts requires explicit meta-cognitive prompting.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Safety alignment encourages refusal for harm, but does not forbid acknowledging lack of knowledge.</li>
+      <li><strong>Option B Flaw:</strong> Tokenizers easily tokenize negative phrases like 'I do not know' or 'uncertain'.</li>
+      <li><strong>Option D Flaw:</strong> Vendor agreements do not require models to invent answers to technical questions.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 12: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 3: The Missing Truth-Checker
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Instructions like 'never make mistakes' influence token probabilities towards more cautious phrasing, but cannot rewrite the fundamental nature of the architecture. Because generation remains probabilistic, hallucinations cannot be eliminated through prompting alone.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Prompting does not trigger external automated tools unless tools are explicitly integrated.</li>
+      <li><strong>Option C Flaw:</strong> Prompt instructions cannot force mathematical certainty into probabilistic weights.</li>
+      <li><strong>Option D Flaw:</strong> Model size does not eliminate hallucinations; larger models simply hallucinate more subtly.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 13: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Idea 4: Tokens as the Unit of Text
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Models do not read letters; they process multi-character token chunks. The word 'strawberry' is ingested as a few whole tokens (e.g., 'straw' + 'berry'), concealing the individual letters. Forcing the model to spell out 's-t-r-a-w-b-e-r-r-y' assigns individual tokens to each character, making counting possible.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Language models do not possess internal orthographic dictionary tables.</li>
+      <li><strong>Option C Flaw:</strong> Spelling letters does not invoke external code execution sandboxes.</li>
+      <li><strong>Option D Flaw:</strong> Spelling does not modify API temperature settings.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 14: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Idea 4: Tokens as the Unit of Text
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The sub-word tokenizer segments misspelled words into smaller recognizable sub-tokens or maps them to nearby vector representations in embedding space. The surrounding context allows the attention mechanism to resolve the intended meaning effortlessly.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Tokenizers follow rigid algorithmic rules and do not switch to special fallback parsing modes.</li>
+      <li><strong>Option C Flaw:</strong> The platform does not perform background dictionary word replacements.</li>
+      <li><strong>Option D Flaw:</strong> Tokenizers do not run spellcheckers; they map character strings directly to token IDs.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 15: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Idea 4: Tokens as the Unit of Text
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Tokenizers are trained on corpora dominated by Latin-script English text. Common English words are single tokens, whereas non-Latin scripts like Urdu or Arabic are fragmented into multiple tokens per word or even per character, consuming 2x to 4x more tokens for the same information.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> UTF-8 encoding is an encoding standard, not a parameter bloat issue in neural weights.</li>
+      <li><strong>Option C Flaw:</strong> Higher token consumption is a tokenizer property, not administrative rate limiting.</li>
+      <li><strong>Option D Flaw:</strong> Models process non-Latin tokens directly without intermediate translation middleware.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 16: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 4: Tokens as the Unit of Text
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Multimodal models do not 'see' images as humans do. Vision encoders divide images into fixed-size grid patches (e.g., 14x14 pixels) and convert each patch into an embedding token. Extremely small text or fine serial numbers that fall within or across patch boundaries lose resolution and are easily misread.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Modern multimodal vision encoders recognize text natively without dedicated external OCR software.</li>
+      <li><strong>Option B Flaw:</strong> Visual tokens and text tokens are projected into the shared embedding space and processed together.</li>
+      <li><strong>Option C Flaw:</strong> Models downsample images to standard grid resolutions, but not by enforcing a 72 DPI print metric.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 17: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Idea 5: The Context Window as Reading Desk
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Every turn in a chat is a brand-new API call to a stateless model. The application frontend bundles the entire preceding conversation history and sends it alongside the latest prompt into the context window, giving the illusion of persistent memory.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Model weights are strictly read-only and cannot cache user conversation data.</li>
+      <li><strong>Option B Flaw:</strong> Database indexing occurs in application storage, but the model's immediate recall is driven by context injection.</li>
+      <li><strong>Option C Flaw:</strong> GPU activations terminate immediately upon completing generation; there is no persistent live state.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 18: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Idea 5: The Context Window as Reading Desk
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> When a chat grows too long, the transcript exceeds the model's context window. To prevent API errors, the platform silently drops or aggressively summarizes older messages, removing early rules, capacity limits, and instructions from the active reading desk.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Tokenizers are static lookup tables that cannot be corrupted by long chats.</li>
+      <li><strong>Option C Flaw:</strong> System prompts do not possess expiration timers; they persist as long as context allows.</li>
+      <li><strong>Option D Flaw:</strong> Frozen weights never degrade from repeated inference.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 19: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Idea 5: The Context Window as Reading Desk
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> A system prompt is not code or hardware configuration. It is simply natural language text injected at the very top of the context window before the user's prompt. The model reads it using the identical next-token prediction mechanism as user text.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> System prompts do not control GPU memory allocation.</li>
+      <li><strong>Option C Flaw:</strong> System prompts are standard tokenized text, not compiled binary instructions.</li>
+      <li><strong>Option D Flaw:</strong> System prompts carry behavioral instructions, not cryptographic authentication certificates.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 20: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Idea 5: The Context Window as Reading Desk
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Progressive disclosure keeps full skill instructions and reference documents on disk or in external storage, injecting only a lightweight metadata summary into the context window. Full documentation is loaded into the reading desk only when a user prompt specifically requires it.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Tokens cannot be compressed to zero space; text always consumes context window tokens.</li>
+      <li><strong>Option C Flaw:</strong> Fine-tuning every weekend is expensive, complex, and unneeded when context retrieval suffices.</li>
+      <li><strong>Option D Flaw:</strong> Pre-computing all possible engineering queries is computationally impossible.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 21: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Idea 5: The Context Window as Reading Desk
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Foundation models do not retain chat data internally; they are stateless. The conversation transcript is stored purely in the software provider's database. Deleting a chat thread deletes that record from application storage.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Neural gradient reversal does not exist as a routine database deletion operation.</li>
+      <li><strong>Option B Flaw:</strong> Deleting a conversation does not trigger an immediate foundational re-training run.</li>
+      <li><strong>Option C Flaw:</strong> Model weights do not contain individual customer record pointers.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 22: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Idea 6: Learned Confidence and Sycophancy
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> During Reinforcement Learning from Human Feedback (RLHF), human raters frequently preferred polite, agreeable, and affirming responses. This systematically trains models in sycophancy—the tendency to validate user assumptions, leading questions, and stated opinions even when technically incorrect.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The failure was agreement with a biased prompt, not inability to predict concrete curing terms.</li>
+      <li><strong>Option C Flaw:</strong> Model weights do not degrade over time.</li>
+      <li><strong>Option D Flaw:</strong> Context rot involves loss of long transcripts, not immediate affirmative bias in single prompts.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 23: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Idea 6: Learned Confidence and Sycophancy
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> To prevent sycophancy, prompts must avoid revealing operator preference. Framing the task neutrally and establishing explicit, objective evaluation criteria (e.g., efficacy, contraindications, cost per dose) forces the model to evaluate balanced trade-offs.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Revealing personal preference triggers sycophancy, even if asked to play devil's advocate.</li>
+      <li><strong>Option B Flaw:</strong> Adversarial or insulting personas produce erratic, ungrounded rhetoric.</li>
+      <li><strong>Option D Flaw:</strong> Colloquial language does not disable alignment or prevent sycophantic praise.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 24: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 6: Learned Confidence and Sycophancy
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Sycophancy extends to numerical scoring. When asked to score proposals without an explicit rubric or anchors, models default to agreeable, high scores (e.g., 8.5 to 9.5) to avoid harsh judgment. Meaningful evaluation requires an objective scoring rubric with strict penalty definitions.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Models have no difficulty outputting varied numbers; the high clustering is behavioral, not arithmetic.</li>
+      <li><strong>Option B Flaw:</strong> There are no alignment rules mandating minimum scores for commercial proposals.</li>
+      <li><strong>Option D Flaw:</strong> Context overcrowding causes text loss, not uniform high scores.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 25: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 6: Learned Confidence and Sycophancy
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> During post-training alignment, human raters consistently scored clear, articulate, and confident completions higher than answers filled with caveats, hesitation, or uncertainty. As a result, models learned that confident tone maximizes reward, regardless of factual accuracy.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Frontend interfaces render raw tokens and do not inject confidence enhancement wrappers.</li>
+      <li><strong>Option B Flaw:</strong> Confidence is a linguistic artifact of token selection, not a physical GPU hardware metric.</li>
+      <li><strong>Option D Flaw:</strong> Tokenizers do not strip uncertainty words; 'maybe' and 'possibly' are standard valid tokens.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 26: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 7: The Jagged Frontier
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The 'jagged frontier' describes how AI capabilities do not map to human scales of difficulty. A model may perform tasks that require years of graduate training (e.g., differential equations) while failing tasks requiring common-sense reasoning or basic physical intuition.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Context contamination occurs between conflicting documents, not inherent capability boundaries.</li>
+      <li><strong>Option B Flaw:</strong> Server attention heads do not exhaust or throttle downstream logic steps.</li>
+      <li><strong>Option C Flaw:</strong> Tokenization does not drift based on switching between math and spatial puzzles.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 27: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 7: The Jagged Frontier
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Because the frontier is jagged, operators cannot assume that success on a hard task implies success on an easy one. Auditing must be applied across all operational outputs, especially simple administrative or formatting steps where silent failures frequently occur.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Smaller models also have jagged frontiers and make more frequent baseline errors.</li>
+      <li><strong>Option C Flaw:</strong> A flawless answer on one step provides zero mathematical guarantee that subsequent steps are sound.</li>
+      <li><strong>Option D Flaw:</strong> Assuming simple tasks succeed automatically is the exact failure trap of the jagged frontier.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 28: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 7: The Jagged Frontier
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Because models are trained on different data mixtures with different architectures and post-training feedback, their jagged frontiers have different contours. Where one model struggles, another may excel, making multi-model comparison a valuable verification strategy.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Temperature affects token distribution entropy, not specific domain math capabilities.</li>
+      <li><strong>Option C Flaw:</strong> Commercial frontier models do not use secret unapproved checkpoints.</li>
+      <li><strong>Option D Flaw:</strong> Antitrust regulations have nothing to do with neural model capability variance.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 29: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 7: The Jagged Frontier
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The jagged frontier is not fixed. As frontier providers update models, release new checkpoints, or modify system prompts, previously failing tasks may succeed while previously reliable workflows may regress. Regular re-testing ensures operational assumptions remain valid.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Tokenizers do not degrade or corrupt over time.</li>
+      <li><strong>Option B Flaw:</strong> Licensing renewals do not alter software parameter weights or model performance.</li>
+      <li><strong>Option D Flaw:</strong> There is no statutory law mandating quarterly re-certification of neural weights.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 30: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 4: Workflow Integration and Solution Design | <strong>Grounding:</strong> Idea 8: Tools, MCP, and the Agent Loop
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> An AI agent is not a new form of consciousness or a separate species of AI. It is an ordinary next-token prediction model wrapped in an execution loop: it predicts text, outputs a structured tool call (act), receives the tool's output back into its context window (observe), and repeats until finished.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Agents rely fundamentally on large language models trained on massive human language corpora.</li>
+      <li><strong>Option B Flaw:</strong> Agents can call databases via tools, but are not themselves database query engines.</li>
+      <li><strong>Option C Flaw:</strong> Claims of quantum cognition or artificial consciousness are marketing exaggerations.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 31: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 4: Workflow Integration and Solution Design | <strong>Grounding:</strong> Idea 8: Tools, MCP, and the Agent Loop
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Model Context Protocol (MCP) is an open standard that acts like a universal plug (USB for AI). Instead of building custom code for every tool, MCP provides a standard way for models to expose and call tools and resources across different platforms and servers.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> MCP does not eliminate security permissions; it enforces structured authorization boundaries.</li>
+      <li><strong>Option C Flaw:</strong> MCP is a communication protocol, not a compiler that modifies neural weights.</li>
+      <li><strong>Option D Flaw:</strong> Tool outputs retrieved via MCP must be injected into the context window for the model to read them.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 32: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Idea 8: Tools, MCP, and the Agent Loop
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Language models do not always recognize when their internal parametric knowledge is outdated. If a prompt does not explicitly demand current data, the model may predict from static weights. Instructing it to 'search the web for current rates' forces tool invocation.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Repeatedly submitting an unprompted query wastes time without guaranteeing tool execution.</li>
+      <li><strong>Option B Flaw:</strong> Browser caches and OS restarts have nothing to do with server-side tool calling logic.</li>
+      <li><strong>Option C Flaw:</strong> Image generation models produce pictures, not verified market data.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 33: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Idea 8: Tools, MCP, and the Agent Loop
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Tools possess real-world agency. If an agent with write/delete authority encounters an error, hallucinates a command, or suffers from prompt injection, it can delete database tables or overwrite general ledger records with catastrophic, irreversible consequences.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Tool permissions govern authorization scopes, not base API token pricing tiers.</li>
+      <li><strong>Option C Flaw:</strong> Insurance policies are not automatically terminated by granting software scopes.</li>
+      <li><strong>Option D Flaw:</strong> API tool data is not written into foundation model parameter weights.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 34: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Idea 9: Reasoning Models and Test-Time Compute
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Reasoning models (e.g., Claude with thinking or OpenAI o-series) utilize test-time compute. Mechanically, they generate an internal chain of thought—hidden tokens in a scratchpad where the model outlines steps, checks work, and explores alternative routes before presenting the visible response.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Thinking models predict tokens internally; they do not automatically call external calculation servers.</li>
+      <li><strong>Option C Flaw:</strong> Weights remain frozen during inference; no gradient fine-tuning occurs.</li>
+      <li><strong>Option D Flaw:</strong> Reasoning models run single-model inference, not multi-model consensus voting.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 35: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Idea 9: Reasoning Models and Test-Time Compute
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Extended thinking uses substantial token capacity and introduces several seconds or minutes of latency. For a simple factual lookup (business hours), reasoning adds zero value, inflates API token costs, and slows down operational response times.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Context tokens apply only to the active chat session and do not degrade future chats.</li>
+      <li><strong>Option C Flaw:</strong> Thinking models process simple queries without triggering safety filter blocks.</li>
+      <li><strong>Option D Flaw:</strong> Thinking tokens are used for deduction; the model does not invent tables to pad output.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 36: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Idea 9: Reasoning Models and Test-Time Compute
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Extended thinking is still next-token prediction. It does not possess an external calculator or deterministic verification engine. A reasoning model can generate a logical-sounding chain of thought that arrives at an arithmetic hallucination with high confidence.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Scratchpad truncation produces incomplete outputs, not precise but erroneous numbers.</li>
+      <li><strong>Option C Flaw:</strong> Consumer tiers do not disable math; generative LLMs simply lack native arithmetic certainty.</li>
+      <li><strong>Option D Flaw:</strong> Numerical dosage calculations are textual and do not require image vision inputs.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 37: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Appendix: The Model Ladder and Configuration Scopes
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> High-volume, low-complexity classification and extraction tasks (like triage) require speed and cost efficiency. The small, fast tier (e.g., Claude Haiku or GPT-4o-mini) handles structured extraction at a fraction of the cost and latency of flagship models.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Reasoning models introduce high latency and unnecessary reasoning cost for simple classification.</li>
+      <li><strong>Option B Flaw:</strong> Flagship frontier models (e.g., Opus) would be prohibitively slow and expensive for 50,000 basic emails/hour.</li>
+      <li><strong>Option C Flaw:</strong> Text emails should be processed as text; converting text to images is absurdly inefficient.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 38: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Appendix: The Model Ladder and Configuration Scopes
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Account-wide instructions are prepended to every single conversation across the account. If the lecturer tries to draft an administrative email, review an essay, or ask for general advice, the assistant will inappropriately force the output into a physics table.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Custom instruction fields fully accept formatting rules and markdown instructions.</li>
+      <li><strong>Option C Flaw:</strong> Custom instructions do not overwrite provider safety prompts; they append to them.</li>
+      <li><strong>Option D Flaw:</strong> Custom instructions consume only a few dozen tokens, not 80% of the context window.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 39: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Appendix: The Model Ladder and Configuration Scopes
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Standard web search executes a quick lookup for discrete factual questions (e.g., current CEO name, quarterly revenue figure). Deep Research modes execute iterative multi-query web searches, crawling and synthesizing dozens of sources to produce comprehensive analytical briefs.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Deep research modes are premium features, not free tier tools.</li>
+      <li><strong>Option C Flaw:</strong> Both tools process qualitative and quantitative web data; the distinction is depth and synthesis vs single lookup.</li>
+      <li><strong>Option D Flaw:</strong> Public vs private intranet access is governed by enterprise connectors, not search vs research tools.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 40: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Appendix: The Model Ladder and Configuration Scopes
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The four configuration scopes each have a distinct architectural purpose: Projects carry project-specific context and knowledge files; Skills define procedural workflows and tools; Code execution provides deterministic calculation and data processing; Memory persists cross-session user preferences and continuity.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Mismatches scopes (Memory persists continuity, not Projects).</li>
+      <li><strong>Option C Flaw:</strong> Mismatches scopes (Code execution verifies computations, not Projects).</li>
+      <li><strong>Option D Flaw:</strong> Mismatches scopes (Skills do not persist continuity; Projects carry context).</li>
+    </ul>
+  </div>
+
+</body>
+</html>

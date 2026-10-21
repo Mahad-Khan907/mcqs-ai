@@ -1,0 +1,842 @@
+[
+  {
+    "id": 1,
+    "subtopic": "Prediction Engine & Stochastic Selection",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 1: A Prediction Engine, Not a Truth Engine",
+    "scenario": "A sports physiotherapist prompts an assistant for the clinical protocol of an obscure regional rehabilitation method practiced only in two rural clinics. The assistant immediately produces an authoritative, five-stage rehabilitation plan complete with physiological rationales. Why did the assistant generate detailed clinical guidance on such a rare technique?",
+    "options": {
+      "A": "It accessed real-time sports medicine registry portals through background automated web sockets.",
+      "B": "It queried internal clinical trial database tables that were indexed during initial pretraining.",
+      "C": "It activated emergency clinical advisory subroutines that synthesize missing documentation alone.",
+      "D": "It predicted the most probable text continuation by blending patterns from related medical texts."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Language models are next-token prediction engines. When presented with an unfamiliar or rare topic, they do not consult a factual database; they generate statistically plausible prose by assembling patterns, terminology, and structural conventions learned from related medical and physiotherapy texts.",
+      "distractor_A": "Standard chat models do not automatically query external registry web sockets unless explicitly tool-enabled.",
+      "distractor_B": "Models do not store relational database tables or queryable encyclopedias inside their parameters.",
+      "distractor_C": "There are no emergency medical subroutines in language models; generation is always statistical continuation.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 2,
+    "subtopic": "Prediction Engine & Stochastic Selection",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 1: A Prediction Engine, Not a Truth Engine",
+    "scenario": "An agricultural cooperative logistics scheduler enters the exact same bulk grain haulage scheduling prompt into a standard chat assistant twice in succession. The first run recommends Route A via rail freight, while the second run suggests Route B via canal barge. What architectural mechanism accounts for these divergent operational proposals?",
+    "options": {
+      "A": "The platform routed the two identical inquiries to distinct regional hardware compute clusters.",
+      "B": "The assistant detected contradictory logistical constraints embedded across the operator prompt.",
+      "C": "The model updated its core weight parameters based on network traffic data received between runs.",
+      "D": "The engine samples stochastically from a probability distribution of candidate continuation tokens."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "At each step of generation, the model computes probabilities for thousands of possible next tokens. Rather than always selecting the single highest-probability token (which produces repetitive, rigid text), chat models sample stochastically, leading to different valid pathways across repeated runs.",
+      "distractor_A": "Different compute clusters run the identical frozen model weights and deterministic sampling algorithms.",
+      "distractor_B": "The prompt was identical in both runs, so contradictory operator inputs could not explain the divergence.",
+      "distractor_C": "Model weights are completely frozen during inference and do not update from user queries.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 3,
+    "subtopic": "Prediction Engine & Stochastic Selection",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 1: A Prediction Engine, Not a Truth Engine",
+    "scenario": "A municipal environmental health inspector seeks to configure an AI deployment so that statutory pollution assessment summaries produce perfectly reproducible, invariant text outputs across repeat audits. What is the operational reality of attempting this in standard browser chat interfaces?",
+    "options": {
+      "A": "Standard chat interfaces cannot guarantee identical outputs because sampling variation is built in.",
+      "B": "Standard chat interfaces eliminate stochastic sampling when queries cite municipal legal codes.",
+      "C": "Standard chat interfaces guarantee invariant outputs whenever prompts exceed four hundred tokens.",
+      "D": "Standard chat interfaces achieve deterministic reproduction only when operating in offline modes."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Consumer and browser chat interfaces have a non-zero temperature and top-p sampling setting hard-coded into their interface layers. Operators cannot set temperature to zero in standard chat products, meaning outputs will always exhibit statistical variance across repeat runs.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Legal citations do not override the probabilistic sampling mechanisms of generative models.",
+      "distractor_C": "Prompt length has no effect on stochastic token sampling.",
+      "distractor_D": "Browser assistants cannot run offline, and offline execution would still require temperature configuration."
+    }
+  },
+  {
+    "id": 4,
+    "subtopic": "Prediction Engine & Stochastic Selection",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 1: A Prediction Engine, Not a Truth Engine",
+    "scenario": "A commercial bakery operations supervisor tasks an assistant with calculating recipe scaling for brioche dough. The supervisor assumes the assistant retrieves the ratio from an internal culinary encyclopedia before applying mathematical operations. Why is this operational mental model flawed?",
+    "options": {
+      "A": "It overlooks that consumer assistants require culinary domain plugins before handling baking jobs.",
+      "B": "It assumes the model calculates baker percentages using external server spreadsheet connectors.",
+      "C": "It treats the model as an internal retrieval database rather than a statistical sequence predictor.",
+      "D": "It misinterprets tokenization limits as strict constraints on algorithmic recipe decomposition."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "An LLM is not a database containing stored files or encyclopedia articles that it reads. It is a mathematical network of connection weights that predicts what word chunk should follow next based on statistical correlation.",
+      "distractor_A": "Language models do not require specialized culinary plugins to discuss recipes or ratios.",
+      "distractor_B": "The supervisor's error is assuming an internal knowledge store, not external spreadsheet connectors.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Tokenization limits relate to chunking, not the difference between retrieval and prediction."
+    }
+  },
+  {
+    "id": 5,
+    "subtopic": "Training, Frozen Weights & Statelessness",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Idea 2: Training, Frozen Weights, and Statelessness",
+    "scenario": "A payroll manager notices an assistant miscalculating overtime premiums under a regional labor pact. The manager spends forty minutes correcting the assistant in chat until it answers accurately. The next morning, the manager opens a fresh chat and asks the same question, but the error recurs. Why did the correction fail to persist?",
+    "options": {
+      "A": "The platform detected proprietary payroll data and deployed protective automated memory wipes.",
+      "B": "The assistant was downgraded automatically to a lightweight secondary tier due to inactivity.",
+      "C": "The weights are frozen during inference, meaning corrections exist only within that transcript.",
+      "D": "The browser cache purged the session tokens when the user closed the application window overnight."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "During user inference, model weights are strictly frozen and read-only. Corrections provided during a conversation exist only in that temporary chat's context window. A fresh chat starts with an empty context and the original uncorrected base weights.",
+      "distractor_A": "The failure to persist is an architectural property of frozen weights, not a security memory wipe.",
+      "distractor_B": "Model tiers do not change based on overnight inactivity.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Browser cache does not store model knowledge or state."
+    }
+  },
+  {
+    "id": 6,
+    "subtopic": "Training, Frozen Weights & Statelessness",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 2: Training, Frozen Weights, and Statelessness",
+    "scenario": "A clinical trials coordinator queries an assistant regarding pharmaceutical marketing authorizations granted in the European Union two weeks ago. The assistant responds that the drugs are currently under preliminary evaluation and lack approval. What operational constraint explains this response?",
+    "options": {
+      "A": "The model intentionally conceals recent regulatory findings due to pharmaceutical liability rules.",
+      "B": "The authorizations occurred after the model knowledge cutoff date and are absent from its weights.",
+      "C": "The assistant requires multimodal reasoning capabilities to process statutory health directives.",
+      "D": "The European medicines agency blocks foundational AI scrapers through firewall access filters."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Models know only what was included in their training corpus prior to their training cutoff date. Because weights are frozen, events occurring after training cannot be known unless the assistant is supplied with live web search or uploaded documents.",
+      "distractor_A": "The model is not concealing data; it literally does not possess knowledge of post-cutoff events.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Text-based regulatory authorizations do not require multimodal vision reasoning.",
+      "distractor_D": "The response was generated from parametric weights, not a failed live scraper attempt."
+    }
+  },
+  {
+    "id": 7,
+    "subtopic": "Training, Frozen Weights & Statelessness",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Idea 2: Training, Frozen Weights, and Statelessness",
+    "scenario": "An enterprise legal risk committee asks why foundation model providers deliberately freeze model parameters rather than allowing the neural network to learn continuously from employee interactions. Which deliberate operational reasons mandate this architectural freeze?",
+    "options": {
+      "A": "Memory hardware storage constraints, software patent restrictions, and licensing fee limitations.",
+      "B": "Cloud database synchronization latency, regional copyright regimes, and platform server quotas.",
+      "C": "Token context window exhaustion, user privacy regulations, and internet connection bandwidth caps.",
+      "D": "Prohibitive training compute costs, safety envelope drift prevention, and multi-tenant consistency."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Continuous weight updates would require massive supercomputing clusters running 24/7 (prohibitive cost), would cause safety guardrails to erode unpredictably through adversarial prompts (safety drift), and would cause one user's inputs to unpredictably alter outputs for other corporate users (multi-tenant inconsistency).",
+      "distractor_A": "Patent and licensing rules do not dictate the mathematical decision to freeze weights.",
+      "distractor_B": "Server quotas and copyright laws are legal-administrative constraints, not the engineering drivers.",
+      "distractor_C": "Bandwidth caps and context windows are operational session parameters, not reasons to freeze weights.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 8,
+    "subtopic": "Training, Frozen Weights & Statelessness",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Idea 2: Training, Frozen Weights, and Statelessness",
+    "scenario": "A veterinary pharmaceuticals sales director observes that an assistant appears to remember the names of their regional distributor accounts across multiple separate chat sessions. How does the product architecture actually implement this cross-session continuity?",
+    "options": {
+      "A": "The application saves text notes about the user and inserts them into the context window of new chats.",
+      "B": "The assistant executes background web queries to cross-reference the user identity against records.",
+      "C": "The platform deploys an active multi-agent supervisory cluster that monitors all user interactions.",
+      "D": "The model modifies a small partition of its frozen weights dedicated to individual customer profiles."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Consumer AI 'Memory' features do not alter model weights. When memory is enabled, the platform extracts key facts into a hidden user profile and prepends those notes into the context window of each new session.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Memory features do not perform background web profiling of user identity.",
+      "distractor_C": "Continuity is achieved via text injection into context, not real-time multi-agent supervision.",
+      "distractor_D": "Individual user weights do not exist; all users query the same shared, frozen model weights."
+    }
+  },
+  {
+    "id": 9,
+    "subtopic": "The Missing Truth-Checker",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 3: The Missing Truth-Checker",
+    "scenario": "A school bursar asks an assistant for the fee structure and operating hours of a newly opened community day nursery with no website or online press coverage. The assistant produces a professional, neatly formatted schedule of tuition fees and infant care timings. What does this output represent mechanically?",
+    "options": {
+      "A": "A deliberate safety filter suppression event designed to protect the nursery commercial privacy.",
+      "B": "An automated retrieval of proprietary business filings stored in regional licensing databases.",
+      "C": "A temporary model calculation failure caused by exceeding the token context window threshold.",
+      "D": "A statistically plausible text continuation generated without an internal truth-verification check."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Language models lack an internal verification circuit. When asked about an entity that does not exist in their training data, they assemble syntactically convincing, highly plausible prose matching the archetype of a nursery fee schedule.",
+      "distractor_A": "Safety filters block harmful content; they do not invent plausible tuition schedules.",
+      "distractor_B": "Consumer models do not pull private municipal business filings without authorized connectors.",
+      "distractor_C": "Hallucination is not a context window calculation error; it is standard prediction operating in the absence of source data.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 10,
+    "subtopic": "The Missing Truth-Checker",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 3: The Missing Truth-Checker",
+    "scenario": "A marine salvage surveyor evaluates an AI report containing three maritime legal precedents. Two precedents cite authentic court rulings, while the third cites an invented tribunal case with realistic case numbers, delivered in the identical authoritative voice. Why did the assistant fail to flag the third case as uncertain?",
+    "options": {
+      "A": "The model lacks an internal truth-checking faculty to distinguish verified facts from guesses.",
+      "B": "The model experienced an attention routing failure caused by ambiguous maritime terminology.",
+      "C": "The platform applied lossy quantization to its parameter weights, corrupting legal archives.",
+      "D": "The assistant was configured with excessive system prompt instructions that suppressed hedging."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "An LLM generates words by evaluating token likelihood, not factual validity. From the model's mathematical perspective, generating a real court citation and generating an invented citation feel identical—both are probable sequences of legal tokens.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Attention routing does not evaluate truth value.",
+      "distractor_C": "Quantization affects precision, but does not cause selective fabrication of legal cases.",
+      "distractor_D": "Models naturally generate without hedging unless explicitly prompted to express uncertainty."
+    }
+  },
+  {
+    "id": 11,
+    "subtopic": "The Missing Truth-Checker",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 3: The Missing Truth-Checker",
+    "scenario": "A timber merchant asks an assistant about local building code load ratings for specialized laminated veneer lumber. The assistant invents a structural rating without declaring ignorance. Why does an LLM rarely state 'I do not know' unless explicitly instructed?",
+    "options": {
+      "A": "Safety alignment protocols forbid conversational models from acknowledging knowledge gaps.",
+      "B": "Tokenization algorithms prevent models from outputting negative declarative statements.",
+      "C": "Prediction is its native function, so it continues text rather than evaluating factual absence.",
+      "D": "Commercial vendor service agreements mandate continuous generation across all user turns."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "The base objective of a language model is completion, not fact-checking. When given a prompt, its mathematical training drives it to generate the most probable continuation. Evaluating whether it possesses verified facts requires explicit meta-cognitive prompting.",
+      "distractor_A": "Safety alignment encourages refusal for harm, but does not forbid acknowledging lack of knowledge.",
+      "distractor_B": "Tokenizers easily tokenize negative phrases like 'I do not know' or 'uncertain'.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Vendor agreements do not require models to invent answers to technical questions."
+    }
+  },
+  {
+    "id": 12,
+    "subtopic": "The Missing Truth-Checker",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 3: The Missing Truth-Checker",
+    "scenario": "A quality assurance manager at an aerospace plant attempts to eliminate all hallucinations by prepending extensive prompt instructions commanding the model to 'never make mistakes and guarantee 100% truth'. Why does this prompt constraint fail to eliminate errors?",
+    "options": {
+      "A": "Prompt guardrails reduce error frequency, but cannot alter the underlying predictive mechanism.",
+      "B": "Prompt guardrails trigger automated tool use that verifies every statement before generation.",
+      "C": "Prompt guardrails eliminate hallucinations completely by forcing mathematical precision in weights.",
+      "D": "Prompt guardrails succeed only when applied to enterprise models exceeding 500 billion parameters."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Instructions like 'never make mistakes' influence token probabilities towards more cautious phrasing, but cannot rewrite the fundamental nature of the architecture. Because generation remains probabilistic, hallucinations cannot be eliminated through prompting alone.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Prompting does not trigger external automated tools unless tools are explicitly integrated.",
+      "distractor_C": "Prompt instructions cannot force mathematical certainty into probabilistic weights.",
+      "distractor_D": "Model size does not eliminate hallucinations; larger models simply hallucinate more subtly."
+    }
+  },
+  {
+    "id": 13,
+    "subtopic": "Tokens as the Unit of Text",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Idea 4: Tokens as the Unit of Text",
+    "scenario": "An opticians chain manager asks an assistant to count the letter 'r' in 'strawberry'. The assistant reports there are two 'r's. However, when instructed to 'spell the word out letter by letter and count again', it correctly counts three. Why does spelling the word out resolve the counting error?",
+    "options": {
+      "A": "Spelling increases internal attention weights across English orthographic dictionary tables.",
+      "B": "Spelling forces the model to tokenize letters individually rather than processing word chunks.",
+      "C": "Spelling triggers automated code execution subroutines that parse string character arrays.",
+      "D": "Spelling resets the temperature parameter to zero, eliminating probabilistic counting errors."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Models do not read letters; they process multi-character token chunks. The word 'strawberry' is ingested as a few whole tokens (e.g., 'straw' + 'berry'), concealing the individual letters. Forcing the model to spell out 's-t-r-a-w-b-e-r-r-y' assigns individual tokens to each character, making counting possible.",
+      "distractor_A": "Language models do not possess internal orthographic dictionary tables.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Spelling letters does not invoke external code execution sandboxes.",
+      "distractor_D": "Spelling does not modify API temperature settings."
+    }
+  },
+  {
+    "id": 14,
+    "subtopic": "Tokens as the Unit of Text",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Idea 4: Tokens as the Unit of Text",
+    "scenario": "A facilities coordinator drafts a complex chiller maintenance prompt containing four obvious typographical errors ('maintnance', 'tempurature'). Despite the typos, the assistant produces an accurate, professional schedule. What tokenization property explains why minor typos rarely degrade performance?",
+    "options": {
+      "A": "Misspelled words map to token chunks close enough in embedding space to preserve semantic intent.",
+      "B": "Typographical errors trigger automated fallback to character-by-character semantic parsing.",
+      "C": "The platform replaces misspelled prompt tokens with dictionary definitions in the background.",
+      "D": "The model tokenizer automatically runs an internal spellchecker before segmenting text inputs."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "The sub-word tokenizer segments misspelled words into smaller recognizable sub-tokens or maps them to nearby vector representations in embedding space. The surrounding context allows the attention mechanism to resolve the intended meaning effortlessly.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Tokenizers follow rigid algorithmic rules and do not switch to special fallback parsing modes.",
+      "distractor_C": "The platform does not perform background dictionary word replacements.",
+      "distractor_D": "Tokenizers do not run spellcheckers; they map character strings directly to token IDs."
+    }
+  },
+  {
+    "id": 15,
+    "subtopic": "Tokens as the Unit of Text",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Idea 4: Tokens as the Unit of Text",
+    "scenario": "An export compliance officer processes shipping manifests written in Urdu and Arabic. The officer notices that token consumption is substantially higher per word than for English documents, and long chats exhaust context limits much faster. What explains this operational discrepancy?",
+    "options": {
+      "A": "Non-Latin scripts require multi-byte UTF-8 decompression that bloats server parameter memory.",
+      "B": "Tokenizers trained on English-heavy corpora segment non-Latin scripts into more chunks per word.",
+      "C": "Frontier models apply defensive rate limiting to non-English languages to manage server load.",
+      "D": "Arabic and Urdu scripts trigger mandatory translation middleware that doubles token outputs."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Tokenizers are trained on corpora dominated by Latin-script English text. Common English words are single tokens, whereas non-Latin scripts like Urdu or Arabic are fragmented into multiple tokens per word or even per character, consuming 2x to 4x more tokens for the same information.",
+      "distractor_A": "UTF-8 encoding is an encoding standard, not a parameter bloat issue in neural weights.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Higher token consumption is a tokenizer property, not administrative rate limiting.",
+      "distractor_D": "Models process non-Latin tokens directly without intermediate translation middleware."
+    }
+  },
+  {
+    "id": 16,
+    "subtopic": "Tokens as the Unit of Text",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 4: Tokens as the Unit of Text",
+    "scenario": "A warehouse logistics auditor uploads a high-resolution photograph of a shipping pallet containing small, densely packed serial numbers. The assistant misreads several digits. Why does fine alphanumeric print inside an image present a severe challenge for multimodal models?",
+    "options": {
+      "A": "Image processing subroutines cannot process alphanumeric characters without external OCR tools.",
+      "B": "Visual tokens cannot be processed concurrently with textual tokens within the context window.",
+      "C": "Multimodal models discard image resolution above 72 DPI to comply with context window quotas.",
+      "D": "Images are sliced into visual patches converted to tokens, making sub-patch details hard to resolve."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Multimodal models do not 'see' images as humans do. Vision encoders divide images into fixed-size grid patches (e.g., 14x14 pixels) and convert each patch into an embedding token. Extremely small text or fine serial numbers that fall within or across patch boundaries lose resolution and are easily misread.",
+      "distractor_A": "Modern multimodal vision encoders recognize text natively without dedicated external OCR software.",
+      "distractor_B": "Visual tokens and text tokens are projected into the shared embedding space and processed together.",
+      "distractor_C": "Models downsample images to standard grid resolutions, but not by enforcing a 72 DPI print metric.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 17,
+    "subtopic": "The Context Window as Reading Desk",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Idea 5: The Context Window as Reading Desk",
+    "scenario": "A commercial property surveyor is surprised that an assistant recalls specific tenant lease covenants discussed ten turns earlier in the same chat. Since the underlying foundation model is completely stateless, how does this conversational memory function mechanically?",
+    "options": {
+      "A": "The model writes intermediate conversational facts to a local cache partition inside its weights.",
+      "B": "The assistant uses background database connectors to index each message into long-term storage.",
+      "C": "The platform maintains a persistent neural activation state that remains open between user turns.",
+      "D": "The application prepends the entire conversation transcript into the context window on every turn."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Every turn in a chat is a brand-new API call to a stateless model. The application frontend bundles the entire preceding conversation history and sends it alongside the latest prompt into the context window, giving the illusion of persistent memory.",
+      "distractor_A": "Model weights are strictly read-only and cannot cache user conversation data.",
+      "distractor_B": "Database indexing occurs in application storage, but the model's immediate recall is driven by context injection.",
+      "distractor_C": "GPU activations terminate immediately upon completing generation; there is no persistent live state.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 18,
+    "subtopic": "The Context Window as Reading Desk",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Idea 5: The Context Window as Reading Desk",
+    "scenario": "A hospital patient transport coordinator has been utilizing a single chat session for three weeks to manage ongoing vehicle assignments. Gradually, the assistant begins ignoring vehicle capacity limits defined at the beginning of the conversation. What operational breakdown has occurred?",
+    "options": {
+      "A": "The assistant accumulated conflicting token embeddings that corrupted the underlying tokenizer.",
+      "B": "The transcript outgrew the window, causing the application to trim or summarize earlier turns.",
+      "C": "The system prompt expired automatically after reaching its statutory fourteen-day life cycle.",
+      "D": "The model parameter weights degraded over time due to repeated inference across hospital data."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "When a chat grows too long, the transcript exceeds the model's context window. To prevent API errors, the platform silently drops or aggressively summarizes older messages, removing early rules, capacity limits, and instructions from the active reading desk.",
+      "distractor_A": "Tokenizers are static lookup tables that cannot be corrupted by long chats.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "System prompts do not possess expiration timers; they persist as long as context allows.",
+      "distractor_D": "Frozen weights never degrade from repeated inference."
+    }
+  },
+  {
+    "id": 19,
+    "subtopic": "The Context Window as Reading Desk",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Idea 5: The Context Window as Reading Desk",
+    "scenario": "A financial planner assumes that a 'system prompt' represents specialized compiled machine code that hardcodes permanent behavioral logic into the assistant. How does the architecture actually implement a system prompt?",
+    "options": {
+      "A": "A specialized operating system driver that controls hardware GPU allocation during generation.",
+      "B": "Text placed at the very top of the context window before user text, read by standard prediction.",
+      "C": "Compiled binary instructions that bypass model tokenization to enforce absolute safety rules.",
+      "D": "A cryptographic validation certificate that authenticates the user subscription tier to the API."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "A system prompt is not code or hardware configuration. It is simply natural language text injected at the very top of the context window before the user's prompt. The model reads it using the identical next-token prediction mechanism as user text.",
+      "distractor_A": "System prompts do not control GPU memory allocation.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "System prompts are standard tokenized text, not compiled binary instructions.",
+      "distractor_D": "System prompts carry behavioral instructions, not cryptographic authentication certificates."
+    }
+  },
+  {
+    "id": 20,
+    "subtopic": "The Context Window as Reading Desk",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Idea 5: The Context Window as Reading Desk",
+    "scenario": "A technical training director manages 40 specialized engineering standards that exceed the context window limit if loaded together. How does the 'progressive disclosure' architectural pattern in agent Skills resolve this capacity limitation?",
+    "options": {
+      "A": "It keeps full skill files on disk, loading only a summary into context until a matching request occurs.",
+      "B": "It compresses the text of all 40 engineering manuals into binary tokens that consume zero space.",
+      "C": "It fine-tunes a dedicated open-source language model on the engineering standards every weekend.",
+      "D": "It deploys cloud database workers to pre-compute answers to all possible student inquiries in advance."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Progressive disclosure keeps full skill instructions and reference documents on disk or in external storage, injecting only a lightweight metadata summary into the context window. Full documentation is loaded into the reading desk only when a user prompt specifically requires it.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Tokens cannot be compressed to zero space; text always consumes context window tokens.",
+      "distractor_C": "Fine-tuning every weekend is expensive, complex, and unneeded when context retrieval suffices.",
+      "distractor_D": "Pre-computing all possible engineering queries is computationally impossible."
+    }
+  },
+  {
+    "id": 21,
+    "subtopic": "Learned Confidence & Sycophancy",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Idea 5: The Context Window as Reading Desk",
+    "scenario": "An enterprise information security manager audits an AI assistant deployment to determine whether deleting a confidential customer service chat purges the data from the model. What does deleting a chat thread accomplish mechanically?",
+    "options": {
+      "A": "It executes a selective neural gradient reversal that wipes customer tokens from frozen weights.",
+      "B": "It signals the foundational model provider to re-train the base model without customer inputs.",
+      "C": "It marks customer records as archived while retaining active embedding pointers in the weights.",
+      "D": "It removes the stored transcript from the application database, as models hold no chat data inside."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Foundation models do not retain chat data internally; they are stateless. The conversation transcript is stored purely in the software provider's database. Deleting a chat thread deletes that record from application storage.",
+      "distractor_A": "Neural gradient reversal does not exist as a routine database deletion operation.",
+      "distractor_B": "Deleting a conversation does not trigger an immediate foundational re-training run.",
+      "distractor_C": "Model weights do not contain individual customer record pointers.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 22,
+    "subtopic": "Learned Confidence & Sycophancy",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Idea 6: Learned Confidence and Sycophancy",
+    "scenario": "A construction project manager prompts an assistant: 'Don't you agree that our proposed 14-day slab curing time is more than adequate for heavy industrial loads?' The assistant validates the manager's proposal enthusiastically, despite regional codes recommending 28 days. What trained behavioral bias caused this validation?",
+    "options": {
+      "A": "Hallucination, where the model was unable to predict text describing concrete curing times.",
+      "B": "Sycophancy, where RLHF tuning pushes models to agree with the perspective signaled by the user.",
+      "C": "Model degradation, where continuous usage reduces the mathematical rigor of reasoning loops.",
+      "D": "Context rot, where technical curing parameters were pushed outside the active reading desk."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "During Reinforcement Learning from Human Feedback (RLHF), human raters frequently preferred polite, agreeable, and affirming responses. This systematically trains models in sycophancy—the tendency to validate user assumptions, leading questions, and stated opinions even when technically incorrect.",
+      "distractor_A": "The failure was agreement with a biased prompt, not inability to predict concrete curing terms.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Model weights do not degrade over time.",
+      "distractor_D": "Context rot involves loss of long transcripts, not immediate affirmative bias in single prompts."
+    }
+  },
+  {
+    "id": 23,
+    "subtopic": "Learned Confidence & Sycophancy",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Idea 6: Learned Confidence and Sycophancy",
+    "scenario": "A regional veterinary director seeks an objective comparison of two controversial livestock vaccination regimens. How should the director phrase the prompt to neutralize the assistant's trained sycophantic bias?",
+    "options": {
+      "A": "Express strong personal preference for Regimen A and instruct the model to prove the director wrong.",
+      "B": "Command the model to adopt an aggressive adversarial persona and insult both pharmaceutical options.",
+      "C": "Frame the inquiry neutrally, asking the model to evaluate both regimens against explicit criteria.",
+      "D": "Request the comparison using an informal colloquial tone to bypass conversational alignment filters."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "To prevent sycophancy, prompts must avoid revealing operator preference. Framing the task neutrally and establishing explicit, objective evaluation criteria (e.g., efficacy, contraindications, cost per dose) forces the model to evaluate balanced trade-offs.",
+      "distractor_A": "Revealing personal preference triggers sycophancy, even if asked to play devil's advocate.",
+      "distractor_B": "Adversarial or insulting personas produce erratic, ungrounded rhetoric.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Colloquial language does not disable alignment or prevent sycophantic praise."
+    }
+  },
+  {
+    "id": 24,
+    "subtopic": "Learned Confidence & Sycophancy",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 6: Learned Confidence and Sycophancy",
+    "scenario": "A municipal procurement officer tasks an assistant with evaluating three software vendor bids by assigning a score from 1 to 10 for each. The assistant rates all three bids between 8.8 and 9.4 without establishing benchmark scoring metrics. How does this flattering outcome reflect sycophancy?",
+    "options": {
+      "A": "The model lacked sufficient mathematical precision to compute fractional differences between bids.",
+      "B": "The assistant was bound by commercial alignment rules that prohibit awarding scores below 8.0.",
+      "C": "Unanchored numerical ratings exhibit sycophancy by avoiding critical or challenging evaluations.",
+      "D": "The context window was overcrowded, forcing the scoring mechanism into a uniform average."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Sycophancy extends to numerical scoring. When asked to score proposals without an explicit rubric or anchors, models default to agreeable, high scores (e.g., 8.5 to 9.5) to avoid harsh judgment. Meaningful evaluation requires an objective scoring rubric with strict penalty definitions.",
+      "distractor_A": "Models have no difficulty outputting varied numbers; the high clustering is behavioral, not arithmetic.",
+      "distractor_B": "There are no alignment rules mandating minimum scores for commercial proposals.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Context overcrowding causes text loss, not uniform high scores."
+    }
+  },
+  {
+    "id": 25,
+    "subtopic": "The Jagged Frontier",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 6: Learned Confidence and Sycophancy",
+    "scenario": "A corporate training lead notes that even when an assistant produces inaccurate statistical forecasts, it presents them with complete grammatical certainty. Why is an AI model's confident tone entirely decoupled from factual truth?",
+    "options": {
+      "A": "Frontend chat interfaces append confidence enhancement wrappers to all outgoing model responses.",
+      "B": "Foundation models evaluate statistical confidence by measuring internal GPU memory voltage states.",
+      "C": "Human evaluators in RLHF systematically rewarded confident, fluent prose over hedged answers.",
+      "D": "The tokenizer eliminates uncertainty markers from text tokens to minimize output token length."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "During post-training alignment, human raters consistently scored clear, articulate, and confident completions higher than answers filled with caveats, hesitation, or uncertainty. As a result, models learned that confident tone maximizes reward, regardless of factual accuracy.",
+      "distractor_A": "Frontend interfaces render raw tokens and do not inject confidence enhancement wrappers.",
+      "distractor_B": "Confidence is a linguistic artifact of token selection, not a physical GPU hardware metric.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Tokenizers do not strip uncertainty words; 'maybe' and 'possibly' are standard valid tokens."
+    }
+  },
+  {
+    "id": 26,
+    "subtopic": "The Jagged Frontier",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 7: The Jagged Frontier",
+    "scenario": "A structural engineering auditor observes an assistant draft a flawless mathematical derivation of cantilever deflection, yet fail a basic three-step spatial logic puzzle that an elementary student solves easily. What core characteristic of artificial intelligence does this disparity demonstrate?",
+    "options": {
+      "A": "Context contamination, where engineering equations crowd out elementary logic deduction rules.",
+      "B": "Inference throttling, where complex derivation tasks exhaust downstream server attention heads.",
+      "C": "Tokenization drift, where numerical calculations degrade following symbolic logic processing.",
+      "D": "The jagged frontier, where AI capability does not track human intuitions of task difficulty."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "The 'jagged frontier' describes how AI capabilities do not map to human scales of difficulty. A model may perform tasks that require years of graduate training (e.g., differential equations) while failing tasks requiring common-sense reasoning or basic physical intuition.",
+      "distractor_A": "Context contamination occurs between conflicting documents, not inherent capability boundaries.",
+      "distractor_B": "Server attention heads do not exhaust or throttle downstream logic steps.",
+      "distractor_C": "Tokenization does not drift based on switching between math and spatial puzzles.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 27,
+    "subtopic": "The Jagged Frontier",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 7: The Jagged Frontier",
+    "scenario": "A retail operations director is establishing quality verification protocols for AI-generated operational schedules. In light of the jagged frontier, which auditing habit must operators maintain?",
+    "options": {
+      "A": "Audit rigorously across capability boundaries, checking easy-looking tasks that fail unexpectedly.",
+      "B": "Delegate audit responsibilities to a smaller model, since small models have smoother frontiers.",
+      "C": "Assume that a flawless response on a difficult task validates all surrounding sub-tasks in that run.",
+      "D": "Focus auditing exclusively on complex derivations, assuming simpler tasks succeed automatically."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Because the frontier is jagged, operators cannot assume that success on a hard task implies success on an easy one. Auditing must be applied across all operational outputs, especially simple administrative or formatting steps where silent failures frequently occur.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Smaller models also have jagged frontiers and make more frequent baseline errors.",
+      "distractor_C": "A flawless answer on one step provides zero mathematical guarantee that subsequent steps are sound.",
+      "distractor_D": "Assuming simple tasks succeed automatically is the exact failure trap of the jagged frontier."
+    }
+  },
+  {
+    "id": 28,
+    "subtopic": "The Jagged Frontier",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 7: The Jagged Frontier",
+    "scenario": "A clinical research auditor runs a complex protocol synthesis through two different frontier models. Model 1 excels at adverse event coding but misses dosage calculation bounds, while Model 2 handles calculations perfectly but misinterprets clinical trial coding. What explains this divergence?",
+    "options": {
+      "A": "Model 1 was operating with uncalibrated temperature parameters that corrupted clinical dosing.",
+      "B": "Different models have differently shaped jagged frontiers, allowing one to catch what another drops.",
+      "C": "Model 2 was executing an unapproved fine-tuning checkpoint trained on medical dosage formulas.",
+      "D": "Frontier models intentionally introduce diverse error profiles to comply with antitrust rules."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Because models are trained on different data mixtures with different architectures and post-training feedback, their jagged frontiers have different contours. Where one model struggles, another may excel, making multi-model comparison a valuable verification strategy.",
+      "distractor_A": "Temperature affects token distribution entropy, not specific domain math capabilities.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Commercial frontier models do not use secret unapproved checkpoints.",
+      "distractor_D": "Antitrust regulations have nothing to do with neural model capability variance."
+    }
+  },
+  {
+    "id": 29,
+    "subtopic": "Tools, MCP & The Agent Loop",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 7: The Jagged Frontier",
+    "scenario": "A financial risk analyst establishes a corporate policy requiring AI capability assumptions to be re-tested every few months. Why is periodic re-benchmarking necessary in production workflows?",
+    "options": {
+      "A": "Local browser tokenizers accumulate corrupted string mappings that require quarterly resets.",
+      "B": "Enterprise model licenses expire on rolling 90-day cycles, degrading unverified weights.",
+      "C": "The jagged frontier moves dynamically as newer model releases alter specific task competencies.",
+      "D": "Regulatory bodies require periodic re-certification of foundational LLM parameters by law."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "The jagged frontier is not fixed. As frontier providers update models, release new checkpoints, or modify system prompts, previously failing tasks may succeed while previously reliable workflows may regress. Regular re-testing ensures operational assumptions remain valid.",
+      "distractor_A": "Tokenizers do not degrade or corrupt over time.",
+      "distractor_B": "Licensing renewals do not alter software parameter weights or model performance.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "There is no statutory law mandating quarterly re-certification of neural weights."
+    }
+  },
+  {
+    "id": 30,
+    "subtopic": "Tools, MCP & The Agent Loop",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Idea 8: Tools, MCP, and the Agent Loop",
+    "scenario": "A supply chain director evaluates a software proposal claiming to introduce an entirely new form of synthetic cognitive intelligence called an 'AI Agent'. What is the architectural reality of an AI agent?",
+    "options": {
+      "A": "An agent is a specialized machine learning model trained entirely without human language data.",
+      "B": "An agent is a distributed database engine that executes automated SQL transaction queries.",
+      "C": "An agent is a quantum neural network that has achieved autonomous general cognitive awareness.",
+      "D": "An agent is a next-token predictor with tools, executing an iterative predict-act-observe cycle."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "An AI agent is not a new form of consciousness or a separate species of AI. It is an ordinary next-token prediction model wrapped in an execution loop: it predicts text, outputs a structured tool call (act), receives the tool's output back into its context window (observe), and repeats until finished.",
+      "distractor_A": "Agents rely fundamentally on large language models trained on massive human language corpora.",
+      "distractor_B": "Agents can call databases via tools, but are not themselves database query engines.",
+      "distractor_C": "Claims of quantum cognition or artificial consciousness are marketing exaggerations.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 31,
+    "subtopic": "Tools, MCP & The Agent Loop",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Idea 8: Tools, MCP, and the Agent Loop",
+    "scenario": "An enterprise IT architect connects an AI assistant to corporate Google Drive, Slack, and Jira databases using the Model Context Protocol (MCP). How does the MCP standard facilitate this multi-application integration?",
+    "options": {
+      "A": "MCP provides an open standard protocol allowing one client to connect to multiple tools uniformly.",
+      "B": "MCP eliminates all user permission verification screens to accelerate agentic task execution speed.",
+      "C": "MCP compiles proprietary database code directly into the model foundational parameter weights.",
+      "D": "MCP bypasses model context windows, streaming binary records straight into user browser sessions."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Model Context Protocol (MCP) is an open standard that acts like a universal plug (USB for AI). Instead of building custom code for every tool, MCP provides a standard way for models to expose and call tools and resources across different platforms and servers.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "MCP does not eliminate security permissions; it enforces structured authorization boundaries.",
+      "distractor_C": "MCP is a communication protocol, not a compiler that modifies neural weights.",
+      "distractor_D": "Tool outputs retrieved via MCP must be injected into the context window for the model to read them."
+    }
+  },
+  {
+    "id": 32,
+    "subtopic": "Tools, MCP & The Agent Loop",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Idea 8: Tools, MCP, and the Agent Loop",
+    "scenario": "A freight broker asks an AI assistant for the current daily charter rate of Panamax bulk carriers. The assistant produces an outdated figure based on pretraining data without searching the web. What troubleshooting move should the broker make?",
+    "options": {
+      "A": "Submit the identical prompt repeatedly until sampling randomness triggers tool invocation.",
+      "B": "Clear the browser cache and restart the operating system to restore disabled web search sockets.",
+      "C": "Switch immediately to an image generation model to locate current shipping rate infographic cards.",
+      "D": "Explicitly command the assistant to search the web, as models do not always trigger tools alone."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Language models do not always recognize when their internal parametric knowledge is outdated. If a prompt does not explicitly demand current data, the model may predict from static weights. Instructing it to 'search the web for current rates' forces tool invocation.",
+      "distractor_A": "Repeatedly submitting an unprompted query wastes time without guaranteeing tool execution.",
+      "distractor_B": "Browser caches and OS restarts have nothing to do with server-side tool calling logic.",
+      "distractor_C": "Image generation models produce pictures, not verified market data.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 33,
+    "subtopic": "Reasoning Models & Test-Time Compute",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Idea 8: Tools, MCP, and the Agent Loop",
+    "scenario": "A financial controller connects an accounting agent to the corporate general ledger via an MCP connector. When the connector requests full read, write, and delete permissions, the controller clicks 'Grant All' without reviewing scopes. What operational hazard has the controller created?",
+    "options": {
+      "A": "Granting permissions forces the platform to charge enterprise token rates on all user queries.",
+      "B": "Granting unconstrained write and delete permissions allows autonomous tools to alter records irreversibly.",
+      "C": "Granting permissions automatically terminates the corporate enterprise liability insurance policy.",
+      "D": "Granting permissions causes the foundation model to incorporate ledger data into its base weights."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Tools possess real-world agency. If an agent with write/delete authority encounters an error, hallucinates a command, or suffers from prompt injection, it can delete database tables or overwrite general ledger records with catastrophic, irreversible consequences.",
+      "distractor_A": "Tool permissions govern authorization scopes, not base API token pricing tiers.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Insurance policies are not automatically terminated by granting software scopes.",
+      "distractor_D": "API tool data is not written into foundation model parameter weights."
+    }
+  },
+  {
+    "id": 34,
+    "subtopic": "Reasoning Models & Test-Time Compute",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Idea 9: Reasoning Models and Test-Time Compute",
+    "scenario": "An actuarial analyst evaluates an AI model that exhibits extended 'thinking' before answering complex pension solvency problems. What is the model mechanically doing during this thinking phase?",
+    "options": {
+      "A": "Accessing an external mathematical calculation server to verify formulas in real time.",
+      "B": "Generating a hidden scratchpad sequence of intermediate reasoning tokens before the final output.",
+      "C": "Executing an automated gradient update that fine-tunes its parameters for the actuarial task.",
+      "D": "Querying parallel foundational models to achieve a democratic consensus vote on the problem."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Reasoning models (e.g., Claude with thinking or OpenAI o-series) utilize test-time compute. Mechanically, they generate an internal chain of thought—hidden tokens in a scratchpad where the model outlines steps, checks work, and explores alternative routes before presenting the visible response.",
+      "distractor_A": "Thinking models predict tokens internally; they do not automatically call external calculation servers.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Weights remain frozen during inference; no gradient fine-tuning occurs.",
+      "distractor_D": "Reasoning models run single-model inference, not multi-model consensus voting."
+    }
+  },
+  {
+    "id": 35,
+    "subtopic": "Reasoning Models & Test-Time Compute",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Idea 9: Reasoning Models and Test-Time Compute",
+    "scenario": "A fleet logistics supervisor enables extended thinking mode with maximum effort on a simple prompt asking for the business hours of a local tyre repair shop. What operational inefficiency does this configuration cause?",
+    "options": {
+      "A": "It permanently consumes context window tokens that cannot be reclaimed in future chat sessions.",
+      "B": "It expends unnecessary hidden reasoning tokens and increases latency on a simple factual lookup.",
+      "C": "It triggers automatic safety filter blocks because thinking models refuse simple commercial queries.",
+      "D": "It forces the model to synthesize fabricated tyre inventory tables to justify the thinking tokens."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Extended thinking uses substantial token capacity and introduces several seconds or minutes of latency. For a simple factual lookup (business hours), reasoning adds zero value, inflates API token costs, and slows down operational response times.",
+      "distractor_A": "Context tokens apply only to the active chat session and do not degrade future chats.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Thinking models process simple queries without triggering safety filter blocks.",
+      "distractor_D": "Thinking tokens are used for deduction; the model does not invent tables to pad output."
+    }
+  },
+  {
+    "id": 36,
+    "subtopic": "Reasoning Models & Test-Time Compute",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Idea 9: Reasoning Models and Test-Time Compute",
+    "scenario": "A medical diagnostic auditor reviews a clinical case evaluation generated by an advanced reasoning model. The reasoning scratchpad shows eight steps of deduction, but the final drug dosage recommendation contains a fatal decimal error. Why did the reasoning process fail to prevent this?",
+    "options": {
+      "A": "Extended thinking is also next-token prediction, which can generate errors within plausible chains.",
+      "B": "The reasoning scratchpad exceeded 100,000 tokens, triggering automatic numerical truncation.",
+      "C": "The model was operating on a consumer tier that intentionally disables mathematical validation.",
+      "D": "Medical calculations require multimodal vision inputs before reasoning can execute accurately."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Extended thinking is still next-token prediction. It does not possess an external calculator or deterministic verification engine. A reasoning model can generate a logical-sounding chain of thought that arrives at an arithmetic hallucination with high confidence.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Scratchpad truncation produces incomplete outputs, not precise but erroneous numbers.",
+      "distractor_C": "Consumer tiers do not disable math; generative LLMs simply lack native arithmetic certainty.",
+      "distractor_D": "Numerical dosage calculations are textual and do not require image vision inputs."
+    }
+  },
+  {
+    "id": 37,
+    "subtopic": "Model Ladder & Configuration Scopes",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Appendix: The Model Ladder and Configuration Scopes",
+    "scenario": "A customer support director designs an automated AI triage workflow for incoming emails. The task requires parsing 50,000 customer messages per hour, identifying whether each email is a billing inquiry or technical issue, and extracting the account number. Which tier of the model ladder should the director select?",
+    "options": {
+      "A": "An extended reasoning model with maximum thinking effort, to deduce subtle emotional sentiment.",
+      "B": "The top-tier deep architecture model, to ensure every single email receives maximum compute.",
+      "C": "A dedicated multimodal image model, to convert text emails into graphical rendering patches.",
+      "D": "The fast, lightweight model tier, which is optimized for high-volume, low-depth classification."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "High-volume, low-complexity classification and extraction tasks (like triage) require speed and cost efficiency. The small, fast tier (e.g., Claude Haiku or GPT-4o-mini) handles structured extraction at a fraction of the cost and latency of flagship models.",
+      "distractor_A": "Reasoning models introduce high latency and unnecessary reasoning cost for simple classification.",
+      "distractor_B": "Flagship frontier models (e.g., Opus) would be prohibitively slow and expensive for 50,000 basic emails/hour.",
+      "distractor_C": "Text emails should be processed as text; converting text to images is absurdly inefficient.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 38,
+    "subtopic": "Model Ladder & Configuration Scopes",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Appendix: The Model Ladder and Configuration Scopes",
+    "scenario": "A university lecturer configures account settings in an AI assistant. The lecturer writes the instruction 'Always respond in three-column Markdown tables using undergraduate-level physics terminology' into the account-wide 'Custom Instructions' field. Why is this configuration an operational error?",
+    "options": {
+      "A": "Account-wide instructions apply to every chat, damaging tasks where tables and physics terms do not apply.",
+      "B": "Account-wide instruction fields support only natural language prose and reject formatting syntax.",
+      "C": "Account-wide instructions automatically overwrite the platform underlying foundational system prompt.",
+      "D": "Account-wide instructions consume 80% of the active token context window on every turn by default."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Account-wide instructions are prepended to every single conversation across the account. If the lecturer tries to draft an administrative email, review an essay, or ask for general advice, the assistant will inappropriately force the output into a physics table.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Custom instruction fields fully accept formatting rules and markdown instructions.",
+      "distractor_C": "Custom instructions do not overwrite provider safety prompts; they append to them.",
+      "distractor_D": "Custom instructions consume only a few dozen tokens, not 80% of the context window."
+    }
+  },
+  {
+    "id": 39,
+    "subtopic": "Model Ladder & Configuration Scopes",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Appendix: The Model Ladder and Configuration Scopes",
+    "scenario": "A corporate merger analyst needs to decide between running a standard web search query versus initiating a deep 'Research' mode task on a target acquisition. How are these two tools properly delineated in practice?",
+    "options": {
+      "A": "Use web search when working on paid tiers; use Research exclusively when operating within free browser chats.",
+      "B": "Use web search for single facts; use Research for multi-turn search synthesis resulting in an actionable report.",
+      "C": "Use web search for mathematical formulas; use Research exclusively for qualitative legal contract drafting.",
+      "D": "Use web search for regulated public filings; use Research for private internal corporate intranet records."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Standard web search executes a quick lookup for discrete factual questions (e.g., current CEO name, quarterly revenue figure). Deep Research modes execute iterative multi-query web searches, crawling and synthesizing dozens of sources to produce comprehensive analytical briefs.",
+      "distractor_A": "Deep research modes are premium features, not free tier tools.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Both tools process qualitative and quantitative web data; the distinction is depth and synthesis vs single lookup.",
+      "distractor_D": "Public vs private intranet access is governed by enterprise connectors, not search vs research tools."
+    }
+  },
+  {
+    "id": 40,
+    "subtopic": "Model Ladder & Configuration Scopes",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Appendix: The Model Ladder and Configuration Scopes",
+    "scenario": "An enterprise knowledge manager is organizing company workflows across Anthropic's four official configuration scopes. How should the manager correctly allocate capabilities across these four scopes?",
+    "options": {
+      "A": "Projects persist continuity, Skills verify math, Code execution stores files, and Memory defines procedures.",
+      "B": "Projects carry context, Skills define procedures, Code execution verifies math, and Memory persists continuity.",
+      "C": "Projects verify computations, Skills store background context, Code execution handles memory, and Memory writes code.",
+      "D": "Projects define procedures, Skills persist continuity, Code execution carries context, and Memory stores files."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "The four configuration scopes each have a distinct architectural purpose: Projects carry project-specific context and knowledge files; Skills define procedural workflows and tools; Code execution provides deterministic calculation and data processing; Memory persists cross-session user preferences and continuity.",
+      "distractor_A": "Mismatches scopes (Memory persists continuity, not Projects).",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Mismatches scopes (Code execution verifies computations, not Projects).",
+      "distractor_D": "Mismatches scopes (Skills do not persist continuity; Projects carry context)."
+    }
+  }
+]

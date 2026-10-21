@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Panaversity PCAO-F & Anthropic CCAO-F Study Guide: Just_Delegate_It</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+    @bottom-right {
+      content: counter(page);
+      font-size: 9pt;
+      font-family: Arial, sans-serif;
+      color: #64748b;
+    }
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    font-size: 10pt;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-cover {
+    text-align: center;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e0e7ff;
+    color: #3730a3;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: 20pt;
+    margin: 8px 0;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 10pt;
+    color: #64748b;
+  }
+
+  .section-divider {
+    page-break-before: always;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .q-item {
+    page-break-inside: avoid;
+    margin-bottom: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 14px;
+    background: #f8fafc;
+  }
+
+  .q-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8.5pt;
+    color: #475569;
+    font-weight: bold;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+
+  .q-num {
+    color: #4338ca;
+  }
+
+  .q-scenario {
+    font-size: 9.8pt;
+    line-height: 1.5;
+    color: #0f172a;
+    margin-bottom: 10px;
+  }
+
+  .options-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .opt-row {
+    font-size: 9.2pt;
+    line-height: 1.4;
+    padding: 3px 0;
+    vertical-align: top;
+  }
+
+  .opt-letter {
+    font-weight: bold;
+    width: 25px;
+    color: #334155;
+  }
+
+  .exp-item {
+    page-break-inside: avoid;
+    margin-bottom: 22px;
+    border-left: 3.5px solid #4338ca;
+    padding-left: 12px;
+  }
+
+  .exp-head {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+
+  .exp-correct {
+    color: #047857;
+    font-weight: bold;
+  }
+
+  .exp-grounding {
+    font-size: 8.5pt;
+    color: #64748b;
+    margin-bottom: 6px;
+  }
+
+  .exp-body {
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #1e293b;
+    margin-bottom: 6px;
+  }
+
+  .flaw-list {
+    font-size: 8.5pt;
+    line-height: 1.4;
+    color: #475569;
+    padding-left: 16px;
+    margin-top: 4px;
+  }
+
+  .flaw-list li {
+    margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header-cover">
+    <div class="badge">Official Exam Blueprint Preparation Guide</div>
+    <h1>Panaversity PCAO-F & Anthropic CCAO-F</h1>
+    <div style="font-size: 13pt; font-weight: 600; color: #4338ca; margin-bottom: 6px;">
+      Chapter: Just_Delegate_It
+    </div>
+    <div class="meta">
+      40 High-Yield Scenario-Based Examination Items &bull; Cut Score: 720 / 1,000 (72%) &bull; Psychometric Standard
+    </div>
+  </div>
+
+  <div style="margin-bottom: 24px; padding: 10px 14px; background: #eef2ff; border-radius: 6px; font-size: 9pt; border-left: 3px solid #6366f1;">
+    <strong>Examination Instructions:</strong> Part 1 contains 40 numbered scenario-based items with zero answers or spoilers. Complete Part 1 under simulated exam conditions (target time: 60 minutes). Then consult Part 2 for the official answer keys, direct source citations, and comprehensive distractor dissections.
+  </div>
+
+  <div class="section-title">PART 1: QUESTIONS ONLY (SPOILER-FREE SIMULATION)</div>
+  <div style="margin-bottom: 16px;"></div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 1</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Asking vs. Giving the Job</span>
+    </div>
+    <div class="q-scenario">A refrigerated depot coordinator needs to evaluate three regional hauliers. She types: 'What are some reliable refrigerated carriers operating across the Northern corridor?' The assistant returns four descriptive paragraphs on fleet history and certifications. The coordinator still has to open haulier websites, find pallet rates, and build a spreadsheet. Why did this prompt fail to save operational time?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It asked a general question for advice rather than specifying an inspectable table to produce.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It failed to list the precise search keywords the assistant should use across haulier sites.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It selected a free browser account rather than an enterprise subscription with live routing.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It omitted the regional freight license numbers required for cross-border transport queries.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 2</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Asking vs. Giving the Job</span>
+    </div>
+    <div class="q-scenario">A property manager wants an assistant to reconcile tenant water sub-meter bills. An administrative assistant advises that delegating work requires a paid enterprise tier, and that free browser accounts can only answer informational questions. How should the manager handle this advice?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Disregard it, because delegating depends on asking for a deliverable, not subscription tier.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Accept it, because automated utility calculations require dedicated enterprise compute quotas.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Accept it, because free browser tiers restrict output formatting to unstructured paragraphs.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Disregard it, because free accounts automatically upgrade once tabular data is requested.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 3</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Asking vs. Giving the Job</span>
+    </div>
+    <div class="q-scenario">A hotel catering manager needs to evaluate three commercial dishwashers. Instead of asking 'Which dishwasher is best?', the manager prompts: 'Find three undercounter commercial dishwashers meeting 60-second cycle standards. Place them in a table showing brand, cycle time, tank capacity, and source URL.' What operational advantage does this prompt provide?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It transfers legal liability for machine sanitation standards to the assistant.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It creates a checkable artifact, leaving the manager to verify rather than compile.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It enables the assistant to bypass vendor paywalls and access private dealer manuals.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It guarantees that all listed technical specifications reflect 100% live inventory.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 4</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Asking vs. Giving the Job</span>
+    </div>
+    <div class="q-scenario">An office furniture buyer spends three hours every week summarizing supplier catalog updates. She wants to delegate this task to an AI assistant so she can focus on supplier negotiations. Which prompt structure represents genuine delegation of this task?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Explain why commercial laminate desks cost more than solid pine alternatives.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>What are the latest European ergonomic desk standards published this month?</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Extract price shifts from this PDF into a CSV table with SKU and percentage change.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Give me some good ideas for negotiating volume discounts on office furniture.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 5</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Outcome, Not Clicks</span>
+    </div>
+    <div class="q-scenario">A pricing manager at an agricultural tyre distributor instructs an AI assistant by dictating twelve precise search queries across two specific regional wholesale portals. The assistant executes the steps perfectly, but the resulting pricing schedule omits substantially cheaper options available through an unmentioned national distributor. What operational failure caused this omission?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The assistant experienced memory token exhaustion caused by parsing twelve search queries.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The wholesale portals blocked automated web scrapers from retrieving wholesale prices.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The manager omitted the regional tire distribution license numbers required for search.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The manager dictated the procedural steps, making her own narrow plan the absolute ceiling.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 6</span>
+      <span>Domain 4: Workflow Integration and Solution Design &bull; Outcome, Not Clicks</span>
+    </div>
+    <div class="q-scenario">An associate at an opticians chain is tasked with creating a benchmarking document for specialized ophthalmic lens edgers. Feeling nervous that the assistant might overlook critical technical specs, the associate spends forty minutes writing eighteen sequential search and extraction steps. Where in the workflow does this apprehension properly belong?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>In the initial prompt, by detailing every intermediate click and browser navigation path.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>In administrative escalation, by seeking managerial approval before starting the task.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>In the model selection stage, by upgrading to a specialized mathematical reasoning tier.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>In the verification stage when inspecting the final result, not when framing the brief.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 7</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Outcome, Not Clicks</span>
+    </div>
+    <div class="q-scenario">A clinic administrator is framing an instruction to build a patient appointment reminder template. Which phrasing establishes an outcome rather than dictating procedural steps?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Interview the head receptionist, record her daily scheduling routine, and format notes.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Execute three web searches on healthcare messaging standards and paste the top abstracts.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Open our scheduling software, click the communications tab, and export active draft SMS.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Produce an approved five-message SMS reminder series mapped to specific delivery triggers.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 8</span>
+      <span>Domain 1: Prompting and Task Execution &bull; Outcome, Not Clicks</span>
+    </div>
+    <div class="q-scenario">A warehouse supervisor wants an assistant to identify bottlenecks in pallet loading logs. He writes a prompt specifying every calculation formula, intermediate sorting rule, and column width. When the output arrives, it misses an obvious 3-hour delay pattern because that specific pattern was not covered by his prescribed calculation steps. What went wrong?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The supervisor micromanaged the steps instead of describing the diagnostic outcome.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The supervisor failed to activate the assistant's extended python reasoning capability.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The assistant lacked sufficient parametric training on logistics warehouse operations.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The dataset contained corrupted timestamps that invalidated the calculation script.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 9</span>
+      <span>Domain 1: Prompting and Task Execution &bull; The Delegation Brief</span>
+    </div>
+    <div class="q-scenario">A fleet maintenance supervisor constructs a Delegation Brief to compare heavy vehicle brake pad suppliers. The supervisor writes sections for Outcome, Context, Constraints, and Deliverable, but omits the remaining two sections. Which two sections were omitted, and why are they critical?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Background and Budget, which establish corporate spending caps and provide vendor history.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Model and Schedule, which select model parameter scale and establish execution timings.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Authority and Verification, which prevent silent autonomous decisions and enforce checking.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Permissions and Approvals, which configure enterprise directory tokens and sign-offs.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 10</span>
+      <span>Domain 1: Prompting and Task Execution &bull; The Delegation Brief</span>
+    </div>
+    <div class="q-scenario">A regional green-coffee buyer complains that filling out six structured lines for every simple two-minute AI inquiry creates unnecessary administrative delay. How should the operational purpose of the Delegation Brief be explained to resolve this complaint?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It is a mandatory compliance document required for auditing all queries across enterprise tools.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It is an automated prompt optimization wrapper designed to inject hidden system instructions.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It is a diagnostic thinking tool rather than a rigid form, clarifying what is missing when tasks fail.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It is a legal contract mechanism intended to transfer technical liability between user and vendor.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 11</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Delegation Brief</span>
+    </div>
+    <div class="q-scenario">A timber yard logistics dispatcher includes the following instruction in a brief: 'Mark anything you could not confirm as "unverified" instead of guessing.' What operational effect does writing this Verification line prior to execution produce?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It establishes an audit standard beforehand, turning passive reading into targeted verification.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It commands search engines to prioritize peer-reviewed industry whitepapers over retail websites.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It forces the assistant's sampling temperature to zero, eliminating all synthetic generation variance.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It shifts complete responsibility for output validation from the dispatcher onto the assistant.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 12</span>
+      <span>Domain 1: Prompting and Task Execution &bull; The Delegation Brief</span>
+    </div>
+    <div class="q-scenario">A commercial property surveyor delegates a market rental survey of high-street retail units. Which requirement belongs under the 'Constraints' line of the Delegation Brief?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Produce a three-column markdown table containing unit address, square footage, and asking rent.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Exclude retail properties under 1,000 square feet and properties subject to pending redevelopment.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Identify asking rents across prime high-street commercial retail properties in North Leeds.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Check each unit listing directly on commercial property portals before including it in the table.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 13</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Something to Research</span>
+    </div>
+    <div class="q-scenario">A maritime port compliance officer reviews an AI-generated schedule of bunker fuel sulfur regulations. Every row includes a clean citation linking to an international maritime agency portal. The officer marks the task as verified without opening the links. What operational error did the officer commit?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Neglecting to check whether the underlying AI model was running an extended reasoning chain.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Treating the presence of a citation as verification rather than auditing source text and date.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Assuming that port compliance regulations require bilateral verification across industry forums.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Failing to convert the markdown schedule into an executive PDF before conducting review.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 14</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Something to Research</span>
+    </div>
+    <div class="q-scenario">A veterinary pharmaceuticals distributor requests current wholesale pricing for a specialized vaccine batch. The assistant responds with highly authoritative price points and delivery timelines, but provides no source links or retrieval timestamps. How should the distributor interpret this output?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The model utilized live search but stripped URLs to optimize response brevity across standard chats.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The facts arrived alone and likely reflect stale parametric memory rather than active web retrieval.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The output indicates that the pharmaceutical supplier's web portal has blocked automated scrapers.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The absence of sources confirms that pricing figures are fixed and require no further human auditing.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 15</span>
+      <span>Domain 3: Product and Model Selection &bull; Something to Research</span>
+    </div>
+    <div class="q-scenario">A commercial lease surveyor needs to confirm whether a specific office park has completed its statutory seismic retrofitting. The surveyor considers activating a multi-minute Deep Research mode rather than a standard web-enabled chat. How should the surveyor evaluate this selection?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Deep research modes are designed for broad multi-page synthesis, not a single factual lookup.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Standard web-enabled chats are incapable of querying municipal building registry portals reliably.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Deep research modes should be deployed for all commercial real estate queries to eliminate drift.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Deep research modes automatically verify physical building permits through municipal connectors.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 16</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Something to Research</span>
+    </div>
+    <div class="q-scenario">An electronics repair manager asks an assistant for current capacitor wholesale availability. The assistant claims parts are in stock across three distributors and provides three links. When the manager clicks them, two links return 404 errors and the third lands on an unrelated resistor catalog. What caused this failure?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The assistant was throttled by enterprise firewall packet filtering on industrial commerce ports.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant generated plausible-sounding URLs from pattern memory without live web validation.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The browser cache on the manager's workstation corrupted the outgoing hyperlink redirect tokens.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The distributor web servers dynamically rotated their domain security certificates overnight.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 17</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; The Source & Privacy</span>
+    </div>
+    <div class="q-scenario">A hospital patient transport scheduler prepares to paste a daily patient transit roster into a free browser assistant to optimize vehicle routing. The roster includes patient names, mobility requirements, residential addresses, and medical ward numbers. What mandatory governance action must the scheduler execute prior to submission?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Scrub all personal identifiers, addresses, and ward numbers before pasting data into the chat.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Ensure the browser tab is set to private browsing mode before pasting the confidential patient roster.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Verify that the assistant vendor maintains ISO-certified encryption protocols across its consumer tier.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Include a strict prompt constraint instructing the model not to disclose patient details to others.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 18</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; The Source & Privacy</span>
+    </div>
+    <div class="q-scenario">A payroll administrator at a textile mill uses an incognito temporary chat session to analyze overtime pay disputes. Believing the temporary session guarantees total data erasure, the administrator pastes unredacted employee wage slips. Why is this security assumption operationally flawed?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Temporary chats immediately publish pasted text onto public vendor demonstration index servers.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Temporary chats automatically disable mathematical calculation capabilities across standard models.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Temporary chats prevent account history storage, but vendors retain backend logs for a retention window.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Temporary chats restrict context length to 500 tokens, causing immediate truncation of payroll records.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 19</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; The Source & Privacy</span>
+    </div>
+    <div class="q-scenario">A dental practice manager uploads a 50-page clinical handbook to summarize hygiene protocols. In the brief, she writes: 'Use only the attached document; do not supplement with outside web information.' Why is this restriction critical?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It prevents the model from injecting external clinical standards that conflict with clinic policy.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It forces the model to convert all medical terminology into layperson terminology automatically.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It prevents the model from generating responses that exceed the free tier output token limits.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It speeds up inference generation by bypassing the model's internal parameter vocabulary index.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 20</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; The Source & Privacy</span>
+    </div>
+    <div class="q-scenario">A sports-physiotherapy clinic associate wants Claude to find injury trends in a hockey club's treatment records for coaches. She removed player names but kept player position and match date. In the first team, several positions are each held by only one player. Why does this redaction fail data privacy requirements?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Injury trends cannot be calculated accurately without linking records to individual player names.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>A record combining a unique one-player position and a match date still identifies that player.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Removing names violates clinical audit standards requiring full patient attribution on reports.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The assistant automatically refuses to process any medical records lacking explicit patient names.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 21</span>
+      <span>Domain 1: Prompting and Task Execution &bull; The Deliverable & Formatting</span>
+    </div>
+    <div class="q-scenario">An operations supervisor asks an assistant to produce an equipment maintenance checklist for a packaging plant. The assistant returns a five-paragraph narrative essay describing general lubrication tips. Why is this deliverable unacceptable for operational deployment?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>It fails to provide an actionable, structured checklist formatted for workshop floor execution.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>It fails to reference international patent numbers for the plant's pneumatic packaging drives.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>It omits the enterprise maintenance subscription billing codes required for accounting audit.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>It uses standard English rather than technical German machine manufacturing terminology.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 22</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Deliverable & Formatting</span>
+    </div>
+    <div class="q-scenario">A commercial property analyst specifies a lease comparison table with columns: Property, Rent/sqft, Service Charge, Break Clause, and Verification Status. The assistant generates the table but omits the Verification Status column. What operational action should the analyst take?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Manually fill in the missing column with estimates to avoid wasting additional API tokens.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Reject the output and require regeneration with the mandatory verification status column included.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Accept the table and assume all presented figures were verified against underlying lease agreements.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Escalate the formatting omission to senior IT management as an enterprise security breach.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 23</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; The Deliverable & Formatting</span>
+    </div>
+    <div class="q-scenario">A municipal procurement officer receives a tender comparison summary where the assistant marked two supplier financial ratios as '[unverified: balance sheet page 14 missing]'. How should the officer proceed?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Delete the unverified marks from the report to maintain clean presentation for the committee.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Automatically disqualify both suppliers from the tender due to AI extraction failure.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Instruct the assistant to estimate the ratios based on historical supplier performance data.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Retain the unverified mark and manually inspect page 14 of the balance sheet before decision.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 24</span>
+      <span>Domain 1: Prompting and Task Execution &bull; The Deliverable & Formatting</span>
+    </div>
+    <div class="q-scenario">An insurance claims assessor delegates policy clause comparisons across three competing commercial liability policies. The assistant produces narrative prose that buries policy excess fees inside paragraphs. Which deliverable format should the assessor specify to minimize audit time?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>A chronological personal diary recording the assessor's daily reading notes across policy forms.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>A dense single-spaced executive memorandum with all excess fees highlighted in bold italics.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>A side-by-side comparison table with explicit columns for coverage limits, exclusions, and excess.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>An audio podcast script presenting the comparison as an informal debate between underwriters.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 25</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Authority & Permissions</span>
+    </div>
+    <div class="q-scenario">A tyre chain's pricing office moves shelf prices each month when supplier costs arrive. The manager maps six steps: cost file filtering, 4 percent price rise limit check, tag price generation, fitting fee assignment, branch notification drafting, and till upload. Which step must stay with the manager?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The 4 percent limit step, where discretionary decisions are made on which prices to hold.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The tag price generation step, copying calculated shelf prices into display print templates.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The till upload file step, formatting finalized product pricing rows into standard CSV text.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The fitting fee band assignment step, matching moved tire sizes to standard fixed fee bands.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 26</span>
+      <span>Domain 4: Workflow Integration and Solution Design &bull; Authority & Permissions</span>
+    </div>
+    <div class="q-scenario">A hotel operations manager delegates drafting of a customer incident response. The manager instructs the assistant to operate in 'Plan-first' mode. What operational behavior does this requirement enforce?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The assistant delegates all complaint classification to an external secondary reasoning model.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant submits its proposed response outline and strategy for approval before drafting text.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The assistant queries external legal advisory forums to verify hotel guest compensation caps.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The assistant immediately emails the customer and logs the incident in the hotel reservation system.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 27</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Authority & Permissions</span>
+    </div>
+    <div class="q-scenario">A freight forwarding dispatcher delegates container re-routing options during a rail strike. Under the 'Authority' line of the brief, which constraint properly establishes the operational boundary?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Select the optimal route and immediately bill customer escrow accounts for demurrage fees.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>You may book carrier slots automatically whenever spot rates are under ten thousand dollars.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Propose three alternative route schedules with cost estimates; do not book carrier bookings.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>You may contact rail network dispatchers directly to negotiate intermodal priority passage.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 28</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Authority & Permissions</span>
+    </div>
+    <div class="q-scenario">A school admissions office uses an assistant to process prospective parent inquiries. Which operational rule correctly enforces authority boundaries for this workflow?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The assistant may grant tuition fee discounts up to ten percent without administrative review.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The assistant may draft routine tour scheduling replies, but must escalate fee queries to staff.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The assistant may modify official degree course prerequisite listings published on the school portal.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The assistant may formally reject admission applications that fail minimum entry criteria.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 29</span>
+      <span>Domain 4: Workflow Integration and Solution Design &bull; Projects & Context Isolation</span>
+    </div>
+    <div class="q-scenario">An opticians chain receives a 30-page document on a new voucher scheme. The associate must write a patient poster, a staff procedure, and a manager summary. All three depend on one list of changes, not yet drawn from the document. She also owes the newsletter a farewell note for a retiring colleague. Which arrangement is most appropriate?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Paste the entire 30-page document into four parallel chats and generate all deliverables simultaneously.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Write the farewell note in the voucher conversation to preserve the established writing tone.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Extract and confirm change list first, draft three scheme pieces there, and write note in a new chat.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Draft the patient poster directly from the document, then extract the change list for remaining tasks.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 30</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Projects & Context Isolation</span>
+    </div>
+    <div class="q-scenario">A coffee importer's marketing associate writes a newsletter line explaining how tasting notes are produced. Claude drafts each note from the grower's technical sheet, and the green coffee buyer checks origin and grade on every note before publication. The draft line says: 'Our trade list is now fully automated.' Which rewrite should replace it?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Our AI now writes every tasting note start to finish, matching our buyer's expertise.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Our buyer still checks every note for origin and grade, exactly as has been done for years.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Claude drafts each note from the grower's sheet; our buyer then checks origin and grade.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Claude now handles our tasting notes, and our buyer keeps an eye across the whole list.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 31</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; Projects & Context Isolation</span>
+    </div>
+    <div class="q-scenario">An architect manages five active client projects within an AI workspace. She creates a dedicated Project container with client briefs, zoning bylaws, and standing specifications. When should she open a fresh chat inside this Project rather than continuing an ongoing conversation?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>When starting a new design phase or deliverable to prevent context and instruction bleed.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Whenever she needs to switch from a desktop computer interface to a mobile device browser.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>After every single prompt submission to clear the model's parametric training weights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Only when the existing chat history reaches the vendor's maximum token storage limit.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 32</span>
+      <span>Domain 5: Configuration and Knowledge Management &bull; Projects & Context Isolation</span>
+    </div>
+    <div class="q-scenario">A structural engineering firm configures a Project workspace containing standing instructions: 'Always output structural load calculations in SI metric units and include uncertainty margins.' A junior engineer opens a regular chat outside the Project to run a beam calculation. What operational failure occurs?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The assistant refuses to run structural calculations without an active CAD plugin connector.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The model's underlying mathematical accuracy degrades due to missing project tokens.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The browser blocks the calculation due to missing local administrative execution rights.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The session lacks the standing instructions, risking non-compliant imperial unit outputs.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 33</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Intervene & Smallest Fix</span>
+    </div>
+    <div class="q-scenario">During an export compliance review, an assistant begins citing non-existent statutory legal cases. What is the most effective immediate intervention move for the compliance officer?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Stop generation immediately and provide a clarifying constraint with the correct statute.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Allow generation to finish, then append five paragraphs explaining why the cases are wrong.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Switch immediately to a different browser brand to reset the model's generation stream.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Delete the entire account workspace and re-register under a separate corporate email alias.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 34</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Intervene & Smallest Fix</span>
+    </div>
+    <div class="q-scenario">A bakery chain inventory coordinator prompts an assistant to forecast monthly flour usage. The assistant outputs weekly demand in individual kilograms, but the coordinator needs figures in 25-kilogram commercial bags. What is the most efficient intervention?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Manually divide every kilogram figure in the table using an external desktop calculator.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Prompt the assistant with an essay detailing wholesale commercial bakery supply history.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Send a single-sentence redirect: 'Convert all flour quantities into 25kg bag counts.'</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Rewrite the entire original brief from scratch in a fresh chat with sixteen new rules.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 35</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Intervene & Smallest Fix</span>
+    </div>
+    <div class="q-scenario">A financial planning associate observes an assistant repeating a circular explanation about tax treaty exemptions across three successive prompts. How should the associate break this loop?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>File a formal hardware diagnostic ticket with the cloud server hosting provider.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Send repeated exclamation marks to register emotional urgency with the assistant.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Continue submitting the identical prompt until the probabilistic output randomizes.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Clear the conversation and restart in a fresh chat with tighter source constraints.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 36</span>
+      <span>Domain 7: Troubleshooting and Optimization &bull; Intervene & Smallest Fix</span>
+    </div>
+    <div class="q-scenario">A customer support lead delegates categorization of 200 customer complaints. After 20 items, the assistant begins drifting into subjective emotional analysis rather than sticking to the taxonomy. What is the proper intervention?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Report the model vendor for generating non-deterministic classification summaries.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Instruct the assistant to upgrade its internal token temperature setting to maximum.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Permit the assistant to complete all 200 items, then edit each row manually in Excel.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Intervene with a concise prompt reminding the model of the four fixed taxonomy categories.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 37</span>
+      <span>Domain 6: Governance, Risk, and Responsible Use &bull; Verify & Accountability</span>
+    </div>
+    <div class="q-scenario">A medical clinic practice manager uses an assistant to compile sterilizer autoclave calibration records for a regulatory audit. The manager signs off on the report without checking primary equipment logs. An inspector discovers an expired calibration. Who is accountable?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The sterilizer equipment manufacturer, for producing ambiguous digital log exports.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Accountability is legally divided equally between the software provider and clinic.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The practice manager, because accountability remains strictly with the supervising human.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The assistant vendor, for failing to detect conflicting dates in the calibration logs.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 38</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Verify & Accountability</span>
+    </div>
+    <div class="q-scenario">A commercial loan officer verifies an assistant's balance sheet analysis. She identifies the debt-to-equity ratio claim, traces it back to the audited filing, challenges the calculation against footnote liabilities, and decides to approve the credit memo. Which protocol did she execute?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>Extract, Transform, Validate, and Ingest.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Prompt, Parse, Predict, and Finalize.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Define, Delegate, Observe, and Intervene.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Identify, Trace, Challenge, and Decide.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 39</span>
+      <span>Domain 2: Output Evaluation and Validation &bull; Verify & Accountability</span>
+    </div>
+    <div class="q-scenario">An associate uses an assistant for four tasks: an internal brainstorming memo, a social media caption, a board financial disclosure, and a team lunch venue suggestion. Which task crosses the mandatory review threshold requiring exhaustive line-by-line verification?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The internal brainstorming memo, due to potential creative copyright infringement.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>The social media caption, because public audiences scrutinize casual marketing phrasing.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>The board financial disclosure, due to high financial stakes and regulatory exposure.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>The team lunch venue suggestion, because catering deposits are non-refundable.</td></tr>
+    </table>
+  </div>
+
+  <div class="q-item">
+    <div class="q-head">
+      <span class="q-num">QUESTION 40</span>
+      <span>Domain 3: Product and Model Selection &bull; Verify & Accountability</span>
+    </div>
+    <div class="q-scenario">An aerospace parts supplier runs the same vendor qualification brief in both Claude and ChatGPT. Claude outputs five qualified suppliers, but ChatGPT flags that two of them lack AS9100 quality certifications. What does this outcome demonstrate?</div>
+    <table class="options-table">
+      <tr class="opt-row"><td class="opt-letter">A)</td><td>The supplier should automatically adopt ChatGPT's output because it produced fewer supplier names.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">B)</td><td>Model divergence highlights discrepancies that direct the supplier to targeted primary source checks.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">C)</td><td>Running the same brief in two models eliminates the operational requirement for human verification.</td></tr>
+      <tr class="opt-row"><td class="opt-letter">D)</td><td>Both models suffered catastrophic token context failure and must be permanently decommissioned.</td></tr>
+    </table>
+  </div>
+
+  <div class="section-divider"></div>
+  <div class="section-title">PART 2: ANSWER KEY & COMPREHENSIVE RATIONALES</div>
+  <div style="margin-bottom: 16px; font-size: 9pt; color: #64748b;">
+    Exhaustive psychometric explanations detailing why the correct option is uniquely accurate per the chapter source text, and why each alternate distractor is operationally flawed.
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 1: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 1: Asking vs. Giving the Job
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Asking an assistant open-ended informational questions yields narrative advice or general lists, leaving all subsequent operational labor (extracting rates, comparing metrics, building spreadsheets) with the human operator. Delegating requires asking for an explicit deliverable to exist, which transfers the routine production work to the assistant and leaves the human with verification.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Specifying granular search keywords micromanages procedural execution rather than establishing the required operational outcome.</li>
+      <li><strong>Option C Flaw:</strong> Delegating work does not depend on a paid subscription tier or enterprise features; structured comparison tables can be produced on standard free browser accounts.</li>
+      <li><strong>Option D Flaw:</strong> Omitting regulatory freight license numbers does not explain the workflow failure; the failure is architectural in asking for conversation rather than an actionable deliverable.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 2: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 1: Asking vs. Giving the Job
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Delegating means giving an assistant responsibility for producing a specific result or artifact. It does not depend on a paid tier or special model; it depends on prompt structure and requesting a finished deliverable rather than conversational commentary.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Basic calculation schedules and utility reconciliations run within normal browser context limits without requiring dedicated enterprise compute quotas.</li>
+      <li><strong>Option C Flaw:</strong> Free browser accounts fully support structured markdown tables, CSV blocks, and multi-column comparison schedules.</li>
+      <li><strong>Option D Flaw:</strong> Free accounts do not automatically change subscription levels upon receiving tabular requests; they fulfill them natively within existing quotas.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 3: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 1: Asking vs. Giving the Job
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Requesting a concrete artifact transfers the initial compilation labor to the assistant. The manager is left with an inspectable deliverable to verify against primary sources, rather than having to gather raw specs manually.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Accountability and compliance liability are non-transferable and remain entirely with the human manager.</li>
+      <li><strong>Option C Flaw:</strong> Language model prompts cannot bypass web authentication or paywalled supplier portals.</li>
+      <li><strong>Option D Flaw:</strong> AI outputs do not guarantee live distributor stock without active human verification.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 4: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 1: Asking vs. Giving the Job
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Delegation hands over the execution of a concrete work product. Extracting price changes from a document into a structured CSV table transfers production effort, whereas asking for explanations, advice, or standards simply initiates conversation.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Asking for cost explanations produces background commentary rather than an operational deliverable.</li>
+      <li><strong>Option B Flaw:</strong> Asking for standard updates requests an informational summary rather than delegating catalog processing.</li>
+      <li><strong>Option D Flaw:</strong> Asking for negotiation ideas requests conversational advice, leaving all operational catalog review to the buyer.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 5: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 2: Give AI the Outcome, Not the Clicks
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> When an operator dictates every step like a procedural recipe, the operator's plan becomes the ceiling of the output. If the specified steps or named portals are narrow or incomplete, the assistant adheres to them and fails to discover superior alternatives.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Twelve short queries do not exceed context window limits.</li>
+      <li><strong>Option B Flaw:</strong> The failure was caused by the prompt excluding the national distributor, not portal blocking.</li>
+      <li><strong>Option C Flaw:</strong> License numbers are irrelevant to web-based pricing comparisons.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 6: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 4: Workflow Integration and Solution Design | <strong>Grounding:</strong> Concept 2: Give AI the Outcome, Not the Clicks
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Apprehension regarding accuracy belongs at the end of the workflow when inspecting and verifying claims, not at the start. Micromanaging clicks during prompting wastes operator time and constrains the assistant unnecessarily.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Writing granular step-by-step clicks creates brittle, inefficient instructions.</li>
+      <li><strong>Option B Flaw:</strong> Routine benchmarking tasks do not require administrative sign-off before running a query.</li>
+      <li><strong>Option C Flaw:</strong> Routine equipment benchmarking does not require specialized reasoning architectures.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 7: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 2: Give AI the Outcome, Not the Clicks
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> An outcome describes what should exist when the work is complete ('an approved five-message SMS reminder series mapped to specific delivery triggers'). The other options dictate operational clicks, searches, or interviews.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Directing an interview process specifies activity rather than the final operational artifact.</li>
+      <li><strong>Option B Flaw:</strong> Directing search numbers and pasting abstracts specifies tasks rather than a finished deliverable.</li>
+      <li><strong>Option C Flaw:</strong> Dictating clicks inside scheduling software is procedural micromanagement.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 8: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 2: Give AI the Outcome, Not the Clicks
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> By prescribing every formula and sorting rule, the supervisor restricted the assistant to an incomplete analysis. Had he described the desired outcome (identifying all delay patterns and anomalies in pallet loading), the assistant could have surfaced the bottleneck.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Detecting delay patterns does not strictly require an extended Python reasoning sandbox.</li>
+      <li><strong>Option C Flaw:</strong> General models possess ample capability to detect anomalies in timestamp logs.</li>
+      <li><strong>Option D Flaw:</strong> The scenario confirms the 3-hour delay was obvious in the raw data, not corrupted.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 9: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 3: The Delegation Brief
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> A standard Delegation Brief comprises six lines: Outcome, Context, Constraints, Authority, Deliverable, and Verification. Authority defines what the assistant may decide alone vs what it must escalate; Verification sets the checking criteria before work starts.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Background and Budget are operational details that fold into Context and Constraints, not standalone brief components.</li>
+      <li><strong>Option B Flaw:</strong> Model and Schedule are infrastructure settings, not the functional questions of a Delegation Brief.</li>
+      <li><strong>Option D Flaw:</strong> Permissions and Approvals are administrative IT categories, not the core brief structure.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 10: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 3: The Delegation Brief
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The Delegation Brief is a work order and thinking tool, not a bureaucratic form. It forces clarity on outcome, boundaries, and verification criteria so the operator knows what to check and how to diagnose failures.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> The brief is not an IT audit filing; treating it as red tape misses its functional utility.</li>
+      <li><strong>Option B Flaw:</strong> The brief is written by the human user, not an automated backend prompt wrapper.</li>
+      <li><strong>Option D Flaw:</strong> Prompts do not constitute legal contracts transferring product liability.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 11: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Concept 3: The Delegation Brief
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Writing the Verification line before work starts establishes an objective standard for inspection. It forces the assistant to flag unconfirmed facts and prevents the operator from passively accepting convincing prose.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Verification instructions do not modify search engine ranking algorithms.</li>
+      <li><strong>Option C Flaw:</strong> Prompt text instructions do not reconfigure underlying sampling temperature parameters.</li>
+      <li><strong>Option D Flaw:</strong> Verification responsibility is strictly non-transferable and remains with the dispatcher.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 12: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 3: The Delegation Brief
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Constraints define boundaries, exclusions, and negative rules (e.g., excluding units under 1,000 sq ft or subject to redevelopment). Deliverables specify format (Option B), Outcomes specify the end state (Option B), and Verification defines checking steps (Option B).
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Table specifications belong under Deliverable.</li>
+      <li><strong>Option C Flaw:</strong> Identifying asking rents describes the Outcome.</li>
+      <li><strong>Option D Flaw:</strong> Checking listings on portals belongs under Verification.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 13: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Concept 4: Something to Research
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The mere presence of a URL or citation does not guarantee accuracy. Assistants can link to real agency homepages while stating obsolete regulatory thresholds. Verification requires opening the primary link and confirming both the specific claim and effective date.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Reasoning chain depth does not substitute for empirical source checking.</li>
+      <li><strong>Option C Flaw:</strong> Primary official regulatory documentation is sufficient; secondary forum consensus is irrelevant.</li>
+      <li><strong>Option D Flaw:</strong> File conversion to PDF is a cosmetic change that has nothing to do with factual audit.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 14: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Concept 4: Something to Research
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> When facts, figures, or dates arrive without search indicators, citations, or timestamps, they are drawn from the model's static training weights. In volatile commercial domains like pharmaceutical pricing, static memory is almost always outdated.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Web-browsing assistants provide clickable citations or search badges when live search is invoked.</li>
+      <li><strong>Option C Flaw:</strong> A scraper block would produce an explicit retrieval error or general disclaimer, not confident ungrounded prices.</li>
+      <li><strong>Option D Flaw:</strong> The absence of citations is an immediate warning signal requiring scrutiny, not proof of stability.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 15: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Concept 4: Something to Research
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Deep research modes execute multi-step exploratory searches and produce long synthetic reports over several minutes. For a single binary or discrete factual lookup (whether a permit was granted), standard web search is faster and less prone to synthetic bloat.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Standard web-browsing queries handle public registry lookups efficiently.</li>
+      <li><strong>Option C Flaw:</strong> Deploying heavy research agents for simple lookups wastes time and compute quotas.</li>
+      <li><strong>Option D Flaw:</strong> Deep research agents cannot access private municipal building databases without explicit credentials.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 16: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Concept 4: Something to Research
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Language models frequently synthesize syntactically plausible URLs based on naming patterns in their training weights (hallucinated links). Unless live web search actively retrieves and confirms the live HTTP endpoint, URLs must be treated as unverified.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Firewall filtering produces connection timeouts, not 404 responses from live vendor hosts.</li>
+      <li><strong>Option C Flaw:</strong> Local browser cache does not alter target URLs generated by an AI assistant.</li>
+      <li><strong>Option D Flaw:</strong> Certificate rotation does not cause 404 missing resource errors or redirects to different product catalogs.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 17: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Concept 5: The Source
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Free consumer AI interfaces must be treated like public noticeboards. Entering protected health information (PHI) or personal identifiable information (PII) violates data protection standards. All names, addresses, and identifying ward numbers must be redacted prior to input.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Incognito browser tabs prevent local browser history storage, but do not prevent server-side data ingestion by the model provider.</li>
+      <li><strong>Option C Flaw:</strong> Consumer tier encryption does not permit processing unredacted patient medical rosters without formal BAA/DPA agreements.</li>
+      <li><strong>Option D Flaw:</strong> Prompt instructions cannot override backend logging, model retraining pipelines, or subpoena disclosures.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 18: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Concept 5: The Source
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Temporary/incognito chats prevent sessions from appearing in user chat history or training future models, but vendor systems still retain backend server logs (typically 30 days) for abuse monitoring and statutory compliance.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Temporary chats do not publish private data to public demonstration servers.</li>
+      <li><strong>Option B Flaw:</strong> Model capabilities, including arithmetic parsing, remain identical between normal and temporary sessions.</li>
+      <li><strong>Option D Flaw:</strong> Temporary chats provide the standard context window, not a restricted 500-token limit.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 19: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Concept 5: The Source
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Restricting an assistant strictly to an uploaded source prevents 'source contamination'—the tendency of models to blend proprietary clinic procedures with general training data or differing national health standards.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Bounding instructions enforce procedural alignment, not vocabulary translation.</li>
+      <li><strong>Option C Flaw:</strong> Source-bounding does not influence maximum output token quotas.</li>
+      <li><strong>Option D Flaw:</strong> Prompt constraints do not alter underlying token vocabulary lookups.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 20: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Concept 5: The Source
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> De-identification requires removing both direct identifiers (names) and quasi-identifiers. If a position is held by only one athlete on a specific match date, any injury record listing that position and date uniquely identifies the individual.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Aggregate injury patterns can be evaluated across positions without exposing individual identities.</li>
+      <li><strong>Option C Flaw:</strong> De-identification is a standard privacy practice for trend analysis; clinical audit logs remain internal.</li>
+      <li><strong>Option D Flaw:</strong> Models do not reject de-identified data; they process whatever structured text is provided.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 21: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 6: The Deliverable
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> A deliverable must be shaped so someone can use it immediately in the workflow. A narrative essay cannot be executed or signed off by packaging plant technicians; the task required a structured checklist with actionable steps and sign-off boxes.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Patent numbers are unnecessary for routine maintenance checklists.</li>
+      <li><strong>Option C Flaw:</strong> Accounting billing codes are unrelated to technician physical maintenance procedures.</li>
+      <li><strong>Option D Flaw:</strong> Workshop instructions must be in the local operating language, not German manufacturing terms.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 22: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Concept 6: The Deliverable
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> If a brief mandates a specific deliverable structure—especially an audit tracking column like Verification Status—omitting it violates constraints. The analyst must reject the response and instruct the assistant to regenerate the full table with the required column.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Estimating verification status defeats the purpose of an objective audit trail.</li>
+      <li><strong>Option C Flaw:</strong> Assuming unflagged data is verified invites significant commercial leasing errors.</li>
+      <li><strong>Option D Flaw:</strong> A column omission is a prompt following defect, not an IT security incident.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 23: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Concept 6: The Deliverable
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> An 'unverified' mark is an intentional signal that data was missing from the source. The officer must preserve the warning and manually inspect the primary balance sheet filing to determine the actual figures.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Stripping unverified flags conceals operational risk from decision-makers.</li>
+      <li><strong>Option B Flaw:</strong> Disqualifying vendors based on an extraction gap without checking the physical submission is improper.</li>
+      <li><strong>Option C Flaw:</strong> Instructing the assistant to guess financial ratios introduces ungrounded hallucinations into a public tender.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 24: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 1: Prompting and Task Execution | <strong>Grounding:</strong> Concept 6: The Deliverable
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> A structured side-by-side matrix with dedicated columns for coverage limits, exclusions, and excess fees enables immediate visual scanning, cross-policy comparison, and targeted verification.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> A personal diary format is unstructured and unusable for underwriting comparison.</li>
+      <li><strong>Option B Flaw:</strong> A dense narrative memo buries critical numerical figures, increasing verification time.</li>
+      <li><strong>Option D Flaw:</strong> Podcast scripts are inappropriate for formal insurance compliance reviews.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 25: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Concept 7: Authority
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The 4 percent limit step involves commercial discretion (deciding whether to absorb cost increases or pass them to retail customers to remain competitive). Mechanical steps (copying tags, mapping fee bands, formatting CSVs) can be delegated, but discretionary pricing authority must remain with the manager.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Generating tag prices from established calculations is mechanical transcription.</li>
+      <li><strong>Option C Flaw:</strong> Formatting lines for till upload is procedural data transformation.</li>
+      <li><strong>Option D Flaw:</strong> Applying pre-agreed fixed fee bands is a deterministic mapping task.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 26: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 4: Workflow Integration and Solution Design | <strong>Grounding:</strong> Concept 7: Authority
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Plan-first mode requires the assistant to articulate its proposed sequence of actions, structure, and strategy and wait for human review and approval before executing the production run.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Plan-first mode governs human-in-the-loop oversight, not sub-model orchestration.</li>
+      <li><strong>Option C Flaw:</strong> Querying outside forums is unconstrained research, not plan-first review.</li>
+      <li><strong>Option D Flaw:</strong> Executing external actions directly violates plan-first review gates.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 27: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Concept 7: Authority
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Setting an explicit authority boundary limits the assistant to analysis and recommendation while withholding execution power ('propose three alternatives... do not book carrier bookings').
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Directly debiting customer accounts without human verification is an extreme operational violation.</li>
+      <li><strong>Option B Flaw:</strong> Permitting automatic financial bookings gives unmonitored commercial authority to an assistant.</li>
+      <li><strong>Option D Flaw:</strong> Language models cannot independently negotiate with external human rail dispatchers.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 28: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Concept 7: Authority
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Routine informational drafting (such as tour bookings) can be delegated, but sensitive policy decisions (financial aid, tuition fee waivers, formal admissions rejections) must be escalated to human staff.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Granting financial discounts requires human financial authority.</li>
+      <li><strong>Option C Flaw:</strong> Curriculum standards are governed by academic leadership, not conversational assistants.</li>
+      <li><strong>Option D Flaw:</strong> Formal student rejection carries legal and institutional consequences and cannot be automated.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 29: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 4: Workflow Integration and Solution Design | <strong>Grounding:</strong> Concept 8: The Job Again
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Extracting the shared change list first establishes a common, verified foundation for the three dependent pieces. Unrelated tasks with different audiences and emotional tones (the colleague's farewell note) must be isolated in a fresh conversation to avoid context contamination.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Spawning parallel chats without an extracted change list duplicates extraction effort and risks discrepancies.</li>
+      <li><strong>Option B Flaw:</strong> Mixing a personal farewell note with technical voucher scheme procedures contaminates context.</li>
+      <li><strong>Option D Flaw:</strong> Drafting the poster first creates an ungrounded artifact without an agreed change list.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 30: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Concept 8: The Job Again
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Responsible disclosure requires precision. Claiming full automation is inaccurate, while claiming no change conceals AI usage. Describing the exact division of labor ('Claude drafts each note... our buyer checks origin and grade') provides transparent, accurate disclosure.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Overstates AI capability and removes the buyer's quality control gate.</li>
+      <li><strong>Option B Flaw:</strong> Conceals the fact that Claude drafts the notes from raw grower technical sheets.</li>
+      <li><strong>Option D Flaw:</strong> 'Keeps an eye across the list' is vague and obscures the specific verification step.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 31: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Concept 8: The Job Again
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Opening a fresh chat within a Project maintains access to project knowledge files and standing instructions while wiping conversational context. This prevents previous calculations, discarded drafts, or conflicting constraints from bleeding into new deliverables.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Chat sessions sync across devices and do not require resetting when switching screens.</li>
+      <li><strong>Option C Flaw:</strong> Prompts do not alter parametric weights; resetting after every prompt destroys working continuity.</li>
+      <li><strong>Option D Flaw:</strong> Waiting for maximum token limits leads to degraded attention and hallucination long before memory fills.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 32: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 5: Configuration and Knowledge Management | <strong>Grounding:</strong> Concept 8: The Job Again
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Chats started outside a Project do not inherit the Project's standing instructions or reference knowledge. The assistant reverts to default behavior and may return imperial units or omit mandatory uncertainty margins.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Text-based mathematical calculations do not require specialized CAD plugin connectors.</li>
+      <li><strong>Option B Flaw:</strong> Mathematical capability is identical; the failure is lack of organizational constraints.</li>
+      <li><strong>Option C Flaw:</strong> Browser interfaces do not require local OS administrative rights for text prompting.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 33: <span class="exp-correct">Correct Option A</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Concept 9: Intervene
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> When an assistant hallucinates or drifts, the fastest and cleanest fix is to stop generation immediately (saving time and tokens) and issue the smallest effective corrective message specifying the required constraint.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option B Flaw:</strong> Allowing hallucinations to finish wastes time and clutters context history with invalid text.</li>
+      <li><strong>Option C Flaw:</strong> Switching browsers has zero impact on server-side model outputs.</li>
+      <li><strong>Option D Flaw:</strong> Deleting user accounts is an absurd overreaction to an everyday prompting drift.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 34: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Concept 9: Intervene
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Applying the 'smallest message that works' principle, a short, direct redirect ('Convert all flour quantities into 25kg bag counts') fixes formatting in seconds without cluttering context or restarting.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Manual calculation reclaims the production labor that was meant to be delegated.</li>
+      <li><strong>Option B Flaw:</strong> Adding narrative essays about bakery history adds noise without resolving unit formatting.</li>
+      <li><strong>Option D Flaw:</strong> Rewriting the entire brief from scratch wastes time when the underlying calculation is sound.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 35: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Concept 9: Intervene
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> When an assistant enters a self-referential loop, previous errors in the chat history compound and trap subsequent completions. The proper fix is to stop, open a fresh chat, and introduce specific constraints or sources.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Conversational looping is an algorithmic context effect, not a hardware server failure.</li>
+      <li><strong>Option B Flaw:</strong> Punctuation and emotional phrasing do not resolve deterministic context traps.</li>
+      <li><strong>Option C Flaw:</strong> Resubmitting identical prompts in a contaminated context simply repeats the loop.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 36: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 7: Troubleshooting and Optimization | <strong>Grounding:</strong> Concept 9: Intervene
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Intervening early with a concise constraint grounds the model back in the agreed taxonomy before additional erroneous outputs are generated.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Taxonomy drift is a standard prompt execution issue, not a vendor defect.</li>
+      <li><strong>Option B Flaw:</strong> Increasing temperature increases randomness and will worsen taxonomy drift.</li>
+      <li><strong>Option C Flaw:</strong> Editing 180 rows manually defeats the purpose of delegating batch categorization.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 37: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 6: Governance, Risk, and Responsible Use | <strong>Grounding:</strong> Concept 10: Verify before you accept
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Accountability never transfers to the machine. Regardless of how sophisticated an AI tool is, the human professional who accepts, signs off, or deploys the work remains 100% accountable for its accuracy and compliance.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Manufacturers are not liable for a practice manager's failure to audit maintenance schedules.</li>
+      <li><strong>Option B Flaw:</strong> Liability cannot be shared with software models in regulatory healthcare environments.</li>
+      <li><strong>Option D Flaw:</strong> Software terms of service explicitly exclude liability for operational compliance decisions.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 38: <span class="exp-correct">Correct Option D</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Concept 10: Verify before you accept
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> The four verification steps are Identify (find the key claim), Trace (locate primary source), Challenge (test the claim against counter-evidence or nuances like footnotes), and Decide (Accept, Correct, Investigate, or Reject).
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Extract, Transform, Validate, and Ingest is an ETL data engineering pipeline.</li>
+      <li><strong>Option B Flaw:</strong> Prompt, Parse, Predict, and Finalize are informal computational descriptors.</li>
+      <li><strong>Option C Flaw:</strong> Define, Delegate, Observe, and Intervene are the first four steps of the Delegation Loop.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 39: <span class="exp-correct">Correct Option C</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 2: Output Evaluation and Validation | <strong>Grounding:</strong> Concept 10: Verify before you accept
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Verification thresholds are triggered by high stakes, irreversibility, broad or critical audiences, and regulatory exposure. Board financial disclosures cross every single threshold, demanding rigorous line-by-line verification.
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Internal brainstorming carries low operational risk and reversible consequences.</li>
+      <li><strong>Option B Flaw:</strong> Social captions carry public visibility but rarely severe regulatory or legal liabilities.</li>
+      <li><strong>Option D Flaw:</strong> Lunch venue suggestions carry minor convenience stakes with zero regulatory exposure.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      Question 40: <span class="exp-correct">Correct Option B</span>
+    </div>
+    <div class="exp-grounding">
+      <strong>Target Domain:</strong> Domain 3: Product and Model Selection | <strong>Grounding:</strong> Concept 11: Same job, different AI
+    </div>
+    <div class="exp-body">
+      <strong>Source Grounding &amp; Rationale:</strong> Running the same portable brief in a second AI tests for model-specific oversights or blind spots. When outputs diverge, the disagreement flags exactly which facts require targeted human verification against primary records (such as checking official AS9100 registries).
+    </div>
+    <div style="font-size: 8.5pt; font-weight: bold; color: #475569; margin-top: 4px;">Distractor Dissection:</div>
+    <ul class="flaw-list">
+      <li><strong>Option A Flaw:</strong> Fewer names does not automatically prove higher accuracy without source checking.</li>
+      <li><strong>Option C Flaw:</strong> Dual-model comparison guides verification; it does not replace human verification.</li>
+      <li><strong>Option D Flaw:</strong> Divergence is normal behavior between different architectures and training corpora.</li>
+    </ul>
+  </div>
+
+</body>
+</html>

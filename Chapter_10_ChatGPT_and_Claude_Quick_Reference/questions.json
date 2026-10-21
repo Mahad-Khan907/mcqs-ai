@@ -1,0 +1,842 @@
+[
+  {
+    "id": 1,
+    "subtopic": "Two Cockpits, One Discipline Philosophy",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 1: Two cockpits, one discipline (Lines 234-266)",
+    "scenario": "A newly appointed training director at a regional opticians chain finds her team divided because half the staff uses ChatGPT while the other half uses Claude. Why should the director avoid mandating a single exclusive tool choice across the enterprise?",
+    "options": {
+      "A": "Enterprise opticians are legally required by healthcare statutes to alternate software vendors every thirty days.",
+      "B": "Desktop web browsers cannot render user interface elements if two competing AI tabs run on the same network.",
+      "C": "Both products share identical core patterns; the operational discipline is transferable while UI buttons move.",
+      "D": "Language models automatically degrade their grammatical accuracy if restricted to a single corporate account."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 1. The chapter emphasizes: 'You do not need to learn two completely different ways of working. You need to learn one discipline and then find where each product put the controls... Pilots do not treat two aircraft as interchangeable. They learn to fly once, then spend a short time learning where a particular aircraft keeps its switches. Flying is the transferable part. The switch layout is the part you look up... learn the pattern, not the button placement.'",
+      "distractor_A": "Option A is incorrect because healthcare regulations impose no mandates requiring bi-monthly AI software switching.",
+      "distractor_B": "Option B is incorrect because standard web browsers handle multiple vendor tabs concurrently without conflict.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because model performance does not degrade based on single-vendor corporate usage."
+    }
+  },
+  {
+    "id": 2,
+    "subtopic": "Platform Awareness and Comparative Evaluation",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 1: Two cockpits, one discipline (Lines 267-273)",
+    "scenario": "A financial data analyst drafts a complex quantitative model comparison. Rather than relying on a single favorite assistant, she runs the identical prompt and data files through both Claude and ChatGPT simultaneously. What operational discipline does this parallel testing illustrate?",
+    "options": {
+      "A": "Platform awareness, recognizing that models have differing strengths and verifying outputs across both systems.",
+      "B": "Token rate-limit exploitation, intentionally bypassing commercial API quotas by splitting requests in half.",
+      "C": "Algorithmic load balancing, designed to prevent single-tenant cloud servers from exceeding thermal thresholds.",
+      "D": "Cryptographic dual-key consensus, verifying that mathematical calculations comply with federal banking codes."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 1. Section 1 defines platform awareness: 'There is also a practical reason to know both products. Claude and ChatGPT do not perform identically on every task. A model that is excellent at one kind of work can be weaker at another. For work that matters, a good habit is to run the same task in both and compare. That is platform awareness: knowing what each tool is good at, instead of becoming loyal to one interface.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because running full tasks in separate web UIs does not constitute illegal rate-limit exploitation.",
+      "distractor_C": "Option C is incorrect because client-side multi-model testing is an analytical practice, not a cloud server thermal balancer.",
+      "distractor_D": "Option D is incorrect because comparative AI prompting is not a cryptographic dual-key consensus protocol."
+    }
+  },
+  {
+    "id": 3,
+    "subtopic": "The Three Prompting Foundations",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 1: The most important beginner habit (Lines 278-288)",
+    "scenario": "A school administrator prepares a prompt to draft an annual faculty evaluation policy memo. To ensure the generated output requires minimal revision, which three core structural elements must the briefing contain?",
+    "options": {
+      "A": "A list of developer API keys, the server CPU temperature limit, and an explicit credit card billing token.",
+      "B": "The compiler binary path, a verified operating system kernel patch number, and an encrypted hash checksum.",
+      "C": "A signed corporate non-disclosure agreement, a five-digit postal code, and the local school Wi-Fi password.",
+      "D": "Set the stage (who and goal), Define the task (exact deliverable), and Set the rules (tone and constraints)."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 1. The text states: 'Talk to the assistant the way you would talk to a capable colleague. Before you send a serious request, cover three things: 1. Set the stage. Who are you, and what are you trying to achieve? 2. Define the task. What exactly should the assistant do? 3. Set the rules. What tone, format, constraints, or examples should it follow?'",
+      "distractor_A": "Option A is incorrect because API keys and hardware temperatures are irrelevant to workplace prompt construction.",
+      "distractor_B": "Option B is incorrect because compiler paths and kernel checksums are low-level engineering parameters.",
+      "distractor_C": "Option C is incorrect because Wi-Fi passwords and postal codes provide zero contextual task value.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 4,
+    "subtopic": "Self-Referential Interface Hallucination",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 1: See it in two minutes (Lines 105-124)",
+    "scenario": "A junior marketing associate pastes a prompt asking Claude to describe every button visible on its workspace screen. The assistant's response confidently lists a 'Live Voice Transcribe' button that does not actually exist in the UI. What core behavioral reality explains this discrepancy?",
+    "options": {
+      "A": "Assistants are not always reliable about their own interfaces; outputs must be verified against actual UI state.",
+      "B": "Web browsers automatically delete audio transcription buttons whenever marketing documents are processed.",
+      "C": "Anthropic cloud servers dynamically disable voice features whenever ambient office noise exceeds 40 decibels.",
+      "D": "The user's computer monitor failed to render the button due to an outdated graphics card display driver."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 1. The text provides an explicit warning: 'One honest warning, and it is a useful one. An assistant is not always reliable about its own interface, so a list may include something that is not really there, or miss something that is. Notice that. Checking a confident answer against the thing itself is Concept 9, and you just met it two minutes in.' Models generate text statistically rather than inspecting live DOM elements.",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because web browsers do not selectively suppress AI transcription buttons based on document types.",
+      "distractor_C": "Option C is incorrect because cloud servers do not monitor ambient physical room acoustic decibel levels.",
+      "distractor_D": "Option D is incorrect because UI elements are defined by web HTML/CSS rather than physical GPU display drivers."
+    }
+  },
+  {
+    "id": 5,
+    "subtopic": "Governing Scope: The Chat Workspace Boundary",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Where this reference sits (Lines 48-103)",
+    "scenario": "A municipal procurement lead establishes standards for day-to-day conversational AI workflows. A colleague asks whether desktop web chat interfaces are appropriate for driving autonomous background CI pipelines. What fundamental operational boundary governs conversational web surfaces?",
+    "options": {
+      "A": "All command-line coding harnesses require explicit presidential executive orders before being described in text.",
+      "B": "This reference stays strictly inside the chat workspace; desktop agents and coding harnesses belong to later courses.",
+      "C": "Commercial AI chat interfaces are legally banned from integrating with local desktop operating system filesystems.",
+      "D": "Chat interfaces automatically convert all terminal shell commands into un-executable binary machine code files."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per the introductory scope section. The text explicitly defines its boundary: 'In short: this reference stays inside the chat workspace. Desktop agents, coding environments, and larger agentic systems come later... It does not reteach those ideas. It shows you where they live inside Claude and ChatGPT.'",
+      "distractor_A": "Option A is incorrect because software documentation requires no government executive orders.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because chat products routinely integrate with desktop filesystems via tools like Claude Desktop.",
+      "distractor_D": "Option D is incorrect because chat interfaces can display and generate executable shell scripts without restriction."
+    }
+  },
+  {
+    "id": 6,
+    "subtopic": "The Three-Tier Model Capability Pattern",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 2: Models and thinking modes (Lines 293-340)",
+    "scenario": "A pricing director at a wholesale hardware chain is frustrated by how rapidly frontier AI model version numbers change. What enduring three-tier architecture should guide enterprise model selection regardless of marketing branding?",
+    "options": {
+      "A": "Unauthenticated trial tier, consumer paid subscription tier, and secret defense contractor tier.",
+      "B": "Microscopic model, macroscopic model, and universal astronomical intelligence network systems.",
+      "C": "Fast default (routine/drafting), Thinking mode (multi-step logic), and Heavy flagship (complex analysis).",
+      "D": "Client-side cached model, edge router neural model, and decentralized peer-to-peer ledger model."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 2. Figure 1 and the accompanying table define the three-tier pattern: 1. Fast default: everyday questions, drafting, routine work (quick and inexpensive). 2. Thinking or reasoning mode: multi-step reasoning, math, tricky code, analysis (plans before answering, slower). 3. Heavy flagship: the hardest analysis and long, demanding tasks (deepest, slowest, most expensive). 'Names rotate, tiers persist, choose the model by the task, not by habit.'",
+      "distractor_A": "Option A is incorrect because commercial licensing tiers do not describe the operational reasoning ladder.",
+      "distractor_B": "Option B is incorrect because astronomical scales are not model capability tiers.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because edge network caching does not represent the three-level cognitive trade-off."
+    }
+  },
+  {
+    "id": 7,
+    "subtopic": "Claude Model Taxonomy and Thinking Mode Architecture",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 2: Models and thinking modes (Lines 327-334)",
+    "scenario": "An enterprise systems analyst evaluates Anthropic's model family for integration into an automated customer service triage pipeline. How do Claude's model tiers align by operational capability, and how is extended reasoning activated?",
+    "options": {
+      "A": "Thinking mode is an expensive standalone model downloaded exclusively onto local Linux server terminals.",
+      "B": "Sonnet is the slow flagship; Haiku is the thinking mode model; Opus is the fast low-cost default model.",
+      "C": "Haiku and Sonnet sit on the fast tier, Opus is the heavy flagship, and thinking mode is an operational switch.",
+      "D": "Opus is permanently restricted to medical research, while Haiku is licensed only for mathematical geometry."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 2. The text clarifies: 'On Claude the model names are Haiku (the fastest and cheapest), Sonnet (the everyday choice), and Opus (the heavy flagship). Haiku and Sonnet both sit on the fast level and Opus on the flagship level. Thinking on Claude is a separate switch you turn on, not a model name.'",
+      "distractor_A": "Option A is incorrect because thinking mode in Claude is a cloud inference configuration toggle, not a downloadable Linux binary.",
+      "distractor_B": "Option B is incorrect because Opus is the heavy flagship, Sonnet is the everyday standard, and Haiku is the fast default.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because Claude models are general-purpose and not restricted to specific academic domains."
+    }
+  },
+  {
+    "id": 8,
+    "subtopic": "Rule 1: Start Fast Operational Discipline",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 2: Two simple rules (Lines 341-348)",
+    "scenario": "A corporate communications manager asks an analyst to rephrase a 50-word internal meeting reminder to sound slightly more courteous. The analyst configures a heavy flagship model with extended thinking mode set to maximum budget. Why is this configuration considered poor operational tradecraft?",
+    "options": {
+      "A": "Flagship models are intentionally programmed to insert sarcastic corporate humor into short office reminders.",
+      "B": "Meeting reminders processed by heavy reasoning models automatically trigger calendar cancellation alerts.",
+      "C": "Rephrasing emails using thinking mode violates commercial end-user intellectual property licensing terms.",
+      "D": "Rule 1 mandates starting fast; waiting on deep reasoning for short routine rewrites wastes latency and budget."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 2. Rule 1 states: 'Start fast. Use the normal fast mode for most everyday work. Do not wait on heavy reasoning for a short rewrite, a summary, or a simple explanation... Sometimes \"the AI failed\" really means \"I used the wrong level of capability\"'—in this case, causing unnecessary latency and compute waste.",
+      "distractor_A": "Option A is incorrect because flagship models adhere to user-specified professional tone without inserting sarcasm.",
+      "distractor_B": "Option B is incorrect because language models do not automatically trigger external calendar cancellations.",
+      "distractor_C": "Option C is incorrect because commercial licensing permits using any available model tier for routine drafting.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 9,
+    "subtopic": "Rule 2: Capability Escalation Triggers",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 2: Two simple rules (Lines 349-361)",
+    "scenario": "A clinical data scientist must select an appropriate reasoning configuration to audit a multi-stage pharmacokinetics dosage calculation containing complex biochemical formulas and tricky Python verification scripts. Which operational guideline applies to this task?",
+    "options": {
+      "A": "Pharmacokinetics dosage scripts must only be processed by unauthenticated public web search search engines.",
+      "B": "Calculations involving biochemical formulas are legally restricted from utilizing computer memory buffers.",
+      "C": "Rule 2 mandates escalating to thinking mode or a flagship model for multi-step logic, math, and critical code.",
+      "D": "Rule 2 mandates disabling all model reasoning to ensure mathematical calculations execute at light speed."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 2. Rule 2 instructs operators to escalate when the task is hard: 'Use thinking mode or a stronger model when the job involves: several steps of logic, careful comparison, mathematics, difficult debugging, code that has to be correct, complex analysis.'",
+      "distractor_A": "Option A is incorrect because public search engines do not perform specialized mathematical script verification.",
+      "distractor_B": "Option B is incorrect because digital computing natively requires memory buffers to process data.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because disabling reasoning severely increases the likelihood of mathematical hallucinations."
+    }
+  },
+  {
+    "id": 10,
+    "subtopic": "ChatGPT Model Spectrum Architecture",
+    "domain": "Domain 3: Product and Model Selection",
+    "grounding": "Concept 2: Models and thinking modes (Lines 331-332)",
+    "scenario": "A retail operations analyst configures ChatGPT for corporate store managers. When explaining the model selector options to new users, how should the analyst describe the capability progression across model tiers?",
+    "options": {
+      "A": "The options represent different geographic server locations, ranging from North America to Antarctica.",
+      "B": "The tiers indicate the physical screen size of the user's monitor, from mobile phone screens to projectors.",
+      "C": "The buttons select different spoken language dialects rather than computational reasoning capability depth.",
+      "D": "The labels run from Instant for everyday work up to Pro for the hardest tasks, with thinking levels between."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 2. The text describes ChatGPT's model spectrum: 'On ChatGPT the labels currently run from Instant for everyday work up to Pro for the hardest tasks, with the thinking levels in between... Build your mental model around the trade-off: fast, then more reasoning, then maximum capability.'",
+      "distractor_A": "Option A is incorrect because model tiers represent capability trade-offs, not geographic data center regions.",
+      "distractor_B": "Option B is incorrect because model pickers have zero relation to physical hardware monitor screen dimensions.",
+      "distractor_C": "Option C is incorrect because frontier models natively process multiple languages across all reasoning tiers.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 11,
+    "subtopic": "The Power of Grounding Context Attachments",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 3: Context you attach (Lines 376-405)",
+    "scenario": "A corporate real estate lease administrator asks an AI assistant: 'Summarize the tenant indemnification liabilities under this commercial lease agreement.' The assistant produces generic legal platitudes. What critical briefing step was omitted?",
+    "options": {
+      "A": "Commercial real estate leases are strictly prohibited from being discussed inside desktop web browsers.",
+      "B": "The lease agreement was not attached; models work only with available context, and attachments ground the work.",
+      "C": "The prompt was not translated into Latin legal terminology prior to being submitted to the web interface.",
+      "D": "The user failed to activate an external GPU crypto-mining cluster before typing the legal question in chat."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 3. The text emphasizes: 'A language model can only work with the information in front of it. That is why attachments matter... Compare these two requests: \"Summarize this contract.\" and \"Summarize this contract. (with the contract attached)\" The words are nearly identical. The second one is useful because the assistant can actually see the contract... better context usually improves the answer more than a cleverer prompt does.'",
+      "distractor_A": "Option A is incorrect because enterprise users routinely analyze commercial leases in standard browser tabs.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because models understand modern English legal phrasing without archaic Latin translation.",
+      "distractor_D": "Option D is incorrect because crypto-mining hardware is completely unrelated to contextual language processing."
+    }
+  },
+  {
+    "id": 12,
+    "subtopic": "Three Diagnostics of a Stale Chat Session",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Concept 3: Context you attach (Lines 410-415)",
+    "scenario": "A financial reporting lead has spent an entire eight-hour workday inside a single chat thread drafting an annual board report. Which three operational symptoms indicate that the conversation has exceeded effective context limits and gone stale?",
+    "options": {
+      "A": "The user's keyboard typing velocity slows down, monitor contrast dims, and font sizes shrink by 50 percent.",
+      "B": "It forgets negative constraints (bullets return), contradicts earlier figures, and drifts into generic advice.",
+      "C": "The model demands payment in physical gold coins, logs out of Windows, and reboots the office Wi-Fi router.",
+      "D": "The browser window turns bright neon red, the mouse cursor freezes, and local speakers emit warning beeps."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 3. The text lists the three definitive signs of a stale chat session: 'Three signs tell you the chat has gone stale: 1. it forgets a rule you set that morning, such as \"no bullet points,\" and the bullets come back; 2. it contradicts a figure it gave you earlier; 3. its answers drift into generic advice that could be about any report.'",
+      "distractor_A": "Option A is incorrect because hardware monitor settings and keyboard speeds are completely unaffected by AI context size.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because software chat interfaces do not demand physical currency or reboot network hardware.",
+      "distractor_D": "Option D is incorrect because browser windows do not change colors or emit acoustic alarms when context saturates."
+    }
+  },
+  {
+    "id": 13,
+    "subtopic": "The State Summary Extraction Protocol",
+    "domain": "Domain 7: Troubleshooting and Optimization",
+    "grounding": "Concept 3: Context you attach (Lines 416-423)",
+    "scenario": "Upon recognizing that an extended chat session drafting an acquisition proposal has begun contradicting earlier figures, a senior investment banker decides to remediate the session. How should the banker execute a standard State Summary protocol?",
+    "options": {
+      "A": "Continue arguing with the model in the same thread until it mathematically admits its arithmetic contradiction.",
+      "B": "Clear the browser cache, delete the computer operating system registry, and re-type the entire 8-hour chat.",
+      "C": "Download the raw JSON browser network log and email it to the AI vendor's corporate executive committee.",
+      "D": "Ask for a concise summary of decisions, open items, and rules, then paste it into a fresh chat with clean files."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 3. When a chat goes stale, the text instructs: 'do not keep pushing, and do not just abandon the chat either. Ask for a state summary first, a short record of where the work stands: \"Summarize what we have decided so far, what is still open, and every rule I gave you. Keep it short enough to paste into a new chat.\" Read it, correct anything wrong, paste it into a fresh chat with the files attached again, and carry on.'",
+      "distractor_A": "Option A is incorrect because arguing in a saturated context window deepens confusion and increases token waste.",
+      "distractor_B": "Option B is incorrect because modifying operating system registries is destructive and unnecessary.",
+      "distractor_C": "Option C is incorrect because emailing raw network logs does not recover active conversational context.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 14,
+    "subtopic": "The Chat-to-Project Graduation Threshold",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 3 (Lines 422-423) & Concept 4 (Lines 492-498)",
+    "scenario": "A healthcare clinic operations manager notes that every Monday morning, she finds herself re-uploading the same clinic staffing schedule and re-pasting the same state summary guidelines into a new chat. What architectural graduation signal does this represent?",
+    "options": {
+      "A": "A clear operational signal that the ongoing stream of work deserves a dedicated Project workspace.",
+      "B": "A technical indication that the clinic's internet service provider is blocking cloud WebSocket traffic.",
+      "C": "A signal to uninstall the web browser and revert clinic operations entirely to paper index cards.",
+      "D": "A critical warning that the user has violated fair-use limits and must purchase an enterprise mainframe."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 3 and Section 4. Section 3 notes: 'If you find yourself pasting the same summary every week, that is the signal for a project, which is Concept 4.' Section 4 formalizes the rule of thumb: 'If you have explained the same background or uploaded the same file three times, that work deserves a project. One-off questions do not need one. Projects are for work that continues.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because repeating prompts by hand is a workflow design issue, not an ISP network outage.",
+      "distractor_C": "Option C is incorrect because operational repetition signals the need for structured workspaces, not paper reversion.",
+      "distractor_D": "Option D is incorrect because recurring business queries do not breach acceptable use or require mainframe computers."
+    }
+  },
+  {
+    "id": 15,
+    "subtopic": "Live Web Search Grounding in Chat",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 3: Context you attach (Lines 406-407)",
+    "scenario": "A currency exchange risk officer asks an AI assistant to calculate the valuation of a foreign currency portfolio using today's spot exchange rates. Why is activating live search essential for this prompt rather than relying on base model weights?",
+    "options": {
+      "A": "Web search engines automatically guarantee that foreign currency transactions are insured by the World Bank.",
+      "B": "Search brings volatile current information into context when the model's built-in parametric knowledge is stale.",
+      "C": "Federal banking regulations strictly prohibit language models from memorizing international currency symbols.",
+      "D": "Base models refuse to execute multiplication calculations unless connected to a live web search engine."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 3. The text explains: 'Both products can also search the live web. Search brings current information into the conversation when the model's built-in knowledge is not enough.' Base models have frozen training cutoff dates and cannot know live daily financial exchange rates without retrieval.",
+      "distractor_A": "Option A is incorrect because search engines retrieve web text and do not provide sovereign financial insurance.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because banking rules do not ban models from recognizing standard currency symbols.",
+      "distractor_D": "Option D is incorrect because models can perform arithmetic natively, but require current input numbers to multiply."
+    }
+  },
+  {
+    "id": 16,
+    "subtopic": "The Three Anatomical Parts of a Project",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 4: Projects: a room for one stream of work (Lines 457-463)",
+    "scenario": "An educational non-profit director sets up an AI project workspace to manage a 6-month regional grant application. What three constituent elements define the structural anatomy of an enterprise project workspace?",
+    "options": {
+      "A": "Hardware CPU clock frequency, operating system kernel version, and local physical monitor resolution.",
+      "B": "A list of employee social security numbers, corporate bank routing details, and tax audit affidavits.",
+      "C": "Chats related to the work, Knowledge (uploaded reference files), and Instructions (standing guidance).",
+      "D": "The user's personal browser search history, credit card billing receipts, and email account passwords."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 4. The text specifies: 'A project normally holds three things: 1. Chats related to that work; 2. Knowledge, meaning files you upload for that project; 3. Instructions, meaning standing guidance for how the assistant should work inside the project... In the language of this book, a project is a small System of Context.'",
+      "distractor_A": "Option A is incorrect because hardware clock speeds and monitor specs are physical computing attributes.",
+      "distractor_B": "Option B is incorrect because highly sensitive PII and banking credentials should never be uploaded as general project context.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because personal web histories and passwords are not part of professional project workspaces."
+    }
+  },
+  {
+    "id": 17,
+    "subtopic": "The Three-Repetition Rule of Project Creation",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 4: Projects: a room for one stream of work (Lines 492-498)",
+    "scenario": "A logistics dispatcher wonders whether to create a formal Project workspace for an unexpected one-off inquiry regarding an unusual customs tariff code on imported avocados. How should the dispatcher resolve this workspace decision?",
+    "options": {
+      "A": "Delete all customs tariff databases from the corporate server to avoid violating automated project creation quotas.",
+      "B": "Mandate that all avocado customs inquiries be processed exclusively on physical paper ledgers without software.",
+      "C": "Create a project immediately, because every single prompt submitted to an AI model legally requires a project.",
+      "D": "Do not create a project; apply the rule: only create a project after explaining context or uploading files 3 times."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 4. Section 4 provides the exact test: 'When should you create a project? Use this test: If you have explained the same background or uploaded the same file three times, that work deserves a project. One-off questions do not need one. Remember: projects are for work that continues.'",
+      "distractor_A": "Option A is incorrect because deleting enterprise trade compliance databases disrupts business operations.",
+      "distractor_B": "Option B is incorrect because tariff research can be performed in standard digital chat tabs.",
+      "distractor_C": "Option C is incorrect because one-off questions belong in standard ad-hoc chat sessions without project overhead.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 18,
+    "subtopic": "Claude Project Knowledge Scaling via Retrieval (RAG)",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 4: Claude and ChatGPT differ slightly (Lines 480-482)",
+    "scenario": "A legal research team uploads 800 pages of municipal zoning ordinances into a single Claude Project knowledge base, exceeding the standard direct context window. How does Claude manage this large volume of reference material under the hood?",
+    "options": {
+      "A": "It switches automatically to retrieval (RAG), searching the knowledge base to expand effective capacity up to 10x.",
+      "B": "It permanently locks the user's account and demands that documents be re-submitted as physical printed books.",
+      "C": "It automatically truncates all files past page 50 and converts the remaining text into random emoji characters.",
+      "D": "It charges the law firm's credit card an unannounced penalty fee of fifty dollars for every additional page uploaded."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 4. The text explains: 'Claude handles growth by retrieval. When project knowledge grows past what fits directly in the context window, Claude switches to searching that knowledge instead of loading all of it, which Anthropic describes as expanding capacity by up to ten times. That switch happens automatically, and it is a paid-plan feature.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because enterprise AI platforms do not lock accounts or demand physical printed submissions.",
+      "distractor_C": "Option C is incorrect because Claude does not delete text or corrupt documents with emoji substitutions.",
+      "distractor_D": "Option D is incorrect because storage expansion is handled natively under standard paid tier subscription allowances."
+    }
+  },
+  {
+    "id": 19,
+    "subtopic": "ChatGPT Project-Only Memory Isolation",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 4: Claude and ChatGPT differ slightly (Lines 483-489)",
+    "scenario": "A human resources consultant manages compensation reviews across two competing corporate clients using ChatGPT Projects. To ensure that confidential wage strategies from Client A never bleed into conversations regarding Client B, which feature must the consultant activate?",
+    "options": {
+      "A": "Disconnect the office desktop computer from the internet and run the compensation review using offline Morse code.",
+      "B": "Enable 'Project-Only Memory', turning the project into an isolated boundary where outside memories stay out.",
+      "C": "Re-type all employee salary figures in reverse chronological order to fool the language model's memory buffer.",
+      "D": "Set both project workspaces to 'Default Shared Memory' so all corporate wage data blends together across threads."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 4. The text details ChatGPT's project memory control: 'ChatGPT adds project memory. A project can use either: default memory, where your wider memory can still take part; [or] project-only memory, where the project becomes a real boundary and outside memories stay out. So a project always helps you organize. Project-only memory is what turns it into isolation.'",
+      "distractor_A": "Option A is incorrect because using Morse code is an impractical and absurd approach to cloud software governance.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because inverting numbers does not isolate memory and corrupts compensation analysis.",
+      "distractor_D": "Option D is incorrect because default shared memory permits cross-session memory bleed, violating client confidentiality."
+    }
+  },
+  {
+    "id": 20,
+    "subtopic": "Persistent Context Efficiency in Projects",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 4: Projects: a room for one stream of work (Lines 463-477)",
+    "scenario": "A corporate governance secretary prepares quarterly board agendas, resolutions, and meeting minutes. Why is a dedicated project workspace considered 'the smallest System of Context you will ever build'?",
+    "options": {
+      "A": "Because it makes context persistent for a continuous stream of work, eliminating redundant uploads and instructions.",
+      "B": "Because projects restrict user access exclusively to thirty-second chat sessions before forcing a system logout.",
+      "C": "Because project folders automatically reduce the physical storage footprint of server hard drives to zero bytes.",
+      "D": "Because it permanently deletes all previous chat histories to prevent employees from auditing past resolutions."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 4. The text explains: 'Now you never re-upload the same files or repeat the same instructions. That is the whole point: a project makes context persistent for one stream of work. In the language of this book, a project is a small System of Context.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because projects support long, multi-turn, multi-session workflows without artificial session timeouts.",
+      "distractor_C": "Option C is incorrect because digital documents still consume server storage; projects organize context rather than eliminating bytes.",
+      "distractor_D": "Option D is incorrect because projects preserve and group related chat histories rather than purging them."
+    }
+  },
+  {
+    "id": 21,
+    "subtopic": "The Persistence Triad Formula",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 5: Memory and standing instructions (Lines 506-554)",
+    "scenario": "A medical clinic administrator configures an AI assistant across diverse administrative workflows. She needs an unambiguous rule of thumb to decide whether a guideline belongs in Custom Instructions, Semantic Memory, or a Project. Which definitive rule governs this decision?",
+    "options": {
+      "A": "Instructions for temporary chats, memory for deleted files, and projects for public web links.",
+      "B": "Instructions for medical diagnoses, memory for billing invoices, and projects for doctor names.",
+      "C": "Instructions for software code, memory for legal lawsuits, and projects for marketing slogans.",
+      "D": "Instructions for stable rules, memory for evolving context, and projects for scoped work."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 5. Section 5 formalizes the core persistence triad: 'The rule of thumb: Instructions for stable rules. Memory for evolving context. Projects for scoped work. That one rule prevents most configuration mistakes... Standing instructions, for stable rules: who you always are and how you always want output... Memory, for evolving context: what is currently true, accumulated from conversations... Projects, for scoped work: one client or one thesis kept to its own room.'",
+      "distractor_A": "Option A is incorrect because temporary chats explicitly disable memory, and projects do not store deleted files.",
+      "distractor_B": "Option B is incorrect because clinical diagnoses and billing items are transactional data, not persistence categories.",
+      "distractor_C": "Option C is incorrect because the triad categorizes persistence stability, not narrow operational subject matter.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 22,
+    "subtopic": "Standing Instructions: Defining Stable Rules",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 5: Standing instructions: stable rules (Lines 514-527)",
+    "scenario": "A senior executive assistant always requires AI outputs to present executive bullet summaries before detailed text, maintain a concise tone, and write for a non-technical board audience across all chats. In which layer of the context stack should these rules be configured?",
+    "options": {
+      "A": "In temporary incognito chat sessions that wipe automatically after each fifteen-minute executive meeting.",
+      "B": "In standing instructions (Claude settings and styles, or ChatGPT Custom Instructions under Personalization).",
+      "C": "In a local computer desktop screen-saver script that executes when the executive locks her laptop monitor.",
+      "D": "In an external public pastebin document link pasted manually into the message box at the start of every turn."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 5. The text specifies: 'Standing instructions are rules you write once and want applied broadly. For example: \"Give me the answer before the explanation.\" \"Use simple language unless I ask for technical detail.\" \"I write for business leaders, not software engineers.\" Claude keeps this kind of preference in its settings and styles. ChatGPT keeps it in Custom Instructions, under Settings and Personalization. Use standing instructions for things that are stable.'",
+      "distractor_A": "Option A is incorrect because incognito sessions disable persistent instructions and memory by design.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because screen-saver software has no connection to AI assistant configuration parameters.",
+      "distractor_D": "Option D is incorrect because pasting external links every turn re-introduces the manual friction instructions eliminate."
+    }
+  },
+  {
+    "id": 23,
+    "subtopic": "Semantic Memory Governance and Enterprise Defaults",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 5: Memory: evolving context about you (Lines 528-540)",
+    "scenario": "A security architect audits cloud AI accounts for an investment bank. When reviewing semantic memory features on corporate Team and Enterprise subscriptions, what critical default configuration reality must be recognized?",
+    "options": {
+      "A": "Enterprise accounts are technically prohibited from remembering user preferences or professional job titles.",
+      "B": "All conversational memory records are automatically broadcast to competing financial institutions overnight.",
+      "C": "Memory defaults on for individual plans, but stays off on Team and Enterprise until an administrator enables it.",
+      "D": "Semantic memory is permanently mandated by international treaty and cannot be audited or modified by users."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 5. The text explicitly notes enterprise governance defaults: 'Both products let you review, edit, and delete memory. On a work account, check first whether it is even on: Claude turns memory on by default for individual plans, and leaves it off on Team and Enterprise until an owner enables it.'",
+      "distractor_A": "Option A is incorrect because enterprise administrators can choose to enable memory when aligned with firm policy.",
+      "distractor_B": "Option B is incorrect because enterprise tenant memory is isolated and never transmitted to competitors.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because memory is user-manageable and governed by vendor settings rather than international treaties."
+    }
+  },
+  {
+    "id": 24,
+    "subtopic": "Incognito and Temporary Chats: Retention Realities",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 5: Memory: evolving context about you (Lines 541-543)",
+    "scenario": "A corporate defense attorney uses Claude's Incognito Chat (or ChatGPT's Temporary Chat) to explore sensitive litigation settlement terms. The attorney tells his managing partner: 'Because I used incognito mode, our conversation was wiped from vendor cloud servers the microsecond I closed the tab.' Why is this claim inaccurate?",
+    "options": {
+      "A": "Language models refuse to process legal questions unless all conversation turns are printed onto paper records.",
+      "B": "Web browsers automatically email incognito chat transcripts to the opposing legal counsel's personal inbox.",
+      "C": "These modes are memory-free, not trace-free; vendors retain copies for ~30 days for safety and abuse review.",
+      "D": "Incognito chats automatically post transcripts to the attorney general's public electronic court docket."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 5. The text explicitly instructs: 'Both also offer a mode that keeps a conversation out of normal history and out of memory: Claude calls it an incognito chat, ChatGPT calls it a temporary chat. Both vendors still retain a copy for a limited period, around thirty days, for safety and abuse review. So treat these modes as memory-free, not trace-free.'",
+      "distractor_A": "Option A is incorrect because digital models process inputs without requiring physical paper printing.",
+      "distractor_B": "Option B is incorrect because browsers do not transmit private chat content to opposing litigation counsel.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because vendor safety retention stores logs privately in secure backend systems, not public court dockets."
+    }
+  },
+  {
+    "id": 25,
+    "subtopic": "The Silent Failure of Stale Context",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 5: Stored context is a responsibility (Lines 555-565)",
+    "scenario": "A financial controller maintains a project workspace for quarterly board reporting. Last quarter's budget model remains in the project knowledge base alongside new data. When the assistant generates this quarter's board deck, what dangerous operational failure occurs?",
+    "options": {
+      "A": "Stale context fails quietly: the model outputs confident, beautifully styled reports citing obsolete figures.",
+      "B": "The cloud server crashes immediately and displays a flashing red warning banner across the executive's screen.",
+      "C": "The spreadsheet software automatically corrupts the operating system kernel and deletes local hard drive files.",
+      "D": "The assistant refuses to generate text and demands that the controller re-calculate all numbers by hand on paper."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 5. Section 5 describes the silent failure of stale context: 'Stored context can hold sensitive or private information. It also goes stale, and stale context fails quietly: there is no error message, just an answer that sounds sure and is wrong. If last quarter's financial model is still in the Quarterly Board Reporting project, this quarter's board deck will quote last quarter's numbers, neatly formatted. The assistant cannot tell that what you gave it is out of date.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because stale context produces plausible text rather than system crashes or warning banners.",
+      "distractor_C": "Option C is incorrect because obsolete project files do not corrupt operating system kernels or delete drives.",
+      "distractor_D": "Option D is incorrect because language models do not refuse to answer simply because reference data is outdated."
+    }
+  },
+  {
+    "id": 26,
+    "subtopic": "Claude Artifacts Architecture",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 6: Artifacts and writing blocks (Lines 570-597)",
+    "scenario": "A software product designer directs Claude to generate an interactive ROI calculator widget alongside extensive user documentation. How does Claude structure this deliverable to keep the user's workspace functional?",
+    "options": {
+      "A": "It sends the calculator code to an external commercial print shop to be mailed as a physical booklet.",
+      "B": "It appends the code to the user's browser bookmarks bar and immediately terminates the active session.",
+      "C": "It opens a separate Artifact panel beside the chat, keeping the deliverable distinct from conversational scroll.",
+      "D": "It forces the user to manually compile the calculator script inside a local command-line assembly editor."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 6. The text defines Claude's artifact architecture: 'Chat is good for conversation. It is a poor container for finished work. If you ask for a 2,000-word report, a working calculator, a diagram, or a small application, you want the result to be a separate object, not one more message in a scroll... Claude uses artifacts. An artifact is a separate output that opens beside the conversation... You keep talking to Claude while the artifact stays there as the thing being built and revised.'",
+      "distractor_A": "Option A is incorrect because artifacts are rendered dynamically in digital format, not mailed as physical paper booklets.",
+      "distractor_B": "Option B is incorrect because artifacts open in a dedicated UI panel and do not modify browser bookmarks or end sessions.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because web-based interactive calculators render directly inside the artifact iframe preview."
+    }
+  },
+  {
+    "id": 27,
+    "subtopic": "ChatGPT 2026 Output Architecture (Writing & Code Blocks)",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 6: ChatGPT: writing blocks and code blocks (Lines 598-607)",
+    "scenario": "A technical writer consults an online 2024 tutorial that repeatedly instructs users to 'open Canvas' in ChatGPT to collaborate on a software manual. When she opens modern ChatGPT in late 2026, she cannot locate the Canvas button. What product interface evolution explains this change?",
+    "options": {
+      "A": "The user's computer monitor lacks the specialized graphical display hardware required to render Canvas tabs.",
+      "B": "OpenAI completely eliminated all writing assistance features and restricted ChatGPT solely to voice calls.",
+      "C": "Canvas was moved behind a mandatory government security clearance requiring federal biometric verification.",
+      "D": "Canvas was retired on current models; work is now managed in inline Writing Blocks and Code Blocks in thread."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 6. The text explains: 'Older ChatGPT tutorials talk about canvas, a side-by-side editing panel. That is out of date. In 2026 OpenAI retired canvas on its current models and moved the same work into the conversation itself, as writing blocks and code blocks: editable regions that sit inline in the thread. If a tutorial tells you to open canvas and you cannot find it, this is why. The design is different. The idea is identical: keep the work product separate from the discussion about the work product.'",
+      "distractor_A": "Option A is incorrect because the change was a product software design retirement, not a hardware display failure.",
+      "distractor_B": "Option B is incorrect because ChatGPT maintains extensive text, document, and writing capabilities.",
+      "distractor_C": "Option C is incorrect because consumer and enterprise ChatGPT features require no federal biometric clearances.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 28,
+    "subtopic": "Structured Output Discipline: Tables vs. Paragraphs",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 6: How to get better results (Lines 624-629)",
+    "scenario": "A supply chain manager asks an AI assistant to evaluate fourteen potential packaging vendors, including pricing tiers, minimum order quantities, and delivery lead times. Why should the manager mandate structured tabular output rather than a descriptive narrative?",
+    "options": {
+      "A": "Narrative paragraphs consume 1,000 times more computer server electricity than structured markdown tables.",
+      "B": "A narrative paragraph cannot be sorted, filtered, or loaded into Excel; structured tables enable analysis.",
+      "C": "Language models are programmed to insert factual pricing hallucinations whenever writing narrative sentences.",
+      "D": "Enterprise corporate firewalls automatically block incoming text messages that contain more than four paragraphs."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 6. The text establishes the structured output discipline: 'If the answer is data, ask for structured output: a table or a spreadsheet file, not a paragraph. Data here means things like twelve vendors with prices and lead times, a delivery schedule, or anything a colleague will load into Excel. A paragraph about twelve vendors cannot be sorted, filtered, or pasted into a sheet. A table can.'",
+      "distractor_A": "Option A is incorrect because markdown tables and prose consume comparable compute tokens.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because hallucination risk exists in all formats; tables are chosen for analytical utility and manipulation.",
+      "distractor_D": "Option D is incorrect because corporate firewalls inspect network packet headers, not paragraph counts in web apps."
+    }
+  },
+  {
+    "id": 29,
+    "subtopic": "Code-Executed Arithmetic and Auditing Columns",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 6: How to get better results (Lines 630-631)",
+    "scenario": "An executive compensation analyst requests that Claude calculate the exact total severance obligations across 450 departing employees based on an attached payroll spreadsheet. To guarantee numerical precision, how should the analyst instruct the assistant?",
+    "options": {
+      "A": "Demand code execution ('write and run code to get this and show it'), and inspect which column the code used.",
+      "B": "Instruct the assistant to guess the approximate total number and round the final result up by twenty percent.",
+      "C": "Ask the model to generate fifty paragraphs of emotional philosophical commentary regarding employee severance.",
+      "D": "Mandate that the model convert all salary numbers into Roman numerals before performing mental arithmetic in chat."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 6. The text instructs: 'If the answer is a number somebody will act on, ask for it computed, not written. Say \"write and run code to get this, and show me the code you ran.\" Both assistants have a code tool for this. Anthropic counts it as a fourth home for output, beside inline chat, artifacts, and structured data, and calls the result code-executed. One limit comes with it. The run is exact, but the assistant wrote the code, and the code can still add up the wrong column, so check which column it used.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because guessing and arbitrary rounding destroys financial accuracy and auditability.",
+      "distractor_C": "Option C is incorrect because philosophical commentary provides zero analytical value for payroll audit calculations.",
+      "distractor_D": "Option D is incorrect because Roman numerals lack a zero digit and severely complicate mathematical parsing."
+    }
+  },
+  {
+    "id": 30,
+    "subtopic": "Effective Deliverable Prompting Specifications",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 6: How to get better results (Lines 609-623)",
+    "scenario": "A hospital patient experience coordinator wants Claude to create a patient discharge checklist for new mothers. Why is prompting simply 'Build a discharge checklist' considered an ineffective prompting approach?",
+    "options": {
+      "A": "Because language models refuse to process requests that contain fewer than five hundred distinct prompt words.",
+      "B": "Because short prompts cause cloud server databases to permanently lock user accounts from future web chats.",
+      "C": "Because hospital discharge checklists are classified as classified national security secrets under defense laws.",
+      "D": "Because specifying what it should do, who it is for, and key interactions produces functional deliverables."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 6. The text advises: 'Do not ask for \"a dashboard\" or \"a report.\" Describe what the finished thing should do... Also say who it is for. A flowchart for new employees is not the same object as a flowchart for experienced engineers. Say what format you want, too... This concept is where a lot of beginners get their first genuine surprise: you describe a useful piece of software, and working software appears.'",
+      "distractor_A": "Option A is incorrect because models readily answer brief prompts, but produce generic, unfocused outputs.",
+      "distractor_B": "Option B is incorrect because concise prompts do not trigger server database locks or account bans.",
+      "distractor_C": "Option C is incorrect because standard maternity discharge checklists are routine clinical guidance documents.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 31,
+    "subtopic": "Skills vs. Projects Operational Division",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 7: Skills and plugins (Lines 646-656, 722-729)",
+    "scenario": "A commercial property controller manages six regional shopping malls. She uploads mall lease agreements into project workspaces, and authors a dedicated standardization checklist for auditing tenant utility charge reconciliations. How are these two operational assets related?",
+    "options": {
+      "A": "Projects store knowledge [what]; skills perform tasks [how]. The project supplies data, the skill the method.",
+      "B": "Projects are designed exclusively for leisure hobbies, while skills are legally mandated for commercial firms.",
+      "C": "Skills store customer context files, while projects define reusable task execution algorithms across teams.",
+      "D": "Projects execute code actions, while skills provide physical hardware data storage on cloud server disks."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 7. The line to memorize is explicit: 'Projects store knowledge. Skills perform tasks. A customer-preparation skill can use the customer files stored in a project. The project supplies the what. The skill supplies the how... Instead of re-teaching the method in every chat, you package the method once.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because projects and skills are enterprise productivity frameworks used across all commercial industries.",
+      "distractor_C": "Option C is incorrect because it exactly inverts the architectural roles of projects (context) and skills (method).",
+      "distractor_D": "Option D is incorrect because projects are context repositories and skills represent procedural task instructions."
+    }
+  },
+  {
+    "id": 32,
+    "subtopic": "The Open Agent Skills Standard (`agentskills.io`)",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 7: Why that matters (Lines 683-694)",
+    "scenario": "A municipal IT director wants to establish standard AI operating procedures for public record redactions across both Claude Cowork and ChatGPT Work without suffering proprietary vendor lock-in. Why is adopting the Agent Skills open standard advantageous?",
+    "options": {
+      "A": "Because the standard requires that all redaction procedures be filed with the United Nations intellectual property office.",
+      "B": "Because skills authored under the standard are compiled into proprietary encrypted binaries readable by only one vendor.",
+      "C": "Because skills are plain markdown folders without runtimes, allowing the same procedure to run across multiple tools.",
+      "D": "Because the Agent Skills standard automatically grants municipal governments free, unmetered access to cloud supercomputers."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 7. The text explains: 'Both vendors build on the Agent Skills open standard, published at agentskills.io. A skill is a folder of Markdown files with no server and no runtime behind it, which is exactly why it travels. Dozens of tools across several companies now read the same format, so a skill written for one product can be installed in another. That turns a workflow into something more durable than a prompt trapped inside one vendor.'",
+      "distractor_A": "Option A is incorrect because the open standard requires no international treaty filings or UN approvals.",
+      "distractor_B": "Option B is incorrect because Agent Skills files are open, human-readable Markdown rather than encrypted proprietary binaries.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because open packaging standards do not subsidize vendor compute infrastructure or token costs."
+    }
+  },
+  {
+    "id": 33,
+    "subtopic": "Plugins as Role-Based Capability Bundles",
+    "domain": "Domain 4: Workflow Integration and Solution Design",
+    "grounding": "Concept 7: What is a plugin? (Lines 695-706)",
+    "scenario": "An enterprise legal operations director installs an approved 'Contract Review Suite' in Claude Cowork. The package includes procedural audit checklists, an authenticated connector to DocuSign, specialized slash commands, and a sub-agent reviewer. What architectural composite does this package represent?",
+    "options": {
+      "A": "A cloud virtualization container that operates an isolated proprietary operating system on user laptops.",
+      "B": "A plugin, which bundles skills, outside connectors, commands, and sub-agents into an installable role package.",
+      "C": "A global standing instruction that permanently commands all cloud models to answer in legal Latin phrases.",
+      "D": "A local device hardware driver that re-programs the physical computer graphics card to render legal fonts."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 7. Section 7 defines plugins: 'A plugin packages capabilities for a broader kind of work. It bundles skills together with connections to outside apps, and sometimes commands and sub-agents as well, into one installable package aimed at a job function. The relationship, in one line each: a skill teaches a method; an app or connector gives access to an outside system; a plugin wraps those together.'",
+      "distractor_A": "Option A is incorrect because plugins run within the assistant's existing harness rather than deploying desktop VM containers.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because plugins provide scoped tool/skill capabilities rather than imposing global Latin language rules.",
+      "distractor_D": "Option D is incorrect because plugins are software packages for AI assistants, not physical GPU hardware drivers."
+    }
+  },
+  {
+    "id": 34,
+    "subtopic": "Custom GPTs vs. Modular Skills",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 7: What about custom GPTs? (Lines 707-721)",
+    "scenario": "A marketing agency operations lead compares OpenAI Custom GPTs with portable Agent Skills. She notes that while Custom GPTs provide a dedicated assistant persona with bundled instructions and knowledge, they differ from skills in one key operational dimension. What is this difference?",
+    "options": {
+      "A": "A Custom GPT is a standalone configured assistant, whereas a skill is a modular method that loads when tasks match.",
+      "B": "Skills can only be written in compiled C++ code, while Custom GPTs are restricted exclusively to spoken voice commands.",
+      "C": "Custom GPTs are legally owned by municipal governments and cannot be customized by corporate marketing agencies.",
+      "D": "Custom GPTs automatically erase all user files from cloud storage whenever a conversation exceeds ten minutes."
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 7. The text contrasts them clearly: 'A custom GPT is a separately configured assistant that you open on purpose. It has its own instructions, persona, knowledge, and tools. That is a different thing from a skill. A short comparison: Project: stores the context for a stream of work; Skill: stores the method for doing a task; Custom GPT: gives you a separately configured assistant; Plugin: packages capabilities together.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because skills are authored in Markdown, and Custom GPTs interact through text, multimodal, and voice.",
+      "distractor_C": "Option C is incorrect because Custom GPTs are created and owned by individual users or enterprise accounts, not municipalities.",
+      "distractor_D": "Option D is incorrect because Custom GPTs maintain persistent configurations and do not delete user storage files."
+    }
+  },
+  {
+    "id": 35,
+    "subtopic": "The Claude Directory Integration Hub",
+    "domain": "Domain 5: Configuration and Knowledge Management",
+    "grounding": "Concept 7: What is a plugin? (Lines 705-706)",
+    "scenario": "A research analyst at an environmental consulting firm wants to see what pre-built integrations, skills, and plugins are currently available in the Anthropic ecosystem before spending hours authoring custom integrations from scratch. Where should the analyst navigate to inspect official extensions?",
+    "options": {
+      "A": "To the United States Patent Office public registry to search for registered artificial intelligence copyright claims.",
+      "B": "To a local physical computer electronics retail store to inspect software packaging boxes on display shelves.",
+      "C": "To claude.ai/directory, which aggregates available skills, connectors, and plugins into a single unified catalog.",
+      "D": "To the internal Linux operating system terminal to execute an unauthenticated network broadcast traceroute ping."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 7. The text notes: 'Claude now lists skills, connectors, and plugins in a single directory at claude.ai/directory, which is the fastest way to see what already exists before you build your own.'",
+      "distractor_A": "Option A is incorrect because patent registries do not list active operational AI assistant integration plugins.",
+      "distractor_B": "Option B is incorrect because modern cloud integrations are digital assets rather than shrink-wrapped retail software boxes.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because traceroute network commands diagnose packet routing, not software application directories."
+    }
+  },
+  {
+    "id": 36,
+    "subtopic": "Model Context Protocol (MCP) Governance: Standard Plug vs. Trust",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 8: MCP: the shared integration standard (Lines 772-780)",
+    "scenario": "A technology director explains the Model Context Protocol (MCP) to his executive risk committee, describing it as 'the universal USB-C standard for connecting AI tools to enterprise systems.' What crucial caveat must the director emphasize regarding operational security?",
+    "options": {
+      "A": "Plugging in an MCP connector requires purchasing physical gold-plated fiber optic network cables from hardware vendors.",
+      "B": "Enterprise firewalls automatically block all MCP traffic unless authorized by an international treaty ratified by NATO.",
+      "C": "MCP connectors are technically incapable of connecting to enterprise services like Google Drive, Gmail, or Slack.",
+      "D": "USB-C standardizes the physical shape, but connecting an MCP tool is a trust decision: standard plug != standard trust."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 8. The text highlights a vital governance insight: 'The usual shorthand is USB-C for AI tools: one standard plug, so a tool built once can be used by many different assistants. Claude's custom connectors run on MCP, and ChatGPT's apps are built on it too, through the Apps SDK. That is genuinely useful, and the shorthand hides one thing you should not lose. Plugging in a USB-C cable is not a decision about trust. Connecting an MCP tool is. The plug is standard; the access is not.'",
+      "distractor_A": "Option A is incorrect because MCP is an open software protocol operating over standard digital network connections.",
+      "distractor_B": "Option B is incorrect because MCP does not require international military alliance ratification.",
+      "distractor_C": "Option C is incorrect because major cloud services (Drive, Slack, GitHub) are primary targets for MCP integration.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 37,
+    "subtopic": "The Four Pre-Connection Security Checks",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 8: Connections are permission decisions (Lines 780-796)",
+    "scenario": "A financial controller considers connecting a third-party accounting analytics app to the firm's cloud AI assistant. Before granting authorization, which four systematic security and governance questions must the controller evaluate?",
+    "options": {
+      "A": "What can it read; can it write/send/delete/buy; do I trust the source; and am I authorized to connect this system?",
+      "B": "What color is the app icon; how many Twitter followers does it have; who designed the logo; and is it fast?",
+      "C": "Does the app accept credit card points; does it support dark mode; can it play audio files; and is it popular?",
+      "D": "What is the developer's home address; what font is used in documentation; and what operating system is running?"
+    },
+    "correct": "A",
+    "explanation": {
+      "correct_rationale": "Option A is uniquely accurate per Section 8. Section 8 details the four mandatory permission checks: 'Before you connect anything, ask: 1. What can it read? 2. Can it write, send, delete, buy, or take some other action in the outside world? 3. Do I trust the source? 4. Am I allowed to connect this account or system? Treat connectors and apps the way you treat installing software: useful, and permission-gated on purpose.'",
+      "distractor_A": "N/A (Correct Option)",
+      "distractor_B": "Option B is incorrect because social media followers and visual branding provide zero security assurance.",
+      "distractor_C": "Option C is incorrect because UI dark modes and audio playback capabilities are irrelevant to corporate data governance.",
+      "distractor_D": "Option D is incorrect because developer home addresses and font typography are superficial non-security attributes."
+    }
+  },
+  {
+    "id": 38,
+    "subtopic": "The Four-Way Retrieval Routing Table",
+    "domain": "Domain 1: Prompting and Task Execution",
+    "grounding": "Concept 8: Search, thinking, or research? (Lines 797-838)",
+    "scenario": "A corporate research strategist needs an assistant to evaluate a multi-faceted industry question: 'Compile a comprehensive 15-page market report on autonomous warehouse robotics, citing current venture funding trends, patent filings, and supplier lead times across 20 global vendors.' Which operational execution route should she select?",
+    "options": {
+      "A": "Web search toggle, because single-source web queries execute in under two seconds and provide brief answers.",
+      "B": "Workplace search, because warehouse robotics venture funding disclosures are stored on the local office file server.",
+      "C": "Standard offline chat with no tools, forcing the model to hallucinate venture funding rounds from base weights.",
+      "D": "Research mode, because it autonomously plans an investigation, queries dozens of sources, and compiles cited reports."
+    },
+    "correct": "D",
+    "explanation": {
+      "correct_rationale": "Option D is uniquely accurate per Section 8. The retrieval routing table maps: One current fact $\\rightarrow$ Web search; Hard reasoning with no new info $\\rightarrow$ Thinking mode; A thorough, cited investigation $\\rightarrow$ Research mode; Internal company knowledge $\\rightarrow$ Workplace search. 'Research mode is not \"better search.\" The assistant plans an investigation, runs many searches, follows leads, reads sources, and hands back a structured report with citations. That takes minutes, not seconds. You are delegating an investigation, not asking a quick question.'",
+      "distractor_A": "Option A is incorrect because web search is designed for quick single-fact lookups, not comprehensive multi-source reports.",
+      "distractor_B": "Option B is incorrect because internal workplace search only accesses private company files, not global robotics market data.",
+      "distractor_C": "Option C is incorrect because offline base models lack access to current venture funding and patent filings.",
+      "distractor_D": "N/A (Correct Option)"
+    }
+  },
+  {
+    "id": 39,
+    "subtopic": "The Five-Step Proving Loop Protocol",
+    "domain": "Domain 2: Output Evaluation and Validation",
+    "grounding": "Concept 9: Prove it on work you already know (Lines 855-906)",
+    "scenario": "An academic department chair wants to evaluate whether an AI assistant can be trusted to calculate semester faculty workload distribution reports. Instead of testing the tool on live, un-graded upcoming semester data, what testing methodology should be used?",
+    "options": {
+      "A": "Instruct the assistant to guess faculty workloads based on alphabetical staff last name rankings in the phone book.",
+      "B": "Execute the 5-step proving loop: test the assistant on an old completed semester whose correct answer is already known.",
+      "C": "Delegate the entire workload distribution task to undergraduate student interns without any software assistance.",
+      "D": "Trust the model immediately if the commercial software sales representative demonstrates a polished video demo."
+    },
+    "correct": "B",
+    "explanation": {
+      "correct_rationale": "Option B is uniquely accurate per Section 9. Section 9 outlines the gold-standard evaluation protocol: 'The best beginner method is simple: Test the assistant on work you have already finished and already trust... The five-step proving loop: 1. Pick one recurring task. 2. Find an old example where you already know the correct result. 3. Ask the assistant to reproduce it. 4. Compare against known truth. 5. Refine and run again... Without known truth you cannot tell whether the assistant reproduced the work or just sounded like it did.'",
+      "distractor_A": "Option A is incorrect because alphabetical guessing produces arbitrary, inequitable faculty workloads.",
+      "distractor_B": "N/A (Correct Option)",
+      "distractor_C": "Option C is incorrect because abandoning technology does not evaluate the software's capabilities or establish safe delegation.",
+      "distractor_D": "Option D is incorrect because vendor sales demos are the weakest form of evidence and reflect optimized marketing scenarios."
+    }
+  },
+  {
+    "id": 40,
+    "subtopic": "What Proving Tests Actually Prove: Non-Transferable Accountability",
+    "domain": "Domain 6: Governance, Risk, and Responsible Use",
+    "grounding": "Concept 9: What does passing actually prove? (Lines 907-928, 1040-1053)",
+    "scenario": "A senior municipal water district engineer runs an AI assistant through a rigorous historical proving loop on twenty past water reservoir pressure audits. The assistant reproduces past results with 100% precision. What does this passing validation prove, and what does it NOT prove?",
+    "options": {
+      "A": "It proves that human engineers are obsolete and authorizes the immediate termination of the municipal safety board.",
+      "B": "It transfers all civil and criminal engineering liability to the AI vendor, relieving the engineer of oversight.",
+      "C": "It earns tested confidence for similar future work, but never transfers professional accountability from the human engineer.",
+      "D": "It proves the software will never experience hardware crashes, but does not prove the model understands English."
+    },
+    "correct": "C",
+    "explanation": {
+      "correct_rationale": "Option C is uniquely accurate per Section 9. The text insists: 'What does passing actually prove? It gives you earned confidence for similar future work. It does not prove the assistant will be right on every future case. And it does not transfer responsibility. You still have to: check whether new results make sense; stand behind the final work; disclose AI assistance where that is appropriate; keep high-risk decisions under proper human control... Passing earns confidence, it never transfers accountability.'",
+      "distractor_A": "Option A is incorrect because AI assists human engineers rather than eliminating safety oversight boards.",
+      "distractor_B": "Option B is incorrect because legal liability never transfers to software vendors; professional engineers remain strictly answerable.",
+      "distractor_C": "N/A (Correct Option)",
+      "distractor_D": "Option D is incorrect because software evaluations do not guarantee server hardware uptime, and models demonstrably process English."
+    }
+  }
+]
